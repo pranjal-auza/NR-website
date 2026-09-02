@@ -1,0 +1,41 @@
+---
+---
+
+<aside id="gb-banner" class="relative z-50 bg-[#F6F2FD] dark:bg-[#151E3D] border-b border-[#E2E0F8] dark:border-[#2A3459] text-xs font-medium text-[#151E3D] dark:text-[#E2E0F8] transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between">
+    <div class="flex-1 flex items-center justify-center gap-2">
+      <span class="inline-flex items-center px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-[#6E56CF]/15 text-[#6E56CF] dark:text-[#A79BE6] uppercase tracking-wider">
+        LIVE DEMO
+      </span>
+      <span class="text-neutral-700 dark:text-neutral-300 hidden sm:inline">
+        Led by a GrowthBook technical expert
+      </span>
+      <span class="text-neutral-400 dark:text-neutral-500 hidden sm:inline">•</span>
+      <a href="https://www.growthbook.io/events/growthbook-demo" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1 font-semibold text-[#6E56CF] dark:text-[#A79BE6] hover:underline">
+        <span>Choose Your Date</span>
+        <span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+      </a>
+    </div>
+
+    <button id="close-gb-banner" aria-label="Dismiss banner" class="text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-200 p-1 rounded-md transition-colors">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+</aside>
+
+<script>
+  const banner = document.getElementById('gb-banner');
+  const closeBtn = document.getElementById('close-gb-banner');
+  if (closeBtn && banner) {
+    closeBtn.addEventListener('click', () => {
+      banner.style.height = '0';
+      banner.style.opacity = '0';
+      banner.style.overflow = 'hidden';
+      banner.style.border = 'none';
+      setTimeout(() => banner.remove(), 300);
+    });
+  }
+</script>

@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import Header from '../components/Header.astro';
+import PricingSection from '../components/PricingSection.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+import Icon from '../components/icons/Icon.astro';
+---
+
+<Layout 
+  title="Enterprise Pricing & Plans | New-Relay"
+  description="Simple, transparent pricing for modern revenue teams. Starter, Growth Pro, and Enterprise Scale plans with 14-day free trial."
+>
+  <Banner />
+  <Header />
+
+  <main class="pt-8">
+    <PricingSection />
+
+    <!-- Feature Comparison Table -->
+    <section class="py-20 border-t border-subtle-stroke bg-secondary-bg/20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-foreground text-center mb-12">
+          Compare Enterprise Plan Capabilities
+        </h2>
+
+        <div class="rounded-2xl enterprise-card overflow-hidden shadow-attio-4">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-secondary-bg/80 border-b border-subtle-stroke text-caption-fg font-mono">
+              <tr>
+                <th class="p-4 sm:p-5 font-semibold">Capabilities</th>
+                <th class="p-4 sm:p-5 font-semibold text-center">Starter</th>
+                <th class="p-4 sm:p-5 font-semibold text-center text-brand-400">Growth Pro</th>
+                <th class="p-4 sm:p-5 font-semibold text-center text-emerald-400">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-subtle-stroke text-secondary-fg">
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">Omnichannel (WhatsApp, SMS, Email, Live Chat)</td>
+                <td class="p-4 sm:p-5 text-center">Included</td>
+                <td class="p-4 sm:p-5 text-center text-brand-400 font-semibold">Included</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-semibold">Included + Multi-Carrier Fallback</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">Captain AI Autonomous Resolutions</td>
+                <td class="p-4 sm:p-5 text-center">500 / mo</td>
+                <td class="p-4 sm:p-5 text-center text-brand-400 font-semibold">Unlimited</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-semibold">Custom RAG + Unlimited</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">AI Copilot Real-Time Draft Suggestions</td>
+                <td class="p-4 sm:p-5 text-center">—</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-bold">✓</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-bold">✓</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">Deal Pipelines & Visual Kanban Velocity</td>
+                <td class="p-4 sm:p-5 text-center">3 Pipelines</td>
+                <td class="p-4 sm:p-5 text-center text-brand-400 font-semibold">Unlimited</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-semibold">Unlimited + Custom Fields</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">Video Testimonial Outreach & Collector</td>
+                <td class="p-4 sm:p-5 text-center">Standard</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-bold">✓</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-bold">✓</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">Security Governance & Compliance</td>
+                <td class="p-4 sm:p-5 text-center">Standard HTTPS</td>
+                <td class="p-4 sm:p-5 text-center">SOC 2 Type II Ingest</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-semibold">SOC2, HIPAA BAA, BYOK & Zero Retention</td>
+              </tr>
+              <tr>
+                <td class="p-4 sm:p-5 font-medium text-foreground">SSO, SAML 2.0 & Dedicated Support SLA</td>
+                <td class="p-4 sm:p-5 text-center">—</td>
+                <td class="p-4 sm:p-5 text-center">—</td>
+                <td class="p-4 sm:p-5 text-center text-emerald-400 font-bold">99.99% SLA + Okta/Azure SSO</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-20 border-t border-subtle-stroke bg-background">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-foreground text-center">
+          Frequently asked questions
+        </h2>
+
+        <div class="space-y-4">
+          <div class="p-6 rounded-xl enterprise-card space-y-2">
+            <h3 class="text-sm sm:text-base font-bold text-foreground">How does the 14-day free trial work?</h3>
+            <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+              You get instant access to the full Growth Pro plan for 14 days without entering a credit card. You can connect your WhatsApp number, import contacts, and test Captain AI with zero obligation.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl enterprise-card space-y-2">
+            <h3 class="text-sm sm:text-base font-bold text-foreground">Can I bring our existing WhatsApp Business numbers?</h3>
+            <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+              Yes! New-Relay supports bringing your official WhatsApp Business API numbers or purchasing new dedicated numbers directly inside your admin console in 60 seconds.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl enterprise-card space-y-2">
+            <h3 class="text-sm sm:text-base font-bold text-foreground">How does Captain AI prevent hallucinations?</h3>
+            <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+              Captain AI utilizes strict Retrieval-Augmented Generation (RAG) coupled with deterministic Scenario Rules and confidence thresholds. If confidence falls below 90%, it drafts a recommendation for human rep approval instead of sending directly.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-xl enterprise-card space-y-2">
+            <h3 class="text-sm sm:text-base font-bold text-foreground">Is customer data ever used to train AI models?</h3>
+            <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+              Never. New-Relay adheres to strict Zero Data Retention policies. Your customer transcripts, WhatsApp messages, and internal PDFs are encrypted with AES-256 and never shared with third parties or foundation model providers.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <CtaSection />
+  </main>
+
+  <Footer />
+</Layout>

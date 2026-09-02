@@ -1,0 +1,67 @@
+---
+import Icon from './icons/Icon.astro';
+---
+
+<section id="changelog" class="py-24 border-t border-subtle-stroke relative overflow-hidden bg-secondary-bg/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12 gap-4">
+      <div class="space-y-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Continuous Velocity</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+          Better as you grow. New features every week.
+        </h2>
+      </div>
+
+      <a href="/changelog" class="button-outline text-xs sm:text-sm">
+        <span>View all releases</span>
+        <Icon name="arrow-right" class="w-4 h-4 ml-1.5" />
+      </a>
+    </div>
+
+    <!-- Changelog Items Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Release 1 -->
+      <div class="p-6 rounded-2xl glass-panel border border-subtle-stroke shadow-attio-2 space-y-4 hover:border-brand-500/40 transition-all">
+        <div class="flex items-center justify-between text-xs text-caption-fg">
+          <span class="font-mono">August 28, 2026</span>
+          <span class="px-2 py-0.5 rounded bg-brand-500/15 text-brand-400 text-[11px] font-semibold">AI & Copilot</span>
+        </div>
+        <h3 class="text-base font-bold text-foreground">Captain AI Autonomous Mode 2.0</h3>
+        <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+          Full deterministic guardrails, custom RAG vector ingestion for PDF/SLA policies, and automatic pipeline deal creation.
+        </p>
+      </div>
+
+      <!-- Release 2 -->
+      <div class="p-6 rounded-2xl glass-panel border border-subtle-stroke shadow-attio-2 space-y-4 hover:border-purple-500/40 transition-all">
+        <div class="flex items-center justify-between text-xs text-caption-fg">
+          <span class="font-mono">August 21, 2026</span>
+          <span class="px-2 py-0.5 rounded bg-purple-500/15 text-purple-400 text-[11px] font-semibold">Reputation</span>
+        </div>
+        <h3 class="text-base font-bold text-foreground">60-Second Video Review Collector</h3>
+        <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+          Browser-based instant video recording widget that allows happy customers to submit verified testimonials with 1 click.
+        </p>
+      </div>
+
+      <!-- Release 3 -->
+      <div class="p-6 rounded-2xl glass-panel border border-subtle-stroke shadow-attio-2 space-y-4 hover:border-emerald-500/40 transition-all">
+        <div class="flex items-center justify-between text-xs text-caption-fg">
+          <span class="font-mono">August 14, 2026</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[11px] font-semibold">Integrations</span>
+        </div>
+        <h3 class="text-base font-bold text-foreground">Model Context Protocol (MCP) Server</h3>
+        <p class="text-xs sm:text-sm text-secondary-fg leading-relaxed">
+          Natively query New-Relay inbox conversations, deal stages, and customer notes directly from Claude Desktop and Cursor.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,331 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section class="relative pt-12 pb-20 md:pt-18 md:pb-28 overflow-hidden bg-[#FAFAFA] dark:bg-[#090812] transition-colors duration-200">
+  
+  <!-- Subtle GrowthBook Violet Ambient Glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-gradient-to-b from-[#6E56CF]/12 via-[#6E56CF]/5 to-transparent rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Hero Header Text Block -->
+    <div class="text-center max-w-4xl mx-auto space-y-6">
+      
+      <!-- GrowthBook Status Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-[#151E3D] border border-[#EEEEF2] dark:border-[#2A3459] text-xs font-medium text-[#151E3D] dark:text-[#E2E0F8] shadow-xs font-sans">
+        <span class="w-2 h-2 rounded-full bg-[#6E56CF] animate-pulse"></span>
+        <span class="font-mono text-[11px] font-semibold text-[#6E56CF] dark:text-[#A79BE6]">GROWTHBOOK 5.0</span>
+        <span class="text-neutral-300 dark:text-neutral-600">|</span>
+        <span>The 1st Warehouse-Native Experimentation Platform</span>
+      </div>
+
+      <!-- Main Heading (Exact GrowthBook Headline) -->
+      <h1 class="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-[-0.035em] leading-[1.08] text-[#151E3D] dark:text-white max-w-4xl mx-auto">
+        Build smarter. Ship safely. <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-[#6E56CF] via-[#8A78DB] to-[#6E56CF] bg-clip-text text-transparent">Grow at the speed of AI.</span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-base sm:text-lg md:text-xl text-[#494966] dark:text-neutral-300 leading-relaxed max-w-2xl mx-auto font-normal">
+        The warehouse-native platform used by modern product teams for experimentation, feature flags, and product analytics.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+        <a 
+          href="#demo" 
+          class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl border border-[#D2D2DB] dark:border-[#2A3459] bg-white dark:bg-[#121624] hover:bg-neutral-50 dark:hover:bg-neutral-800 text-[#151E3D] dark:text-white font-semibold text-sm sm:text-base shadow-xs transition-all w-full sm:w-44 cursor-pointer"
+        >
+          Book a Demo
+        </a>
+
+        <a 
+          href="https://app.growthbook.io" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-[#6E56CF] hover:bg-[#5643B8] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#6E56CF]/25 transition-all transform hover:-translate-y-0.5 w-full sm:w-48 cursor-pointer"
+        >
+          <span>Start for Free</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Interactive 3-Tab Product Canvas Showcase (Exact GrowthBook Structure) -->
+    <div class="mt-12 sm:mt-16 max-w-5xl mx-auto relative">
+      
+      <!-- Interactive Tabs Switcher -->
+      <div class="flex items-center justify-center gap-2 sm:gap-3 mb-4">
+        <button 
+          id="tab-btn-exp" 
+          class="gb-hero-tab active inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl bg-white dark:bg-[#151E3D] border-2 border-[#6E56CF] text-xs sm:text-sm font-semibold text-[#151E3D] dark:text-white shadow-sm transition-all cursor-pointer"
+        >
+          <span class="text-[#6E56CF] font-bold">⚗</span>
+          <span>Experimentation</span>
+        </button>
+
+        <button 
+          id="tab-btn-flags" 
+          class="gb-hero-tab inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl bg-white/70 dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] text-xs sm:text-sm font-medium text-[#62627A] dark:text-neutral-400 hover:text-[#151E3D] dark:hover:text-white transition-all cursor-pointer"
+        >
+          <span class="text-emerald-500 font-bold">⚑</span>
+          <span>Feature Flags</span>
+        </button>
+
+        <button 
+          id="tab-btn-analytics" 
+          class="gb-hero-tab inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl bg-white/70 dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] text-xs sm:text-sm font-medium text-[#62627A] dark:text-neutral-400 hover:text-[#151E3D] dark:hover:text-white transition-all cursor-pointer"
+        >
+          <span class="text-blue-500 font-bold">📈</span>
+          <span>Product Analytics</span>
+        </button>
+      </div>
+
+      <!-- Main Showcase Canvas Card -->
+      <div class="rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0F1424] border border-[#EEEEF2] dark:border-[#222B42] shadow-2xl p-3 sm:p-5 overflow-hidden transition-all">
+        
+        <!-- Canvas Mockup Top Bar -->
+        <div class="flex items-center justify-between px-3 sm:px-4 py-2.5 rounded-xl bg-[#F8F9FA] dark:bg-[#151B2E] border border-[#EEEEF2] dark:border-[#1E2538] text-xs mb-4">
+          <div class="flex items-center gap-3">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></span>
+            </div>
+            <span class="font-mono text-[11px] text-neutral-400 hidden sm:inline">app.growthbook.io/experiments/checkout_funnel_v2</span>
+          </div>
+
+          <div class="flex items-center gap-2 font-mono text-[11px]">
+            <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 font-semibold">
+              ● Warehouse Connected: Snowflake
+            </span>
+            <span class="text-neutral-400 hidden md:inline">Latency: 8ms</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Tab Panel 1: Experimentation (Default View) -->
+        <div id="panel-exp" class="gb-tab-panel space-y-4 font-sans">
+          
+          <!-- Experiment Header Banner -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-[#F6F2FD] dark:bg-[#1A1A32] border border-[#E2E0F8] dark:border-[#2E2E55]">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded bg-[#6E56CF] text-white font-mono text-[10px] font-bold">RUNNING</span>
+                <h3 class="text-sm sm:text-base font-bold text-[#151E3D] dark:text-white">Checkout Step 2: One-Click Express Pay</h3>
+              </div>
+              <p class="text-xs text-[#62627A] dark:text-neutral-400">Targeting: Mobile App (iOS / Android) • Sample size: 184,290 visitors</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="text-right">
+                <div class="text-[10px] font-mono text-neutral-400 uppercase">Statistical Confidence</div>
+                <div class="text-sm sm:text-base font-bold text-emerald-600 dark:text-emerald-400 font-mono">99.8% (Significant)</div>
+              </div>
+              <button class="px-3 py-1.5 rounded-lg bg-[#6E56CF] text-white text-xs font-semibold hover:bg-[#5643B8]">
+                Ship Winner →
+              </button>
+            </div>
+          </div>
+
+          <!-- Variations Comparison Table (GrowthBook Signature) -->
+          <div class="border border-[#EEEEF2] dark:border-[#1E2538] rounded-xl overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-[#F8F9FA] dark:bg-[#151B2E] text-neutral-500 font-mono text-[11px] border-b border-[#EEEEF2] dark:border-[#1E2538]">
+                <tr>
+                  <th class="py-2.5 px-4 font-medium">VARIATION</th>
+                  <th class="py-2.5 px-4 font-medium">USERS</th>
+                  <th class="py-2.5 px-4 font-medium">CONVERSIONS</th>
+                  <th class="py-2.5 px-4 font-medium">CONVERSION RATE</th>
+                  <th class="py-2.5 px-4 font-medium">LIFT (VS CONTROL)</th>
+                  <th class="py-2.5 px-4 font-medium">P-VALUE</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#EEEEF2] dark:divide-[#1E2538] text-neutral-800 dark:text-neutral-200">
+                <!-- Control -->
+                <tr class="hover:bg-neutral-50 dark:hover:bg-neutral-800/30">
+                  <td class="py-3 px-4 font-bold flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-neutral-400"></span>
+                    <span>Control (Default Multi-step)</span>
+                  </td>
+                  <td class="py-3 px-4 font-mono">92,140</td>
+                  <td class="py-3 px-4 font-mono">3,796</td>
+                  <td class="py-3 px-4 font-mono font-semibold">4.12%</td>
+                  <td class="py-3 px-4 font-mono text-neutral-400">— Baseline</td>
+                  <td class="py-3 px-4 font-mono text-neutral-400">—</td>
+                </tr>
+
+                <!-- Variation B (Winner) -->
+                <tr class="bg-emerald-50/40 dark:bg-emerald-500/5 hover:bg-emerald-50 dark:hover:bg-emerald-500/10">
+                  <td class="py-3 px-4 font-bold flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Variation B (Express Apple/Google Pay)</span>
+                  </td>
+                  <td class="py-3 px-4 font-mono">92,150</td>
+                  <td class="py-3 px-4 font-mono">4,497</td>
+                  <td class="py-3 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">4.88%</td>
+                  <td class="py-3 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20">+18.4% Lift ★</span>
+                  </td>
+                  <td class="py-3 px-4 font-mono text-emerald-600 font-bold">&lt; 0.001</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Posterior Distribution & Confidence Interval Visual -->
+          <div class="p-4 rounded-xl bg-[#FAFAFA] dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#1E2538] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div class="space-y-1">
+              <span class="font-mono text-[10px] text-neutral-400 uppercase">Bayesian Engine Analysis</span>
+              <div class="font-semibold text-neutral-900 dark:text-white">99.8% probability of being the best variation. Expected +$124,000 monthly ARR gain.</div>
+            </div>
+            <div class="flex items-center gap-2 font-mono text-[11px] shrink-0">
+              <span class="px-2 py-1 rounded bg-white dark:bg-[#1A2232] border border-neutral-200 dark:border-neutral-700">CUPED Variance Reduction: ON</span>
+              <span class="px-2 py-1 rounded bg-purple-50 text-[#6E56CF] dark:bg-[#6E56CF]/10 border border-[#6E56CF]/30">SRM Test: PASS</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Tab Panel 2: Feature Flags -->
+        <div id="panel-flags" class="gb-tab-panel hidden space-y-4 font-sans">
+          
+          <div class="p-4 rounded-xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#1E2538] space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                <span class="font-bold text-sm text-[#151E3D] dark:text-white font-mono">ai_smart_search_v2</span>
+                <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-600 dark:bg-blue-500/10 text-[10px] font-mono">Boolean Flag</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-neutral-500">Environment:</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-600 font-bold font-mono text-[10px]">PRODUCTION</span>
+              </div>
+            </div>
+
+            <!-- Rollout Slider & Targeting Rules -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <div class="text-[10px] font-mono text-neutral-400 uppercase">Rollout Percentage</div>
+                <div class="text-lg font-bold text-[#6E56CF] font-mono">35% Canary Ramp</div>
+                <div class="w-full bg-neutral-200 dark:bg-neutral-700 h-1.5 rounded-full overflow-hidden mt-1">
+                  <div class="bg-[#6E56CF] h-full w-[35%] rounded-full"></div>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <div class="text-[10px] font-mono text-neutral-400 uppercase">Targeting Rules</div>
+                <div class="text-xs font-semibold text-neutral-800 dark:text-neutral-200 font-mono">country IN ('US', 'UK', 'CA')</div>
+                <div class="text-[10px] text-neutral-400">and user.tier == 'Enterprise'</div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <div class="text-[10px] font-mono text-neutral-400 uppercase">Automated Guardrails</div>
+                <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono">✓ 0 Auto-Rollbacks</div>
+                <div class="text-[10px] text-neutral-400">Error rate &lt; 0.02% (Healthy)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet -->
+          <div class="p-4 rounded-xl bg-[#0F1424] text-white font-mono text-xs space-y-2 border border-neutral-800">
+            <div class="flex items-center justify-between text-neutral-400 text-[11px] pb-1 border-b border-neutral-800">
+              <span>SDK: React / Next.js Hook</span>
+              <span>Ultra-Lightweight &lt; 1KB</span>
+            </div>
+            <pre class="text-[11px] text-neutral-300 leading-relaxed overflow-x-auto"><code>const {'{'} value: isSmartSearch {'}'} = useFeature("ai_smart_search_v2");
+if (isSmartSearch) {'{'}
+  return &lt;AISmartSearchEngine user={'{'}user{'}'} /&gt;;
+{'}'}</code></pre>
+          </div>
+
+        </div>
+
+        <!-- Dynamic Tab Panel 3: Product Analytics -->
+        <div id="panel-analytics" class="gb-tab-panel hidden space-y-4 font-sans">
+          
+          <div class="p-4 rounded-xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#1E2538] space-y-3">
+            <div class="flex items-center justify-between">
+              <div>
+                <h4 class="text-sm font-bold text-[#151E3D] dark:text-white">Warehouse-Native Funnel &amp; Cohort Retention</h4>
+                <p class="text-xs text-neutral-500">Direct SQL execution on Snowflake with zero proprietary data silos</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-[#6E56CF]/10 text-[#6E56CF] font-mono text-xs font-semibold">
+                AI Analyst: Active
+              </span>
+            </div>
+
+            <!-- Funnel Metric Steps -->
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 pt-2">
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <span class="text-[10px] font-mono text-neutral-400">STEP 1: PAGE VIEW</span>
+                <div class="text-lg font-bold text-neutral-900 dark:text-white font-mono">100%</div>
+                <div class="text-[10px] text-neutral-500">240,000 Visitors</div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <span class="text-[10px] font-mono text-neutral-400">STEP 2: SIGNUP</span>
+                <div class="text-lg font-bold text-neutral-900 dark:text-white font-mono">42.5%</div>
+                <div class="text-[10px] text-neutral-500">102,000 Users</div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-[#1E2538] space-y-1">
+                <span class="text-[10px] font-mono text-neutral-400">STEP 3: FIRST FLAG CREATED</span>
+                <div class="text-lg font-bold text-neutral-900 dark:text-white font-mono">28.1%</div>
+                <div class="text-[10px] text-neutral-500">67,440 Users</div>
+              </div>
+
+              <div class="p-3 rounded-lg bg-[#F6F2FD] dark:bg-[#1A1A32] border border-[#6E56CF]/30 space-y-1">
+                <span class="text-[10px] font-mono text-[#6E56CF]">STEP 4: PAID CONVERT</span>
+                <div class="text-lg font-bold text-[#6E56CF] font-mono">14.8%</div>
+                <div class="text-[10px] text-neutral-500">+3.2x Industry Avg</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Interactive 3-Tab switcher logic for Hero
+  const btnExp = document.getElementById('tab-btn-exp');
+  const btnFlags = document.getElementById('tab-btn-flags');
+  const btnAnalytics = document.getElementById('tab-btn-analytics');
+
+  const panelExp = document.getElementById('panel-exp');
+  const panelFlags = document.getElementById('panel-flags');
+  const panelAnalytics = document.getElementById('panel-analytics');
+
+  const allBtns = [btnExp, btnFlags, btnAnalytics];
+  const allPanels = [panelExp, panelFlags, panelAnalytics];
+
+  function activateTab(btn: HTMLElement | null, panel: HTMLElement | null) {
+    if (!btn || !panel) return;
+    
+    allBtns.forEach(b => {
+      b?.classList.remove('active', 'border-2', 'border-[#6E56CF]', 'text-[#151E3D]', 'dark:text-white');
+      b?.classList.add('border', 'border-[#EEEEF2]', 'dark:border-[#222B42]', 'text-[#62627A]', 'dark:text-neutral-400');
+    });
+
+    btn.classList.add('active', 'border-2', 'border-[#6E56CF]', 'text-[#151E3D]', 'dark:text-white');
+    btn.classList.remove('border-[#EEEEF2]', 'dark:border-[#222B42]', 'text-[#62627A]', 'dark:text-neutral-400');
+
+    allPanels.forEach(p => p?.classList.add('hidden'));
+    panel.classList.remove('hidden');
+  }
+
+  if (btnExp && btnFlags && btnAnalytics) {
+    btnExp.addEventListener('click', () => activateTab(btnExp, panelExp));
+    btnFlags.addEventListener('click', () => activateTab(btnFlags, panelFlags));
+    btnAnalytics.addEventListener('click', () => activateTab(btnAnalytics, panelAnalytics));
+  }
+</script>

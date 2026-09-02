@@ -1,0 +1,91 @@
+---
+const warehouses = [
+  { name: "Snowflake", desc: "Native SQL pushdown with zero data egress", icon: "❄️" },
+  { name: "Google BigQuery", desc: "Direct queries on partitioned tables & analytics sets", icon: "📊" },
+  { name: "Databricks", desc: "Unity Catalog & Delta Lake connector", icon: "🧱" },
+  { name: "Amazon Redshift", desc: "High-performance spectrum queries", icon: "🚀" },
+  { name: "ClickHouse", desc: "Sub-second analytical queries at extreme scale", icon: "⚡" },
+  { name: "PostgreSQL", desc: "Standard SQL engine for growing engineering teams", icon: "🐘" },
+  { name: "AWS Athena", desc: "Serverless queries on Amazon S3 data lakes", icon: "☁️" },
+  { name: "Trino / Starburst", desc: "Distributed SQL query engine federation", icon: "✨" }
+];
+
+const sdks = [
+  { name: "React / Next.js", lang: "Frontend", size: "< 1KB" },
+  { name: "Python", lang: "Backend / ML", size: "< 5KB" },
+  { name: "Node.js / TypeScript", lang: "Backend", size: "< 2KB" },
+  { name: "Go", lang: "Systems", size: "< 10KB" },
+  { name: "iOS (Swift)", lang: "Mobile", size: "< 15KB" },
+  { name: "Android (Kotlin)", lang: "Mobile", size: "< 15KB" },
+  { name: "Ruby", lang: "Backend", size: "< 4KB" },
+  { name: "Flutter", lang: "Cross-Platform", size: "< 12KB" }
+];
+---
+
+<section id="integrations" class="py-20 md:py-28 bg-[#FAFAFA] dark:bg-[#090812] border-t border-[#EEEEF2] dark:border-[#1E2538] transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <div class="space-y-3 max-w-2xl">
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-[#6E56CF] dark:text-[#A79BE6]">
+          Ecosystem &amp; SDKs
+        </div>
+        <h2 class="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#151E3D] dark:text-white">
+          Seamlessly integrates with your stack
+        </h2>
+        <p class="text-base text-[#494966] dark:text-neutral-400">
+          Built by engineers for engineers to adapt to any workflow, cloud, or programming language with zero latency overhead.
+        </p>
+      </div>
+
+      <a 
+        href="https://docs.growthbook.io/lib/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-[#D2D2DB] dark:border-[#2A3459] bg-white dark:bg-[#121624] text-xs sm:text-sm font-semibold text-[#151E3D] dark:text-white hover:border-[#6E56CF] transition-colors shrink-0"
+      >
+        <span>View All Integrations</span>
+        <span>→</span>
+      </a>
+    </div>
+
+    <!-- Data Warehouses Grid -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between text-xs font-mono font-semibold text-neutral-500 uppercase tracking-wider">
+        <span>Supported Data Warehouses (Native SQL Pushdown)</span>
+        <span class="text-[#6E56CF]">Zero Data Leaves Your Cloud</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {warehouses.map(w => (
+          <div class="p-5 rounded-2xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] hover:border-[#6E56CF] dark:hover:border-[#6E56CF] transition-all space-y-2 group cursor-pointer shadow-2xs">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl">{w.icon}</span>
+              <span class="font-bold text-sm text-[#151E3D] dark:text-white group-hover:text-[#6E56CF] transition-colors">{w.name}</span>
+            </div>
+            <p class="text-xs text-neutral-500 leading-relaxed">{w.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Official Lightweight SDKs Grid -->
+    <div class="space-y-4">
+      <div class="text-xs font-mono font-semibold text-neutral-500 uppercase tracking-wider">
+        Official Lightweight Client &amp; Server SDKs
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+        {sdks.map(s => (
+          <div class="p-3 rounded-xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] text-center space-y-1 hover:border-[#6E56CF] transition-all cursor-pointer">
+            <div class="text-xs font-bold text-[#151E3D] dark:text-white font-mono">{s.name}</div>
+            <div class="text-[10px] text-neutral-400 font-mono">{s.lang}</div>
+            <div class="text-[10px] font-bold font-mono text-emerald-600 dark:text-emerald-400">{s.size}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,181 @@
+---
+import Icon from './icons/Icon.astro';
+
+interface Props {
+  activeDesign?: '1' | '2' | '3';
+}
+
+const { activeDesign = '1' } = Astro.props;
+---
+
+<header class="sticky top-0 z-40 w-full border-b border-subtle-stroke glass-panel transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+    
+    <!-- Logo & Brand -->
+    <div class="flex items-center gap-6 sm:gap-8">
+      <a href="/" class="flex items-center gap-2.5 font-display font-semibold text-lg tracking-tight text-foreground group">
+        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white shadow-attio-2 transition-transform duration-200 group-hover:scale-105">
+          <!-- Relay Geometric Icon -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+        </div>
+        <div class="flex items-baseline gap-1.5">
+          <span class="text-base font-bold tracking-tight">New-Relay</span>
+          <span class="text-[10px] font-mono font-semibold uppercase tracking-wider px-1.5 py-0.2 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">OS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1">
+        
+        <!-- Designs Mega Dropdown Trigger -->
+        <div class="relative group">
+          <button class="button-ghost text-sm font-medium inline-flex items-center gap-1.5 text-foreground bg-surface/50 border border-subtle-stroke rounded-lg px-2.5 py-1">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            <span class="font-semibold">Designs</span>
+            <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-brand-500/10 text-brand-400">Design {activeDesign}</span>
+            <Icon name="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 text-secondary-fg" />
+          </button>
+
+          <!-- Mega Menu Dropdown for Designs (Solid Opaque Background, Zero Transparency Bleed) -->
+          <div class="absolute top-full left-0 mt-1.5 w-[480px] p-3.5 rounded-2xl bg-white dark:bg-[#0D1117] shadow-2xl shadow-neutral-900/20 dark:shadow-black/80 border border-neutral-200 dark:border-[#222B3D] opacity-0 translate-y-1 invisible group-hover:opacity-100 group-hover:translate-y-0 group-hover:visible transition-all duration-200 z-50">
+            <div class="flex items-center justify-between pb-2 mb-2 border-b border-neutral-200 dark:border-[#1E2636]">
+              <span class="text-[11px] font-semibold text-neutral-500 dark:text-neutral-400 uppercase tracking-wider font-mono">Select Homepage Design Concept</span>
+              <span class="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-medium">3 Concepts Available</span>
+            </div>
+            
+            <div class="space-y-2">
+              <!-- Design 1: Enterprise Revenue OS -->
+              <a href="/" class={`p-3 rounded-xl transition-all flex items-start gap-3 group/item border ${activeDesign === '1' ? 'border-brand-500 bg-brand-50/70 dark:bg-brand-500/10' : 'border-transparent hover:bg-neutral-100 dark:hover:bg-[#161D2B]'}`}>
+                <div class="p-2 rounded-lg bg-brand-500/10 text-brand-500 dark:text-brand-400 border border-brand-500/20 shrink-0 font-mono font-bold text-xs">
+                  01
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-bold text-neutral-950 dark:text-white group-hover/item:text-brand-500 dark:group-hover/item:text-brand-400 transition-colors">Website Design 1</span>
+                    {activeDesign === '1' && <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-brand-500 text-white font-medium">ACTIVE</span>}
+                  </div>
+                  <div class="text-xs text-neutral-800 dark:text-neutral-200 font-semibold mt-0.5">Enterprise Revenue OS</div>
+                  <div class="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5 leading-snug">Dark slate precision, live command center telemetry & stack comparison matrix.</div>
+                </div>
+              </a>
+
+              <!-- Design 2: Lamossa Modern Studio -->
+              <a href="/design-2" class={`p-3 rounded-xl transition-all flex items-start gap-3 group/item border ${activeDesign === '2' ? 'border-[#FF4D36] bg-[#FF4D36]/5 dark:bg-[#FF4D36]/10' : 'border-transparent hover:bg-neutral-100 dark:hover:bg-[#161D2B]'}`}>
+                <div class="p-2 rounded-lg bg-[#FF4D36]/10 text-[#FF4D36] border border-[#FF4D36]/20 shrink-0 font-mono font-bold text-xs">
+                  02
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-bold text-neutral-950 dark:text-white group-hover/item:text-[#FF4D36] transition-colors">Website Design 2</span>
+                    {activeDesign === '2' && <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[#FF4D36] text-white font-medium">ACTIVE</span>}
+                  </div>
+                  <div class="text-xs text-neutral-800 dark:text-neutral-200 font-semibold mt-0.5">Lamossa Modern Studio & Revenue Engine</div>
+                  <div class="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5 leading-snug">Coral red accents (#FF4D36), 01-04 numbered bento modules, 4-step process & ROI modeler.</div>
+                </div>
+              </a>
+
+              <!-- Design 3: Editorial Minimalist & Architecture -->
+              <a href="/design-3" class={`p-3 rounded-xl transition-all flex items-start gap-3 group/item border ${activeDesign === '3' ? 'border-emerald-500 bg-emerald-50/70 dark:bg-emerald-500/10' : 'border-transparent hover:bg-neutral-100 dark:hover:bg-[#161D2B]'}`}>
+                <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shrink-0 font-mono font-bold text-xs">
+                  03
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-bold text-neutral-950 dark:text-white group-hover/item:text-emerald-600 dark:group-hover/item:text-emerald-400 transition-colors">Website Design 3</span>
+                    {activeDesign === '3' && <span class="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-500 text-white font-medium">ACTIVE</span>}
+                  </div>
+                  <div class="text-xs text-neutral-800 dark:text-neutral-200 font-semibold mt-0.5">Editorial Minimalist & Architecture Blueprint</div>
+                  <div class="text-[11px] text-neutral-600 dark:text-neutral-400 mt-0.5 leading-snug">Swiss grid typography, interactive 4-layer system architecture & executive solutions.</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="mt-2.5 pt-2.5 border-t border-neutral-200 dark:border-[#1E2636] text-[11px] text-neutral-500 dark:text-neutral-400 flex items-center justify-between font-mono">
+              <span>Prepared for Senior Leadership Review</span>
+              <span class="text-brand-500 dark:text-brand-400 font-medium">Click to switch concept →</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#comparison" class="button-ghost text-sm text-secondary-fg hover:text-foreground">Why New-Relay</a>
+        <a href="#security" class="button-ghost text-sm text-secondary-fg hover:text-foreground">Security</a>
+        <a href="#developers" class="button-ghost text-sm text-secondary-fg hover:text-foreground">Developers</a>
+        <a href="/pricing" class="button-ghost text-sm text-secondary-fg hover:text-foreground">Pricing</a>
+        <a href="/changelog" class="button-ghost text-sm text-secondary-fg hover:text-foreground inline-flex items-center gap-1.5">
+          <span>Changelog</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-2.5">
+      
+      <!-- Theme Switcher -->
+      <button id="theme-toggle" aria-label="Toggle Theme" class="p-2 rounded-lg text-secondary-fg hover:text-foreground hover:bg-surface-subtle transition-colors">
+        <span class="dark:hidden"><Icon name="moon" class="w-4 h-4" /></span>
+        <span class="hidden dark:inline"><Icon name="sun" class="w-4 h-4" /></span>
+      </button>
+
+      <a href="#demo" class="hidden sm:inline-flex button-outline text-xs sm:text-sm">
+        Talk to Sales
+      </a>
+
+      <a href="#demo" class="button-primary text-xs sm:text-sm shadow-attio-2">
+        <span>Start Free</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Open mobile menu" class="md:hidden p-2 text-secondary-fg hover:text-foreground">
+        <Icon name="menu" class="w-5 h-5" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-200 dark:border-[#222B3D] bg-white dark:bg-[#0D1117] px-4 pt-3 pb-6 space-y-3 shadow-xl">
+    <div class="space-y-1">
+      <div class="px-3 py-1 text-[11px] font-semibold text-caption-fg uppercase font-mono">Website Designs</div>
+      <a href="/" class="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-surface">Website Design 1 (Enterprise Revenue OS)</a>
+      <a href="/design-2" class="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-surface">Website Design 2 (Kinetic Command Center)</a>
+      <a href="/design-3" class="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-surface">Website Design 3 (Editorial Minimalist)</a>
+      <div class="pt-2 border-t border-subtle-stroke"></div>
+      <a href="/pricing" class="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-surface">Pricing</a>
+      <a href="/changelog" class="block px-3 py-2 text-sm font-medium text-foreground rounded-lg hover:bg-surface">Changelog</a>
+    </div>
+    <div class="pt-3 border-t border-subtle-stroke flex flex-col gap-2">
+      <a href="#demo" class="button-outline w-full justify-center">Talk to Sales</a>
+      <a href="#demo" class="button-primary w-full justify-center">Start Free</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Theme toggle script
+  const themeToggle = document.getElementById('theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        localStorage.setItem('nr-theme', 'light');
+      } else {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('nr-theme', 'dark');
+      }
+    });
+  }
+
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

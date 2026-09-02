@@ -1,0 +1,137 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section id="architecture" class="py-24 border-t border-subtle-stroke relative overflow-hidden bg-secondary-bg/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl space-y-4 mb-16">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-surface border border-subtle-stroke text-xs font-mono font-medium text-foreground">
+        <span>SYSTEM TOPOLOGY & DATA ARCHITECTURE</span>
+      </div>
+
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-foreground">
+        A 4-layer architecture engineered for <span class="italic">absolute determinism</span>.
+      </h2>
+
+      <p class="text-base sm:text-lg text-secondary-fg leading-relaxed">
+        Explore how customer interactions travel from global telecommunication backbones through our isolated inference enclave to real-time CRM pipelines.
+      </p>
+    </div>
+
+    <!-- 4-Layer Architecture Stack -->
+    <div class="space-y-6 max-w-5xl mx-auto font-mono text-xs">
+      
+      <!-- Layer 1: Ingestion Gateway -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-subtle-stroke bg-background space-y-4 hover:border-brand-500/50 transition-all shadow-attio-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-subtle-stroke gap-2">
+          <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 font-bold border border-blue-500/20">LAYER 01</span>
+            <span class="text-base font-bold text-foreground font-sans">Omnichannel Carrier & Ingestion Gateway</span>
+          </div>
+          <span class="text-emerald-400 text-[11px]">Sub-10ms Ingest • Global Carrier Peering</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 pt-2 text-[11px] font-sans">
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">WhatsApp Cloud API</div>
+            <div class="text-secondary-fg text-xs">Direct Meta carrier line with green checkmark verification.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">SMS Backbone</div>
+            <div class="text-secondary-fg text-xs">Redundant routing across Twilio, Sinch, and Infobip.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Live Chat & SDK</div>
+            <div class="text-secondary-fg text-xs">Lightweight 8kB browser widget with collision detection.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Email & Webhooks</div>
+            <div class="text-secondary-fg text-xs">Inbound SPF/DKIM validation with instant parser.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 2: Universal Context Inference -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-subtle-stroke bg-background space-y-4 hover:border-purple-500/50 transition-all shadow-attio-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-subtle-stroke gap-2">
+          <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 font-bold border border-purple-500/20">LAYER 02</span>
+            <span class="text-base font-bold text-foreground font-sans">Universal Context™ & Deterministic AI Engine</span>
+          </div>
+          <span class="text-purple-400 text-[11px]">99.6% Precision • Confidence Threshold Gating</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-[11px] font-sans">
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">PDF & Doc RAG Indexer</div>
+            <div class="text-secondary-fg text-xs">Ingest internal SLA terms, contract PDFs, and product matrices.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Deterministic Scenario Trees</div>
+            <div class="text-secondary-fg text-xs">Rigid enterprise rules prevent unauthorized discounts or commitments.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Human-in-the-Loop Fallback</div>
+            <div class="text-secondary-fg text-xs">AI Copilot drafts replies for rep review if confidence drops below 90%.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 3: CRM Synchronization Core -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-subtle-stroke bg-background space-y-4 hover:border-emerald-500/50 transition-all shadow-attio-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-subtle-stroke gap-2">
+          <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-bold border border-emerald-500/20">LAYER 03</span>
+            <span class="text-base font-bold text-foreground font-sans">Revenue Synchronization & Deal Attribution Core</span>
+          </div>
+          <span class="text-emerald-400 text-[11px]">Bi-Directional CRM Sync • Sub-50ms</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-[11px] font-sans">
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Kanban Pipeline Engine</div>
+            <div class="text-secondary-fg text-xs">Live stage tracking, drag-and-drop progression, and revenue forecasting.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Salesforce & HubSpot Sync</div>
+            <div class="text-secondary-fg text-xs">Zero-data-loss synchronization with automatic contact enrichment.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Stripe & Billing Webhooks</div>
+            <div class="text-secondary-fg text-xs">Trigger post-purchase video review requests upon paid invoice events.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Layer 4: Enterprise Security Enclave -->
+      <div class="p-6 sm:p-8 rounded-2xl border border-subtle-stroke bg-background space-y-4 hover:border-amber-500/50 transition-all shadow-attio-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-subtle-stroke gap-2">
+          <div class="flex items-center gap-3">
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-bold border border-amber-500/20">LAYER 04</span>
+            <span class="text-base font-bold text-foreground font-sans">Security Enclave & Governance</span>
+          </div>
+          <span class="text-amber-400 text-[11px]">SOC 2 Type II • Zero LLM Data Retention</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2 text-[11px] font-sans">
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Zero Retention Guarantee</div>
+            <div class="text-secondary-fg text-xs">No customer data is ever retained or used to train external LLMs.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Private VPC & BYOK</div>
+            <div class="text-secondary-fg text-xs">Single-tenant deployment on AWS/GCP with customer-managed keys.</div>
+          </div>
+          <div class="p-3 rounded-lg bg-secondary-bg/50 border border-subtle-stroke space-y-1">
+            <div class="font-bold text-foreground font-mono text-xs">Okta SAML 2.0 & SCIM</div>
+            <div class="text-secondary-fg text-xs">Automated enterprise provisioning with immutable audit log export.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

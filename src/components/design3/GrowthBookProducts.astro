@@ -1,0 +1,261 @@
+---
+---
+
+<section class="py-20 md:py-28 bg-[#FAFAFA] dark:bg-[#090812] transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+    
+    <!-- Section Phrase Divider -->
+    <div class="text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#6E56CF]/10 text-[#6E56CF] dark:text-[#A79BE6] text-xs font-mono font-semibold uppercase tracking-wider">
+        <span>The GrowthBook Platform</span>
+      </div>
+      <h2 class="font-sans text-3xl sm:text-5xl font-extrabold tracking-tight text-[#151E3D] dark:text-white">
+        One platform for your team <br class="hidden sm:inline" />
+        and your agents
+      </h2>
+    </div>
+
+    <!-- Product 1: Experimentation (2-column layout) -->
+    <div id="experimentation" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- Left Content -->
+      <div class="lg:col-span-5 space-y-5">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider font-mono text-[#6E56CF]">
+          <span class="text-sm">⚗</span>
+          <span>Experimentation</span>
+        </div>
+        
+        <h3 class="font-sans text-3xl sm:text-4xl font-bold tracking-tight text-[#151E3D] dark:text-white">
+          Faster results, bigger impact
+        </h3>
+
+        <p class="text-base text-[#494966] dark:text-neutral-300 leading-relaxed font-normal">
+          Trusted by the world's leading data science teams, GrowthBook is built for your teams and agents to run rigorous tests at scale and learn faster.
+        </p>
+
+        <ul class="space-y-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 pt-1">
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-[#6E56CF] font-bold">✓</span>
+            <span>Both Bayesian &amp; Frequentist statistical engines</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-[#6E56CF] font-bold">✓</span>
+            <span>CUPED variance reduction for 50% faster run times</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-[#6E56CF] font-bold">✓</span>
+            <span>Warehouse-native SQL execution directly in Snowflake &amp; BigQuery</span>
+          </li>
+        </ul>
+
+        <div class="pt-2">
+          <a 
+            href="#demo" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#6E56CF] hover:bg-[#5643B8] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all transform hover:-translate-y-0.5"
+          >
+            <span>Explore Experimentation</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Mockup -->
+      <div class="lg:col-span-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] shadow-xl p-5 sm:p-6 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100 dark:border-neutral-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span class="font-bold text-neutral-900 dark:text-white font-mono text-[11px]">Experiment: Pricing Page Re-architecture</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400 font-mono text-[10px] font-bold">
+            P &lt; 0.001 (STAT SIG)
+          </span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="p-3 rounded-xl bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-neutral-800 space-y-1">
+            <div class="text-[10px] font-mono text-neutral-400">CONTROL CONVERSION</div>
+            <div class="text-xl font-bold font-mono text-neutral-900 dark:text-white">3.41%</div>
+            <div class="text-[10px] text-neutral-500">84,100 visitors</div>
+          </div>
+          <div class="p-3 rounded-xl bg-[#F6F2FD] dark:bg-[#1A1A32] border border-[#6E56CF]/30 space-y-1">
+            <div class="text-[10px] font-mono text-[#6E56CF]">TREATMENT B (+22.6% LIFT)</div>
+            <div class="text-xl font-bold font-mono text-[#6E56CF]">4.18%</div>
+            <div class="text-[10px] text-neutral-500">84,250 visitors</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-neutral-900 text-white font-mono text-xs space-y-2">
+          <div class="flex justify-between text-neutral-400 text-[10px]">
+            <span>Generated SQL (Runs in your warehouse)</span>
+            <span class="text-emerald-400">Zero data leaves Snowflake</span>
+          </div>
+          <pre class="text-[11px] text-neutral-300"><code>SELECT variation_id, COUNT(DISTINCT user_id) as n,
+       SUM(converted) as conversions,
+       growthbook.bayesian_lift(control, variation)
+FROM analytics.checkout_events;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 2: Feature Flag Management (Reverse Layout) -->
+    <div id="feature-flags" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- Left Visual Mockup -->
+      <div class="lg:col-span-7 order-2 lg:order-1 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] shadow-xl p-5 sm:p-6 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100 dark:border-neutral-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+            <span class="font-bold text-neutral-900 dark:text-white font-mono text-[11px]">Feature: new_onboarding_flow_v3</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-500/10 text-[10px] font-mono font-bold">
+            Canary Ramp: Active
+          </span>
+        </div>
+
+        <div class="space-y-3">
+          <div class="p-3.5 rounded-xl bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-neutral-800 flex items-center justify-between">
+            <div class="space-y-0.5">
+              <div class="text-xs font-bold text-neutral-900 dark:text-white">Progressive Traffic Ramp</div>
+              <div class="text-[11px] text-neutral-500">Auto-incrementing 10% → 25% → 50% over 4 hours</div>
+            </div>
+            <div class="font-mono text-base font-bold text-[#6E56CF]">50% LIVE</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-emerald-50/50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 font-bold">🛡</span>
+              <span class="font-bold text-emerald-900 dark:text-emerald-200">Automated Circuit Breaker Guardrail</span>
+            </div>
+            <span class="text-emerald-700 dark:text-emerald-300 font-mono text-[11px]">Error Rate &lt; 0.01%</span>
+          </div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-[#FAFAFA] dark:bg-[#151B2E] border border-neutral-200 dark:border-neutral-800 text-xs font-mono text-neutral-500 flex justify-between">
+          <span>Targeting Rule: user.organization_id IN ('Tier 1')</span>
+          <span class="text-[#6E56CF] font-bold">SDK Evaluation: 0.2ms</span>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="lg:col-span-5 order-1 lg:order-2 space-y-5">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider font-mono text-emerald-600">
+          <span class="text-sm">⚑</span>
+          <span>Feature Flag Management</span>
+        </div>
+        
+        <h3 class="font-sans text-3xl sm:text-4xl font-bold tracking-tight text-[#151E3D] dark:text-white">
+          Ship fast with a safety net
+        </h3>
+
+        <p class="text-base text-[#494966] dark:text-neutral-300 leading-relaxed font-normal">
+          AI coding tools let your team (and agents) ship faster than ever. With auto-rollbacks and ramp schedules with guardrails, GrowthBook ensures you can still sleep at night.
+        </p>
+
+        <ul class="space-y-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 pt-1">
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span>
+            <span>Ultra-lightweight SDKs for 24+ languages and frameworks</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span>
+            <span>Real-time instant streaming flag updates with SSE</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-emerald-600 font-bold">✓</span>
+            <span>Automated guardrail metrics that kill flags on error spikes</span>
+          </li>
+        </ul>
+
+        <div class="pt-2">
+          <a 
+            href="#demo" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#6E56CF] hover:bg-[#5643B8] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all transform hover:-translate-y-0.5"
+          >
+            <span>Explore Feature Flags</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product 3: Product Analytics -->
+    <div id="analytics" class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- Left Content -->
+      <div class="lg:col-span-5 space-y-5">
+        <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider font-mono text-blue-600">
+          <span class="text-sm">📈</span>
+          <span>Product Analytics</span>
+        </div>
+        
+        <h3 class="font-sans text-3xl sm:text-4xl font-bold tracking-tight text-[#151E3D] dark:text-white">
+          Turn data into insights for growth
+        </h3>
+
+        <p class="text-base text-[#494966] dark:text-neutral-300 leading-relaxed font-normal">
+          GrowthBook connects to all your product data, so your team can understand user behavior, track trends, and identify opportunities. Ask our AI Analyst or explore your data with your agents.
+        </p>
+
+        <ul class="space-y-2 text-xs sm:text-sm text-neutral-700 dark:text-neutral-300 pt-1">
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-blue-600 font-bold">✓</span>
+            <span>No data duplication or vendor lock-in</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-blue-600 font-bold">✓</span>
+            <span>AI Analyst answers natural language questions on your events</span>
+          </li>
+          <li class="flex items-center gap-2 font-medium">
+            <span class="text-blue-600 font-bold">✓</span>
+            <span>Built-in MCP Server for autonomous coding agents</span>
+          </li>
+        </ul>
+
+        <div class="pt-2">
+          <a 
+            href="#demo" 
+            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#6E56CF] hover:bg-[#5643B8] text-white text-xs sm:text-sm font-semibold shadow-sm transition-all transform hover:-translate-y-0.5"
+          >
+            <span>Explore Product Analytics</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual Mockup -->
+      <div class="lg:col-span-7 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#121624] border border-[#EEEEF2] dark:border-[#222B42] shadow-xl p-5 sm:p-6 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-neutral-100 dark:border-neutral-800 text-xs">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+            <span class="font-bold text-neutral-900 dark:text-white font-mono text-[11px]">Analytics: Onboarding Drop-off Diagnostics</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-purple-50 text-[#6E56CF] dark:bg-[#6E56CF]/10 text-[10px] font-mono font-bold">
+            AI Query Generated
+          </span>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-[#F8F9FA] dark:bg-[#151B2E] border border-neutral-200 dark:border-neutral-800 space-y-2 text-xs">
+          <div class="flex items-center gap-2 text-[#6E56CF] font-bold">
+            <span>✨ AI Analyst Insight:</span>
+          </div>
+          <p class="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+            "Users who enable 2FA during initial onboarding convert to paid plans at <strong>3.4x</strong> higher rates, but 18% abandon when SMS verification takes &gt; 15s. Suggested experiment: Passkey biometric login."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-2 text-center font-mono">
+          <div class="p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200 dark:border-neutral-800">
+            <div class="text-[10px] text-neutral-400">30-DAY RETENTION</div>
+            <div class="text-base font-bold text-neutral-900 dark:text-white mt-1">68.4%</div>
+          </div>
+          <div class="p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200 dark:border-neutral-800">
+            <div class="text-[10px] text-neutral-400">ACTIVATION RATE</div>
+            <div class="text-base font-bold text-emerald-600 dark:text-emerald-400 mt-1">82.1%</div>
+          </div>
+          <div class="p-3 rounded-lg bg-neutral-50 dark:bg-neutral-800/40 border border-neutral-200 dark:border-neutral-800">
+            <div class="text-[10px] text-neutral-400">COST PER EVENT</div>
+            <div class="text-base font-bold text-[#6E56CF] mt-1">$0.000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

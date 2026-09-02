@@ -1,0 +1,200 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section id="calculator" class="py-24 border-t border-subtle-stroke relative overflow-hidden bg-background">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider border border-emerald-500/20 font-mono">
+        <Icon name="bar-chart" class="w-3.5 h-3.5" />
+        <span>Enterprise ROI Modeler</span>
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        Calculate your enterprise ROI in seconds.
+      </h2>
+
+      <p class="text-base sm:text-lg text-secondary-fg leading-relaxed">
+        See how much time, operational overhead, and fragmented SaaS subscription costs your revenue organization can eliminate with New-Relay.
+      </p>
+    </div>
+
+    <!-- Interactive Calculator Card -->
+    <div class="max-w-5xl mx-auto rounded-2xl enterprise-card p-6 sm:p-10 border border-emerald-500/20 shadow-attio-5">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Input Sliders (6 cols) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Slider 1: Sales / Support Reps -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-foreground">Revenue & Support Team Size</span>
+              <span id="reps-display" class="font-mono text-brand-400 font-bold text-base">25 Reps</span>
+            </div>
+            <input 
+              id="reps-slider" 
+              type="range" 
+              min="5" 
+              max="150" 
+              value="25" 
+              step="5"
+              class="w-full h-2 bg-secondary-bg rounded-lg appearance-none cursor-pointer accent-brand-500"
+            />
+            <div class="flex justify-between text-[10px] text-caption-fg font-mono">
+              <span>5 Reps</span>
+              <span>75 Reps</span>
+              <span>150+ Reps</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Monthly Inbound Messages -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-foreground">Monthly Inbound Volume</span>
+              <span id="volume-display" class="font-mono text-purple-400 font-bold text-base">15,000 / mo</span>
+            </div>
+            <input 
+              id="volume-slider" 
+              type="range" 
+              min="1000" 
+              max="80000" 
+              value="15000" 
+              step="1000"
+              class="w-full h-2 bg-secondary-bg rounded-lg appearance-none cursor-pointer accent-purple-500"
+            />
+            <div class="flex justify-between text-[10px] text-caption-fg font-mono">
+              <span>1,000</span>
+              <span>40,000</span>
+              <span>80,000+</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Average Contract Value (ACV) -->
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-sm font-semibold">
+              <span class="text-foreground">Average Deal Value (ACV)</span>
+              <span id="acv-display" class="font-mono text-emerald-400 font-bold text-base">$25,000</span>
+            </div>
+            <input 
+              id="acv-slider" 
+              type="range" 
+              min="5000" 
+              max="100000" 
+              value="25000" 
+              step="5000"
+              class="w-full h-2 bg-secondary-bg rounded-lg appearance-none cursor-pointer accent-emerald-500"
+            />
+            <div class="flex justify-between text-[10px] text-caption-fg font-mono">
+              <span>$5,000</span>
+              <span>$50,000</span>
+              <span>$100,000+</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Real-Time Calculated ROI Results (6 cols) -->
+        <div class="lg:col-span-6 rounded-2xl bg-secondary-bg/90 border border-emerald-500/30 p-6 space-y-6">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-subtle-stroke text-xs font-mono">
+            <span class="text-caption-fg uppercase">Projected Annual Return</span>
+            <span class="text-emerald-400 font-bold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              99.4% Model Confidence
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Output 1: Annual Cost Savings -->
+            <div class="p-4 rounded-xl bg-surface border border-subtle-stroke space-y-1">
+              <div class="text-[11px] text-caption-fg font-mono">Annual SaaS Savings</div>
+              <div id="savings-val" class="text-2xl sm:text-3xl font-display font-bold text-emerald-400 font-mono">
+                $43,200
+              </div>
+              <div class="text-[10px] text-caption-fg">vs Fragmented Stacks</div>
+            </div>
+
+            <!-- Output 2: Hours Saved -->
+            <div class="p-4 rounded-xl bg-surface border border-subtle-stroke space-y-1">
+              <div class="text-[11px] text-caption-fg font-mono">Hours Saved / mo</div>
+              <div id="hours-val" class="text-2xl sm:text-3xl font-display font-bold text-brand-400 font-mono">
+                380 hrs
+              </div>
+              <div class="text-[10px] text-caption-fg">Via Captain AI triage</div>
+            </div>
+
+            <!-- Output 3: Pipeline Acceleration -->
+            <div class="p-4 rounded-xl bg-surface border border-subtle-stroke space-y-1">
+              <div class="text-[11px] text-caption-fg font-mono">Pipeline Accelerated</div>
+              <div id="pipeline-val" class="text-2xl sm:text-3xl font-display font-bold text-purple-400 font-mono">
+                $375,000
+              </div>
+              <div class="text-[10px] text-caption-fg">Via sub-10s response</div>
+            </div>
+
+            <!-- Output 4: Speed Multiplier -->
+            <div class="p-4 rounded-xl bg-surface border border-subtle-stroke space-y-1">
+              <div class="text-[11px] text-caption-fg font-mono">Speed-to-Lead Factor</div>
+              <div class="text-2xl sm:text-3xl font-display font-bold text-amber-400 font-mono">
+                4.8x
+              </div>
+              <div class="text-[10px] text-caption-fg">Instant lead conversion</div>
+            </div>
+          </div>
+
+          <a href="#demo" class="button-primary w-full justify-center shadow-attio-3 text-sm font-semibold">
+            <span>Lock in Enterprise Plan & ROI</span>
+            <Icon name="arrow-right" class="w-4 h-4 ml-1.5" />
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const repsSlider = document.getElementById('reps-slider') as HTMLInputElement | null;
+  const volumeSlider = document.getElementById('volume-slider') as HTMLInputElement | null;
+  const acvSlider = document.getElementById('acv-slider') as HTMLInputElement | null;
+
+  const repsDisplay = document.getElementById('reps-display');
+  const volumeDisplay = document.getElementById('volume-display');
+  const acvDisplay = document.getElementById('acv-display');
+
+  const savingsVal = document.getElementById('savings-val');
+  const hoursVal = document.getElementById('hours-val');
+  const pipelineVal = document.getElementById('pipeline-val');
+
+  function calculateROI() {
+    if (!repsSlider || !volumeSlider || !acvSlider) return;
+
+    const reps = parseInt(repsSlider.value);
+    const volume = parseInt(volumeSlider.value);
+    const acv = parseInt(acvSlider.value);
+
+    if (repsDisplay) repsDisplay.textContent = `${reps} Reps`;
+    if (volumeDisplay) volumeDisplay.textContent = `${volume.toLocaleString()} / mo`;
+    if (acvDisplay) acvDisplay.textContent = `$${acv.toLocaleString()}`;
+
+    // Calculation formulas
+    const annualSavings = Math.round(reps * 1200 + (volume / 1000) * 880);
+    const hoursSaved = Math.round((volume * 0.45) / 18);
+    const pipelineAccelerated = Math.round((volume * 0.02) * (acv * 0.25));
+
+    if (savingsVal) savingsVal.textContent = `$${annualSavings.toLocaleString()}`;
+    if (hoursVal) hoursVal.textContent = `${hoursSaved.toLocaleString()} hrs`;
+    if (pipelineVal) pipelineVal.textContent = `$${pipelineAccelerated.toLocaleString()}`;
+  }
+
+  if (repsSlider && volumeSlider && acvSlider) {
+    repsSlider.addEventListener('input', calculateROI);
+    volumeSlider.addEventListener('input', calculateROI);
+    acvSlider.addEventListener('input', calculateROI);
+  }
+</script>

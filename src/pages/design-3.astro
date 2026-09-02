@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GrowthBookBanner from '../components/design3/GrowthBookBanner.astro';
+import GrowthBookHeader from '../components/design3/GrowthBookHeader.astro';
+import GrowthBookHero from '../components/design3/GrowthBookHero.astro';
+import GrowthBookLogos from '../components/design3/GrowthBookLogos.astro';
+import GrowthBookProducts from '../components/design3/GrowthBookProducts.astro';
+import GrowthBookCaseStudies from '../components/design3/GrowthBookCaseStudies.astro';
+import GrowthBookStats from '../components/design3/GrowthBookStats.astro';
+import GrowthBookIntegrations from '../components/design3/GrowthBookIntegrations.astro';
+import GrowthBookPersonaTabs from '../components/design3/GrowthBookPersonaTabs.astro';
+import GrowthBookFooter from '../components/design3/GrowthBookFooter.astro';
+---
+
+<Layout 
+  title="GrowthBook: Warehouse-Native Experimentation & Feature Flagging Platform (Design 3 Replica)"
+  description="The warehouse-native platform used by modern product teams for experimentation, feature flags, and product analytics. Replicated on Design 3 with custom typography and components."
+>
+  <!-- GrowthBook Top Banner -->
+  <GrowthBookBanner />
+
+  <!-- GrowthBook Custom Header & Navigation -->
+  <GrowthBookHeader />
+  
+  <main class="min-h-screen bg-[#FAFAFA] dark:bg-[#090812] text-[#151E3D] dark:text-neutral-100 font-sans selection:bg-[#6E56CF]/20 selection:text-[#6E56CF]">
+    <!-- Hero with 3-tab interactive software canvas -->
+    <GrowthBookHero />
+
+    <!-- Continuous Logo Marquee -->
+    <GrowthBookLogos />
+
+    <!-- 3 Core 2-Column Product Showcases -->
+    <GrowthBookProducts />
+
+    <!-- Customer Case Studies Grid -->
+    <GrowthBookCaseStudies />
+
+    <!-- High-Impact Stats Ribbon & Cloud vs Self-Hosted Cards -->
+    <GrowthBookStats />
+
+    <!-- Tech Stack & Warehouse Integrations -->
+    <GrowthBookIntegrations />
+
+    <!-- Persona-Specific Bento Tabs -->
+    <GrowthBookPersonaTabs />
+  </main>
+
+  <!-- GrowthBook Bottom CTA & Multi-Column Footer -->
+  <GrowthBookFooter />
+</Layout>

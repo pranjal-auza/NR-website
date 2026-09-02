@@ -1,0 +1,91 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section class="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-background">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Top Metadata Header Strip -->
+    <div class="flex items-center justify-between pb-4 mb-12 border-b border-subtle-stroke text-xs font-mono text-caption-fg">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span class="text-foreground font-semibold">CONCEPT 3: EDITORIAL MINIMALIST</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4">
+        <span>ARCH-SPEC: V2.8-SWISS</span>
+        <span>INFRASTRUCTURE GRADE</span>
+      </div>
+    </div>
+
+    <!-- Editorial Main Headline & Framing -->
+    <div class="max-w-5xl space-y-8">
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface border border-subtle-stroke text-xs font-mono font-medium text-foreground">
+        <span>NEW-RELAY ENTERPRISE ARCHITECTURE</span>
+      </div>
+
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-normal tracking-tight leading-[1.08] text-foreground">
+        The infrastructure for <span class="italic font-normal">autonomous enterprise</span> conversations.
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pt-4 items-start">
+        <div class="md:col-span-7">
+          <p class="text-lg sm:text-xl text-secondary-fg leading-relaxed">
+            New-Relay provides the carrier-grade backbone that unites WhatsApp, SMS, Live Chat, and Email into a single deterministic AI revenue operating system. Built for organizations where latency, compliance, and accuracy are paramount.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-8">
+            <a href="#demo" class="button-primary text-base px-8 py-3.5 rounded-lg shadow-attio-3 w-full sm:w-auto font-medium">
+              <span>Request Enterprise Access</span>
+              <Icon name="arrow-right" class="w-4 h-4 ml-2" />
+            </a>
+
+            <a href="#architecture" class="button-outline text-base px-8 py-3.5 rounded-lg w-full sm:w-auto font-medium">
+              <span>View System Blueprint</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side Key Telemetry Specs -->
+        <div class="md:col-span-5 p-6 rounded-xl border border-subtle-stroke bg-secondary-bg/40 space-y-4 font-mono text-xs">
+          <div class="text-[11px] font-semibold text-caption-fg uppercase tracking-wider pb-2 border-b border-subtle-stroke">
+            System Specifications
+          </div>
+          
+          <div class="flex justify-between items-center py-1">
+            <span class="text-caption-fg">Uptime SLA:</span>
+            <span class="font-bold text-foreground">99.99% Financially Backed</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1">
+            <span class="text-caption-fg">Message Latency:</span>
+            <span class="font-bold text-emerald-400">&lt; 12ms Global Routing</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1">
+            <span class="text-caption-fg">Compliance Frameworks:</span>
+            <span class="font-bold text-foreground">SOC 2 Type II, HIPAA, GDPR</span>
+          </div>
+
+          <div class="flex justify-between items-center py-1">
+            <span class="text-caption-fg">LLM Privacy Guarantee:</span>
+            <span class="font-bold text-brand-400">Zero Retention & Isolation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Editorial Client Line -->
+    <div class="mt-20 pt-8 border-t border-subtle-stroke grid grid-cols-2 md:grid-cols-6 gap-6 items-center text-center font-mono text-xs text-caption-fg">
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">LINEAR</span>
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">MODAL</span>
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">GRANOLA</span>
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">RAILWAY</span>
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">TASKRABBIT</span>
+      <span class="font-display font-bold text-sm tracking-tight text-foreground">STRIPE</span>
+    </div>
+
+  </div>
+</section>

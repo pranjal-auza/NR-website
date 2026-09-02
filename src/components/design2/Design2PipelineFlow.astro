@@ -1,0 +1,159 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section class="py-24 border-t border-subtle-stroke relative overflow-hidden bg-secondary-bg/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold uppercase tracking-wider border border-indigo-500/20 font-mono">
+        <Icon name="activity" class="w-3.5 h-3.5" />
+        <span>End-to-End Visual Architecture</span>
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+        How autonomous revenue flows through New-Relay.
+      </h2>
+
+      <p class="text-base sm:text-lg text-secondary-fg leading-relaxed">
+        Sub-50ms execution from the moment a prospect messages on WhatsApp to real-time CRM deal attribution and automated video review capture.
+      </p>
+    </div>
+
+    <!-- Interactive Node Pipeline Flowchart -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 max-w-6xl mx-auto relative">
+      
+      <!-- Node 1: Omnichannel Ingest -->
+      <div class="pipeline-node active p-5 rounded-2xl enterprise-card border-indigo-500/40 space-y-3 cursor-pointer hover:border-indigo-500 transition-all text-center relative" data-step="1">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20">
+          <Icon name="inbox" class="w-5 h-5" />
+        </div>
+        <div>
+          <div class="text-xs font-mono font-semibold text-caption-fg">STEP 01</div>
+          <div class="text-sm font-bold text-foreground mt-0.5">Omnichannel Ingest</div>
+        </div>
+        <p class="text-[11px] text-secondary-fg">WhatsApp, SMS, Live Chat & Email unified in &lt;10ms.</p>
+        <div class="pt-2 text-[10px] font-mono text-emerald-400">Latency: 8ms ✓</div>
+      </div>
+
+      <!-- Node 2: Captain AI Guardrails -->
+      <div class="pipeline-node p-5 rounded-2xl enterprise-card space-y-3 cursor-pointer hover:border-purple-500 transition-all text-center relative" data-step="2">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center border border-purple-500/20">
+          <Icon name="bot" class="w-5 h-5" />
+        </div>
+        <div>
+          <div class="text-xs font-mono font-semibold text-caption-fg">STEP 02</div>
+          <div class="text-sm font-bold text-foreground mt-0.5">Captain AI Inference</div>
+        </div>
+        <p class="text-[11px] text-secondary-fg">RAG context search with 99.6% deterministic guardrails.</p>
+        <div class="pt-2 text-[10px] font-mono text-purple-400">Confidence: 99.8%</div>
+      </div>
+
+      <!-- Node 3: Security & Isolation -->
+      <div class="pipeline-node p-5 rounded-2xl enterprise-card space-y-3 cursor-pointer hover:border-emerald-500 transition-all text-center relative" data-step="3">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+          <Icon name="shield" class="w-5 h-5" />
+        </div>
+        <div>
+          <div class="text-xs font-mono font-semibold text-caption-fg">STEP 03</div>
+          <div class="text-sm font-bold text-foreground mt-0.5">Security Enclave</div>
+        </div>
+        <p class="text-[11px] text-secondary-fg">Zero LLM Data Retention & AES-256 token encryption.</p>
+        <div class="pt-2 text-[10px] font-mono text-emerald-400">SOC 2 Verified</div>
+      </div>
+
+      <!-- Node 4: CRM Deal Velocity -->
+      <div class="pipeline-node p-5 rounded-2xl enterprise-card space-y-3 cursor-pointer hover:border-amber-500 transition-all text-center relative" data-step="4">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+          <Icon name="kanban" class="w-5 h-5" />
+        </div>
+        <div>
+          <div class="text-xs font-mono font-semibold text-caption-fg">STEP 04</div>
+          <div class="text-sm font-bold text-foreground mt-0.5">CRM Pipeline Sync</div>
+        </div>
+        <p class="text-[11px] text-secondary-fg">Auto-create deals, update stages, and alert assigned rep.</p>
+        <div class="pt-2 text-[10px] font-mono text-amber-400">ARR Auto-Tagged</div>
+      </div>
+
+      <!-- Node 5: Video Proof Outreach -->
+      <div class="pipeline-node p-5 rounded-2xl enterprise-card space-y-3 cursor-pointer hover:border-pink-500 transition-all text-center relative" data-step="5">
+        <div class="w-10 h-10 mx-auto rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center border border-pink-500/20">
+          <Icon name="video" class="w-5 h-5" />
+        </div>
+        <div>
+          <div class="text-xs font-mono font-semibold text-caption-fg">STEP 05</div>
+          <div class="text-sm font-bold text-foreground mt-0.5">60s Video Proof</div>
+        </div>
+        <p class="text-[11px] text-secondary-fg">Trigger WhatsApp video review link upon closed deal.</p>
+        <div class="pt-2 text-[10px] font-mono text-pink-400">4.8x Conversion</div>
+      </div>
+
+    </div>
+
+    <!-- Node Telemetry Inspector Box -->
+    <div class="mt-8 max-w-4xl mx-auto rounded-2xl enterprise-card p-5 sm:p-6 border border-indigo-500/20 bg-gray-950/80">
+      <div class="flex items-center justify-between pb-3 border-b border-gray-800 text-xs font-mono">
+        <span class="text-indigo-400 font-bold" id="node-inspector-title">Active Node Telemetry: Step 1 (Omnichannel Ingest Gateway)</span>
+        <span class="text-emerald-400">Health: 100% OK</span>
+      </div>
+      <div class="mt-3 font-mono text-xs text-gray-300 bg-gray-900/60 p-3.5 rounded-xl overflow-x-auto" id="node-inspector-code">
+{`{
+  "event_id": "evt_99218204",
+  "channel": "whatsapp_business_direct",
+  "carrier": "Meta_Cloud_API_Direct",
+  "latency_ms": 8.4,
+  "payload": {
+    "sender": "+1 (415) 890-2341",
+    "intent": "enterprise_pricing_inquiry",
+    "priority": "P0_HIGH_VALUE"
+  }
+}`}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const nodes = document.querySelectorAll<HTMLElement>('.pipeline-node');
+  const titleEl = document.getElementById('node-inspector-title');
+  const codeEl = document.getElementById('node-inspector-code');
+
+  const nodeTelemetry: Record<string, { title: string; json: string }> = {
+    "1": {
+      title: "Active Node Telemetry: Step 1 (Omnichannel Ingest Gateway)",
+      json: `{\n  "event_id": "evt_99218204",\n  "channel": "whatsapp_business_direct",\n  "carrier": "Meta_Cloud_API_Direct",\n  "latency_ms": 8.4,\n  "payload": {\n    "sender": "+1 (415) 890-2341",\n    "intent": "enterprise_pricing_inquiry",\n    "priority": "P0_HIGH_VALUE"\n  }\n}`
+    },
+    "2": {
+      title: "Active Node Telemetry: Step 2 (Captain AI Inference & Guardrails)",
+      json: `{\n  "inference_id": "inf_778102",\n  "rag_vectors_matched": 12,\n  "guardrail_confidence": 0.998,\n  "deterministic_check": "PASS",\n  "action_suggested": "create_deal_and_reply"\n}`
+    },
+    "3": {
+      title: "Active Node Telemetry: Step 3 (Security Enclave & Zero-Retention)",
+      json: `{\n  "tenant_id": "acme_enterprise_vpc",\n  "encryption": "AES_256_GCM_BYOK",\n  "zero_data_retention": true,\n  "compliance_frameworks": ["SOC2_TYPE_II", "HIPAA_BAA", "GDPR"]\n}`
+    },
+    "4": {
+      title: "Active Node Telemetry: Step 4 (CRM Pipeline Attribution)",
+      json: `{\n  "deal_id": "deal_9418",\n  "deal_name": "CloudScale Bio Enterprise Plan",\n  "amount_usd": 75000,\n  "stage": "Qualified_Demo_Scheduled",\n  "assigned_rep": "Alex Rivers"\n}`
+    },
+    "5": {
+      title: "Active Node Telemetry: Step 5 (60s Video Testimonial Trigger)",
+      json: `{\n  "outreach_id": "vid_req_441",\n  "trigger_event": "Contract_Signed",\n  "channel": "WhatsApp_Direct_Link",\n  "expected_conversion": "78% completion rate"\n}`
+    }
+  };
+
+  nodes.forEach(node => {
+    node.addEventListener('click', () => {
+      nodes.forEach(n => n.classList.remove('border-indigo-500', 'border-2'));
+      node.classList.add('border-indigo-500', 'border-2');
+
+      const step = node.getAttribute('data-step') || '1';
+      const data = nodeTelemetry[step];
+      if (titleEl && codeEl && data) {
+        titleEl.textContent = data.title;
+        codeEl.textContent = data.json;
+      }
+    });
+  });
+</script>

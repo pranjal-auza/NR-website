@@ -1,0 +1,121 @@
+---
+import Icon from './icons/Icon.astro';
+
+const codeSnippet = `import { NewRelayClient } from '@newrelay/sdk';
+
+// Initialize client with Enterprise Universal Context
+const relay = new NewRelayClient({
+  apiKey: process.env.NEW_RELAY_API_KEY,
+  environment: 'production',
+});
+
+// 1. Trigger autonomous Captain AI resolution on high-intent lead
+const session = await relay.captain.resolveLead({
+  channel: 'whatsapp',
+  senderPhone: '+1 (415) 890-2341',
+  message: 'Looking for 120-seat enterprise plan, custom RAG vector ingestion, and SOC2 report',
+  autoCreateDeal: true,
+  guardrailConfidenceThreshold: 0.95,
+});
+
+// 2. Query deal pipeline attribution & CRM telemetry
+const deal = await relay.deals.get(session.dealId);
+console.log(\`✓ Created Opportunity: \${deal.name} ($75,000 ARR) • Assigned: Alex R.\`);`;
+---
+
+<section id="developers" class="py-24 border-t border-subtle-stroke relative overflow-hidden bg-secondary-bg/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Copy & Value Proposition -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/10 text-pink-400 text-xs font-semibold uppercase tracking-wider border border-pink-500/20 font-mono">
+          <Icon name="code" class="w-3.5 h-3.5" />
+          <span>Enterprise Developer Platform</span>
+        </div>
+
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+          SDK. API. Webhooks. Build anything on New-Relay.
+        </h2>
+
+        <p class="text-base text-secondary-fg leading-relaxed">
+          Full programmatic control over conversations, customer memory, and deal stages. Connect custom internal tools, sync proprietary billing databases, or empower LLM agents via our native MCP server.
+        </p>
+
+        <div class="space-y-3 pt-2">
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5"><Icon name="check" class="w-3.5 h-3.5" /></div>
+            <div>
+              <div class="text-sm font-semibold text-foreground">TypeScript & Python SDKs</div>
+              <div class="text-xs text-secondary-fg">Fully typed clients with automatic retries and exponential backoff.</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5"><Icon name="check" class="w-3.5 h-3.5" /></div>
+            <div>
+              <div class="text-sm font-semibold text-foreground">Model Context Protocol (MCP) Server</div>
+              <div class="text-xs text-secondary-fg">Directly integrate your CRM and inboxes into Cursor and Claude Desktop.</div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="p-1 rounded bg-brand-500/20 text-brand-400 mt-0.5"><Icon name="check" class="w-3.5 h-3.5" /></div>
+            <div>
+              <div class="text-sm font-semibold text-foreground">Real-time Webhook Stream</div>
+              <div class="text-xs text-secondary-fg">Sub-50ms event delivery for messages, deals, and AI triage logs.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="#demo" class="button-outline text-sm inline-flex items-center gap-1.5">
+            <span>Explore Developer Documentation</span>
+            <Icon name="arrow-right" class="w-4 h-4" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Code Sandbox Mockup -->
+      <div class="lg:col-span-7">
+        <div class="rounded-2xl enterprise-card overflow-hidden shadow-attio-5">
+          
+          <!-- Code Window Tab Header -->
+          <div class="flex items-center justify-between px-4 py-3 bg-secondary-bg/80 border-b border-subtle-stroke text-xs">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-1 rounded-md bg-surface font-mono font-medium text-brand-400 border border-subtle-stroke">
+                enterprise-sdk.ts
+              </span>
+              <span class="px-2.5 py-1 rounded-md text-caption-fg font-mono hover:text-foreground cursor-pointer">
+                mcp-config.json
+              </span>
+              <span class="px-2.5 py-1 rounded-md text-caption-fg font-mono hover:text-foreground cursor-pointer">
+                webhook-stream.ts
+              </span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span class="text-[11px] font-mono text-caption-fg">npm: @newrelay/sdk</span>
+            </div>
+          </div>
+
+          <!-- Code Snippet Body -->
+          <div class="p-5 font-mono text-xs sm:text-[13px] leading-relaxed text-secondary-fg bg-gray-950/90 overflow-x-auto">
+            <pre class="text-gray-300"><code>{codeSnippet}</code></pre>
+          </div>
+
+          <!-- Code Window Bottom Footer -->
+          <div class="px-4 py-2.5 bg-secondary-bg/60 border-t border-subtle-stroke flex items-center justify-between text-xs text-caption-fg">
+            <span class="font-mono text-[11px]">Latency: 14ms • Carrier Delivery: 99.99%</span>
+            <span class="text-brand-400 font-mono text-[11px]">TypeScript v5.7 Ready</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

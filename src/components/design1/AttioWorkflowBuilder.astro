@@ -1,0 +1,80 @@
+---
+import Icon from '../icons/Icon.astro';
+---
+
+<section id="workflows" class="py-24 border-t border-[#E5E7EB] dark:border-[#1E2636] bg-white dark:bg-[#0D1117] transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header in Attio Two-Tone Style -->
+    <div class="max-w-3xl mb-16 space-y-4">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold uppercase tracking-wider font-mono">
+        <span>Visual Workflow Engine</span>
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-950 dark:text-white">
+        Orchestrate revenue agents with workflows. <br />
+        <span class="text-neutral-400 dark:text-neutral-500 font-normal">Automate complex multi-step pipelines with zero custom code.</span>
+      </h2>
+    </div>
+
+    <!-- Interactive Visual Node Canvas (Attio Style) -->
+    <div class="max-w-5xl mx-auto rounded-3xl bg-[#F8F9FA] dark:bg-[#0A0D12] border border-[#E5E7EB] dark:border-[#1E2636] p-6 sm:p-10 shadow-lg relative overflow-hidden">
+      
+      <!-- Canvas Header Bar -->
+      <div class="flex items-center justify-between pb-6 border-b border-[#E5E7EB] dark:border-[#1E2636] text-xs font-mono">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="text-neutral-950 dark:text-white font-bold">Workflow: Inbound Enterprise Lead Fast-Track</span>
+        </div>
+        <span class="text-blue-600 dark:text-blue-400 font-semibold">Active: 1,420 Executions Today</span>
+      </div>
+
+      <!-- Node Chain -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-8 relative">
+        
+        <!-- Node 1: Trigger -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#12161F] border border-[#E5E7EB] dark:border-[#222938] shadow-sm space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-500/10 text-blue-600 text-[10px] font-mono font-bold">TRIGGER</span>
+            <Icon name="inbox" class="w-3.5 h-3.5 text-blue-500" />
+          </div>
+          <div class="text-xs font-bold text-neutral-950 dark:text-white">Inbound Lead Message</div>
+          <p class="text-[11px] text-neutral-500">WhatsApp or SMS inquiry received at 2am.</p>
+        </div>
+
+        <!-- Node 2: AI Qualification -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#12161F] border border-[#E5E7EB] dark:border-[#222938] shadow-sm space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-purple-50 dark:bg-purple-500/10 text-purple-600 text-[10px] font-mono font-bold">AI EVALUATE</span>
+            <Icon name="bot" class="w-3.5 h-3.5 text-purple-500" />
+          </div>
+          <div class="text-xs font-bold text-neutral-950 dark:text-white">Captain AI Triage</div>
+          <p class="text-[11px] text-neutral-500">Qualify budget &gt; $25k &amp; match ICP domain.</p>
+        </div>
+
+        <!-- Node 3: Opportunity Creation -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#12161F] border border-[#E5E7EB] dark:border-[#222938] shadow-sm space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 text-[10px] font-mono font-bold">CRM ACTION</span>
+            <Icon name="kanban" class="w-3.5 h-3.5 text-emerald-500" />
+          </div>
+          <div class="text-xs font-bold text-neutral-950 dark:text-white">Create CRM Deal</div>
+          <p class="text-[11px] text-neutral-500">Auto-create $75k deal in Salesforce &amp; alert AE.</p>
+        </div>
+
+        <!-- Node 4: Review Trigger -->
+        <div class="p-5 rounded-2xl bg-white dark:bg-[#12161F] border border-[#E5E7EB] dark:border-[#222938] shadow-sm space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-500/10 text-amber-600 text-[10px] font-mono font-bold">AUTOMATION</span>
+            <Icon name="video" class="w-3.5 h-3.5 text-amber-500" />
+          </div>
+          <div class="text-xs font-bold text-neutral-950 dark:text-white">60s Video Request</div>
+          <p class="text-[11px] text-neutral-500">Trigger WhatsApp review link on contract close.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
