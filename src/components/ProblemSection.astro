@@ -1,0 +1,109 @@
+---
+// The Problem Section: Centered Editorial + Visual Composition
+---
+
+<section class="py-20 md:py-32 bg-[#FCFCFA] relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <!-- 1. Centered Eyebrow & Headline -->
+    <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-100 text-xs font-bold tracking-wider text-rose-600 uppercase mb-4">
+      <span>The Problem</span>
+    </div>
+
+    <h2 class="text-4xl sm:text-6xl font-extrabold text-[#17172A] tracking-[-0.035em] leading-[1.05] font-['Plus_Jakarta_Sans'] max-w-3xl mx-auto">
+      Your customers are everywhere. <br class="hidden sm:inline" />
+      Conversations <span class="text-rose-500">get lost.</span>
+    </h2>
+
+    <p class="text-base sm:text-lg text-[#656579] max-w-2xl mx-auto leading-relaxed mt-5 mb-10">
+      When your team switches between 6 disconnected apps, response times drag, leads slip through the cracks, and critical customer context disappears.
+    </p>
+
+    <!-- 2. Visual Chaos to Order Showcase -->
+    <div class="relative max-w-4xl mx-auto min-h-[360px] sm:min-h-[420px] rounded-[24px] bg-[#FFF0F6]/40 border border-rose-100/60 p-6 sm:p-10 flex items-center justify-center overflow-hidden">
+      
+      <!-- Handwritten Annotation on Top Right -->
+      <div class="absolute top-4 right-6 sm:right-12 z-20 hidden sm:block text-[#17172A]">
+        <div class="font-handwriting text-2xl sm:text-3xl font-bold leading-tight transform rotate-3 text-rose-600">
+          Too many tools.<br />Too much chaos.
+        </div>
+        <svg class="w-12 h-12 text-rose-400 ml-6 transform -rotate-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M12 10 C 35 15, 45 35, 30 50 M 24 45 L 30 50 L 35 44" />
+        </svg>
+      </div>
+
+      <!-- Scattered Chat Bubble 1 (Top Left) -->
+      <div class="absolute top-8 left-4 sm:left-12 z-10 p-3.5 bg-white rounded-[16px] shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-[#E9E9EF] flex items-center gap-3 transform -rotate-2 hover:rotate-0 transition-transform cursor-default">
+        <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+          <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100&auto=format&fit=crop&q=80" alt="User" class="w-full h-full object-cover" />
+        </div>
+        <div class="text-left">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+            <span class="text-xs font-bold text-[#17172A]">WhatsApp Lead</span>
+          </div>
+          <div class="text-xs font-semibold text-[#17172A] mt-0.5">Hi, is this plan available?</div>
+          <div class="text-[10px] text-[#9696A8]">Waiting 42 mins</div>
+        </div>
+      </div>
+
+      <!-- Scattered Chat Bubble 2 (Top Right/Center) -->
+      <div class="absolute top-14 right-20 sm:right-32 z-10 p-3.5 bg-white rounded-[16px] shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-[#E9E9EF] flex items-center gap-3 transform rotate-3 hover:rotate-0 transition-transform cursor-default">
+        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#FD1D1D] to-[#833AB4] flex items-center justify-center text-white text-xs font-bold shadow-sm">
+          📸
+        </div>
+        <div class="text-left">
+          <div class="flex items-center gap-1.5">
+            <span class="text-xs font-bold text-[#17172A]">Instagram DM</span>
+          </div>
+          <div class="text-xs font-semibold text-[#17172A] mt-0.5">Can you share the pricing?</div>
+          <div class="text-[10px] text-rose-500 font-medium">Unassigned</div>
+        </div>
+      </div>
+
+      <!-- Central Warning Badge -->
+      <div class="relative z-10 bg-white border border-rose-200/80 rounded-[20px] p-6 sm:p-8 shadow-[0_12px_35px_rgba(244,63,94,0.08)] max-w-sm text-center">
+        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mx-auto mb-3 text-xl font-bold">
+          ⚡
+        </div>
+        <h3 class="text-lg font-bold text-[#17172A]">6 Fragmented Inboxes</h3>
+        <p class="text-xs text-[#656579] mt-1.5 leading-relaxed">
+          Repetitive context switching leads to 4x slower replies and lost revenue.
+        </p>
+      </div>
+
+      <!-- Scattered Chat Bubble 3 (Bottom Left) -->
+      <div class="absolute bottom-6 left-6 sm:left-16 z-10 p-3.5 bg-white rounded-[16px] shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-[#E9E9EF] flex items-center gap-3 transform rotate-1 hover:rotate-0 transition-transform cursor-default">
+        <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="User" class="w-full h-full object-cover" />
+        </div>
+        <div class="text-left">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#0066FF]"></span>
+            <span class="text-xs font-bold text-[#17172A]">Email Ticket #849</span>
+          </div>
+          <div class="text-xs font-semibold text-[#17172A] mt-0.5">Where is my order dispatch?</div>
+          <div class="text-[10px] text-rose-500 font-medium">Overdue SLA</div>
+        </div>
+      </div>
+
+      <!-- Scattered Chat Bubble 4 (Bottom Right) -->
+      <div class="absolute bottom-8 right-6 sm:right-16 z-10 p-3.5 bg-white rounded-[16px] shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-[#E9E9EF] flex items-center gap-3 transform -rotate-2 hover:rotate-0 transition-transform cursor-default">
+        <div class="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 border border-slate-100">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" alt="User" class="w-full h-full object-cover" />
+        </div>
+        <div class="text-left">
+          <div class="flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-[#00C853]"></span>
+            <span class="text-xs font-bold text-[#17172A]">Missed Call</span>
+          </div>
+          <div class="text-xs font-semibold text-[#17172A] mt-0.5">Enterprise Demo Inquiry</div>
+          <div class="text-[10px] text-[#9696A8]">3 mins ago</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

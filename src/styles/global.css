@@ -1,196 +1,200 @@
-@import './theme.css';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@layer base {
-  * {
-    border-color: var(--color-subtle-stroke);
-    box-sizing: border-box;
-  }
+:root {
+  /* Surface & Background */
+  --bg-primary: #FCFCFA;
+  --bg-surface: #FFFFFF;
   
-  html {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: var(--color-primary-foreground);
-    background-color: var(--color-primary-background);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-    letter-spacing: -0.011em;
-  }
+  /* Pastels (Use 1 dominant per section) */
+  --pastel-lavender: #F2EEFF;
+  --pastel-blue: #EEF5FF;
+  --pastel-pink: #FFF0F6;
+  --pastel-mint: #EEFAF5;
+  --pastel-yellow: #FFF9E8;
+  --pastel-peach: #FFF1E8;
 
-  body {
-    background-color: var(--color-primary-background);
-    color: var(--color-primary-foreground);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+  /* Text Hierarchy */
+  --text-primary: #17172A;
+  --text-secondary: #656579;
+  --text-muted: #9696A8;
+  --accent-brand: #635BFF;
+
+  /* Radii Hierarchy */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-hand: 'Caveat', cursive, sans-serif;
 }
 
-/* Glassmorphism & Enterprise Visual Accents */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--color-subtle-stroke);
+* {
+  box-sizing: border-box;
 }
 
-.dark .glass-panel {
-  background: rgba(13, 15, 18, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+html {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* High-spec Enterprise Card */
-.enterprise-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--color-subtle-stroke);
-  box-shadow: var(--shadow-attio-3);
-  transition: all 220ms var(--ease-out-cubic);
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  overflow-x: hidden;
 }
 
-.dark .enterprise-card {
-  background: linear-gradient(180deg, rgba(20, 24, 31, 0.8) 0%, rgba(13, 15, 18, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  letter-spacing: -0.035em;
+  font-weight: 800;
 }
 
-.dark .enterprise-card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.6), 0 0 20px -4px rgba(47, 104, 253, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+.font-handwriting {
+  font-family: var(--font-hand);
 }
 
-/* Attio / Linear Technical Grid Background with Soft Radial Fade */
-.bg-attio-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(120, 140, 180, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(120, 140, 180, 0.07) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 10%, #000 50%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 10%, #000 50%, transparent 100%);
+/* Accent Color Highlight */
+.text-accent {
+  color: var(--accent-brand);
 }
 
-.dark .bg-attio-grid {
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 90% 70% at 50% 10%, #000 50%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 10%, #000 50%, transparent 100%);
-}
-
-/* Ambient Lighting & Glows */
-.radial-glow-top {
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1000px;
-  height: 520px;
-  background: radial-gradient(50% 50% at 50% 40%, rgba(59, 130, 246, 0.12) 0%, rgba(99, 102, 241, 0.05) 60%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.dark .radial-glow-top {
-  background: radial-gradient(50% 50% at 50% 40%, rgba(59, 130, 246, 0.2) 0%, rgba(99, 102, 241, 0.08) 60%, transparent 100%);
-}
-
-.radial-glow-ambient {
-  position: absolute;
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(139, 92, 246, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
-  pointer-events: none;
-}
-
-/* Linear / Attio Glass Pill Badge */
-.glass-badge {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.dark .glass-badge {
-  background: rgba(18, 22, 31, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-/* Linear / Attio Canvas Card */
-.linear-canvas {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.03);
-}
-
-.dark .linear-canvas {
-  background: #0D1117;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px -5px rgba(59, 130, 246, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-weak-stroke);
-  border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-default-stroke);
-}
-
-/* Text Gradient Utilities */
-.text-gradient-hero {
-  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+.text-gradient-purple {
+  background: linear-gradient(135deg, #635BFF 0%, #7C3AED 50%, #9333EA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.light .text-gradient-hero {
-  background: linear-gradient(180deg, #0f172a 0%, #334155 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Playful SaaS Soft Cards */
+.saas-card {
+  background: #FFFFFF;
+  border: 1px solid #E9E9EF;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(30, 30, 60, 0.05);
+  transition: all 0.25s ease;
 }
 
-.text-gradient-brand {
-  background: linear-gradient(135deg, #3b74ff 0%, #709fff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.saas-card:hover {
+  box-shadow: 0 16px 40px rgba(30, 30, 60, 0.08);
+  border-color: #DCDCE6;
 }
 
-.text-gradient-enterprise {
-  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Product UI Mockup Container */
+.product-surface {
+  background: #FFFFFF;
+  border: 1px solid #E9E9EF;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(30, 30, 60, 0.08);
 }
 
-.light .text-gradient-enterprise {
-  background: linear-gradient(135deg, #0f172a 0%, #475569 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Buttons System */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 46px;
+  padding: 0 1.35rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #17172A;
+  border: 1px solid #17172A;
+  transition: all 0.2s ease;
 }
 
-/* Subtle Shimmer Animation */
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+.btn-dark:hover {
+  background-color: #24243B;
+  border-color: #24243B;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(23, 23, 42, 0.18);
 }
 
-.animate-shimmer {
-  animation: shimmer 2.5s infinite;
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 46px;
+  padding: 0 1.35rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 10px;
+  color: #17172A;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5EA;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.btn-white:hover {
+  background-color: #F8F8FA;
+  border-color: #D4D4DC;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 46px;
+  padding: 0 1.35rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #635BFF;
+  border: 1px solid #635BFF;
+  transition: all 0.2s ease;
+}
+
+.btn-accent:hover {
+  background-color: #5248FF;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(99, 91, 255, 0.35);
+}
+
+/* Subtle Pill Eyebrow */
+.eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(99, 91, 255, 0.08);
+  color: #635BFF;
+  border: 1px solid rgba(99, 91, 255, 0.15);
+  margin-bottom: 1rem;
 }

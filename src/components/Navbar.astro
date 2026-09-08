@@ -1,0 +1,175 @@
+---
+// Navbar Component — Sticky Pill Header on Scroll (30px border-radius)
+---
+
+<header id="site-header" class="sticky top-0 z-50 w-full transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 transition-all duration-300" id="header-outer-container">
+    <div 
+      id="navbar-pill" 
+      class="navbar-pill-box w-full flex flex-col justify-center transition-all duration-300"
+    >
+      <div class="flex items-center justify-between w-full h-full">
+        
+        <!-- Brand Logo -->
+        <a href="/" class="flex items-center group py-1">
+          <img src="/new-relay-logo.svg" alt="NewRelay" class="h-7 sm:h-8.5 w-auto object-contain transition-all duration-300" id="navbar-brand-logo" />
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex items-center gap-7 lg:gap-8">
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] py-2 transition-colors">
+              <span>Product</span>
+              <svg class="w-3.5 h-3.5 text-[#9696A8] group-hover:text-[#17172A] transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] py-2 transition-colors">
+              <span>Solutions</span>
+              <svg class="w-3.5 h-3.5 text-[#9696A8] group-hover:text-[#17172A] transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="relative group">
+            <button class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] py-2 transition-colors">
+              <span>Resources</span>
+              <svg class="w-3.5 h-3.5 text-[#9696A8] group-hover:text-[#17172A] transition-transform group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </div>
+
+          <a href="#pricing" class="text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] py-2 transition-colors">
+            Pricing
+          </a>
+        </nav>
+
+        <!-- Right CTAs -->
+        <div class="flex items-center gap-4 sm:gap-5">
+          <a href="#login" class="hidden sm:inline-flex text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] transition-colors">
+            Log in
+          </a>
+          
+          <a href="#start" class="btn-dark group !h-9 !px-4 !text-xs !rounded-full sm:!h-10 sm:!px-5 sm:!text-sm sm:!rounded-xl transition-all">
+            <span>Start for free</span>
+            <svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <!-- Mobile Menu Hamburger -->
+          <button id="mobile-toggle-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900" aria-label="Open mobile menu">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-nav-menu" class="hidden md:hidden py-3 mt-2 border-t border-slate-100 flex flex-col gap-2">
+        <a href="#product" class="text-sm font-medium text-slate-700 py-1.5 px-1 hover:text-purple-600">Product</a>
+        <a href="#solutions" class="text-sm font-medium text-slate-700 py-1.5 px-1 hover:text-purple-600">Solutions</a>
+        <a href="#resources" class="text-sm font-medium text-slate-700 py-1.5 px-1 hover:text-purple-600">Resources</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-700 py-1.5 px-1 hover:text-purple-600">Pricing</a>
+        <div class="pt-2 flex flex-col gap-2 border-t border-slate-100">
+          <a href="#login" class="text-sm font-semibold text-slate-700 py-1.5 text-center">Log in</a>
+          <a href="#start" class="btn-dark w-full text-center !h-9 !text-xs !rounded-full">Start for free</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Base (Unscrolled) Header State */
+  #site-header {
+    background-color: transparent;
+    padding-top: 0px;
+  }
+
+  .navbar-pill-box {
+    height: 4.75rem; /* 76px */
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: rgba(252, 252, 250, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(233, 233, 239, 0.8);
+    border-radius: 0px;
+    box-shadow: none;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Scrolled: Floating Pill Header with 30px Border Radius */
+  #site-header.is-scrolled {
+    padding-top: 0.85rem; /* 14px */
+  }
+
+  #site-header.is-scrolled #header-outer-container {
+    max-width: 64rem; /* 1024px centered pill width */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #site-header.is-scrolled .navbar-pill-box {
+    height: 3.85rem; /* 62px compact */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(23, 23, 42, 0.09);
+    border-radius: 30px; /* Exact 30px pill border radius requested */
+    box-shadow: 0 14px 34px -6px rgba(23, 23, 42, 0.1), 0 4px 12px -2px rgba(23, 23, 42, 0.05);
+  }
+
+  @media (max-width: 640px) {
+    .navbar-pill-box {
+      height: 4.25rem;
+    }
+    #site-header.is-scrolled {
+      padding-top: 0.5rem;
+    }
+    #site-header.is-scrolled #header-outer-container {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+    #site-header.is-scrolled .navbar-pill-box {
+      height: 3.5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-radius: 30px;
+    }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const toggleBtn = document.getElementById('mobile-toggle-btn');
+  const menu = document.getElementById('mobile-nav-menu');
+
+  const onScroll = () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('is-scrolled');
+    } else {
+      header?.classList.remove('is-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  toggleBtn?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

@@ -1,333 +1,399 @@
 ---
-import Icon from './icons/Icon.astro';
+// Hero Section: Side-by-Side Playful SaaS Composition (Copy on Left, Graphic on Right)
 ---
 
-<section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-attio-grid">
-  <!-- Ambient Top Glow -->
-  <div class="radial-glow-top"></div>
+<section class="relative pt-10 pb-16 md:pt-16 md:pb-28 overflow-hidden bg-[#FCFCFA]">
+  <!-- Subtle Atmospheric Pale Purple & Soft Glows -->
+  <div class="absolute top-1/4 left-1/4 w-[650px] h-[400px] bg-purple-100/35 rounded-full blur-3xl pointer-events-none -z-0"></div>
+  <div class="absolute top-1/3 right-10 w-[600px] h-[450px] bg-purple-50/60 rounded-full blur-3xl pointer-events-none -z-0"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <!-- Hero Header & Value Prop -->
-    <div class="text-center max-w-4xl mx-auto space-y-6">
+    <!-- 2-Column Grid: Text on Left (6 cols), Graphic on Right (6 cols) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
       
-      <!-- Enterprise Pill Badge -->
-      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full enterprise-card text-xs font-medium text-secondary-fg animate-fade-in">
-        <span class="flex h-2 w-2 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-        </span>
-        <span class="text-foreground font-semibold font-mono">ENTERPRISE REVENUE ENGINE</span>
-        <span class="text-weak-stroke">|</span>
-        <span class="text-brand-400 font-medium">Captain AI 2.0 Now Available</span>
-      </div>
-
-      <!-- Main Headline -->
-      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[66px] font-bold tracking-tight leading-[1.08] text-foreground">
-        The AI-Native Revenue & <br class="hidden sm:inline" />
-        <span class="text-gradient-brand">Omnichannel Engine</span> for Enterprises.
-      </h1>
-
-      <!-- Subheadline -->
-      <p class="text-base sm:text-lg md:text-xl text-secondary-fg leading-relaxed max-w-2xl mx-auto font-normal">
-        Unify WhatsApp, SMS, Live Chat, and Email into a single command center. Automate 70%+ of customer inquiries with autonomous Captain AI agents backed by enterprise SLAs and SOC 2 security.
-      </p>
-
-      <!-- Enterprise CTAs -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
-        <a href="#demo" class="button-primary text-base px-7 py-3.5 rounded-xl shadow-attio-4 w-full sm:w-auto font-medium">
-          <span>Start Free Trial</span>
-          <Icon name="arrow-right" class="w-4 h-4 ml-2" />
-        </a>
-
-        <a href="#demo" class="button-outline text-base px-7 py-3.5 rounded-xl w-full sm:w-auto font-medium flex items-center justify-center gap-2">
-          <Icon name="play" class="w-3.5 h-3.5 text-brand-400" />
-          <span>Book Enterprise Walkthrough</span>
-        </a>
-      </div>
-
-      <!-- Institutional Trust Badges Ribbon -->
-      <div class="pt-4 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs text-caption-fg">
-        <div class="flex items-center gap-1.5 font-medium text-foreground">
-          <Icon name="shield" class="w-4 h-4 text-emerald-400" />
-          <span>SOC 2 Type II Certified</span>
-        </div>
-        <div class="flex items-center gap-1.5 font-medium text-foreground">
-          <Icon name="lock" class="w-4 h-4 text-emerald-400" />
-          <span>HIPAA & GDPR Compliant</span>
-        </div>
-        <div class="flex items-center gap-1.5 font-medium text-foreground">
-          <Icon name="activity" class="w-4 h-4 text-emerald-400" />
-          <span>99.99% Carrier Uptime SLA</span>
-        </div>
-        <div class="flex items-center gap-1.5 font-medium text-foreground">
-          <Icon name="database" class="w-4 h-4 text-emerald-400" />
-          <span>Zero LLM Data Retention</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- High-Density Enterprise Command Center Mockup -->
-    <div class="mt-14 max-w-5xl mx-auto">
-      <div class="relative rounded-2xl enterprise-card overflow-hidden shadow-attio-6 p-1.5 sm:p-2.5">
+      <!-- Left Column: Copy & Actions (lg:col-span-6) -->
+      <div class="lg:col-span-6 space-y-6 text-left">
         
-        <!-- App Window Header Bar -->
-        <div class="flex items-center justify-between px-3.5 py-2.5 border-b border-subtle-stroke bg-secondary-bg/80 rounded-t-xl text-xs">
-          <div class="flex items-center gap-3">
-            <div class="flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-              <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
-            </div>
-            <div class="hidden sm:flex items-center gap-2 pl-2 border-l border-subtle-stroke">
-              <span class="px-2 py-0.5 rounded bg-surface font-mono text-[11px] text-foreground font-medium border border-subtle-stroke">
-                Acme Global Corp (Enterprise Tier)
-              </span>
-              <span class="text-caption-fg font-mono text-[11px]">us-east-1 • latency 11ms</span>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-              Captain AI: Autonomous Mode (99.6% Precision)
-            </span>
-          </div>
+        <!-- 1. Eyebrow Pill with Playful Micro-Details -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-50/80 border border-purple-100 text-xs font-semibold tracking-wide text-[#635BFF] shadow-2xs">
+          <span>✨</span>
+          <span class="font-bold text-[#17172A]">All conversations.</span>
+          <span class="text-purple-300">•</span>
+          <span class="text-[#656579]">One intelligent workspace</span>
         </div>
 
-        <!-- App Workspace Simulated Body -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-0 bg-background/95 min-h-[490px] text-sm">
+        <!-- 2. Editorial Headline (2-3 lines) -->
+        <h1 class="text-4xl sm:text-6xl lg:text-[68px] font-extrabold text-[#17172A] tracking-[-0.04em] leading-[0.98] font-['Plus_Jakarta_Sans']">
+          Turn conversations <br />
+          into <span class="text-[#635BFF]">growth.</span>
+        </h1>
+
+        <!-- 3. Softer Description -->
+        <p class="text-base sm:text-lg text-[#656579] max-w-xl leading-relaxed font-normal">
+          Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools.
+        </p>
+
+        <!-- 4. Action Buttons -->
+        <div class="flex flex-wrap items-center gap-3.5 pt-1">
+          <a href="#start" class="btn-dark px-7 shadow-lg shadow-slate-900/10 group">
+            <span>Start for free</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+
+          <a href="#demo" class="btn-white px-6">
+            <span>Book a demo</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual Product Graphic with Multi-Layered Sleek & Classy Animations (lg:col-span-6) -->
+      <div class="lg:col-span-6 relative flex items-center justify-center min-h-[540px] sm:min-h-[620px] w-full pt-6 select-none">
+        
+        <!-- EXTENDED OUTER PALE PURPLE RIPPLE LAYERS -->
+        <!-- Extended Layer 3 (Outer Pale Lavender Atmosphere - 700px) with subtle breathing pulse -->
+        <div class="w-[540px] h-[540px] sm:w-[700px] sm:h-[700px] rounded-full border border-purple-200/35 bg-purple-50/15 pointer-events-none absolute -z-30 animate-ripple-breathe"></div>
+
+        <!-- Extended Layer 2 (Secondary Pale Purple Dashed Orbit - 570px) with ultra-slow calm celestial rotation -->
+        <div class="w-[440px] h-[440px] sm:w-[570px] sm:h-[570px] rounded-full border border-dashed border-purple-200/60 bg-purple-50/25 pointer-events-none absolute -z-20 animate-spin-celestial"></div>
+
+        <!-- Floating Playful Micro-Chip (Top-Left on Extended Orbit) -->
+        <div class="absolute top-2 left-2 sm:-left-4 z-20 hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-purple-100/90 shadow-[0_8px_20px_-4px_rgba(99,91,255,0.12)] text-xs font-semibold text-[#17172A] animate-chip-drift-1 hover:scale-105 transition-transform duration-300">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Live sync: <span class="font-bold text-[#635BFF]">99.9% uptime</span></span>
+        </div>
+
+        <!-- Floating Playful Micro-Chip (Bottom-Right on Extended Orbit) -->
+        <div class="absolute bottom-2 right-2 sm:-right-4 z-20 hidden md:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-purple-100/90 shadow-[0_8px_20px_-4px_rgba(99,91,255,0.12)] text-xs font-semibold text-[#17172A] animate-chip-drift-2 hover:scale-105 transition-transform duration-300">
+          <span class="text-amber-500">⚡</span>
+          <span>Auto-triaged in <span class="font-bold text-[#635BFF]">0.4s</span></span>
+        </div>
+
+        <!-- Decorative Playful Sparkles with Twinkle Animation -->
+        <span class="absolute top-10 left-6 text-purple-400 font-bold text-base select-none hidden lg:block animate-twinkle-1">✦</span>
+        <span class="absolute bottom-10 left-12 text-amber-400 font-bold text-sm select-none hidden lg:block animate-twinkle-2">✦</span>
+        <span class="absolute bottom-16 right-8 text-purple-400 font-bold text-sm select-none hidden lg:block animate-twinkle-3">✦</span>
+
+        <!-- MAIN ORBIT RING CONTAINER: The exact circular line where all 8 icons sit (440px) -->
+        <div class="relative w-[360px] h-[360px] sm:w-[440px] sm:h-[440px] rounded-full bg-purple-50/40 border border-purple-300/80 flex items-center justify-center animate-orbit-glow">
           
-          <!-- Column 1: Omnichannel Left Feed (4 cols) -->
-          <div class="md:col-span-4 border-r border-subtle-stroke p-3 space-y-2.5 bg-secondary-bg/30">
-            <div class="flex items-center justify-between pb-2 border-b border-subtle-stroke text-xs font-semibold text-caption-fg">
-              <span class="uppercase tracking-wider font-mono text-[11px]">Real-Time Priority Stream</span>
-              <span class="px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 text-[10px] font-mono">12 Ingested / min</span>
-            </div>
+          <!-- Inner Concentric Halo Ring (Pale Purple Core) -->
+          <div class="w-[250px] h-[250px] sm:w-[310px] sm:h-[310px] rounded-full bg-purple-100/40 border border-purple-200/50 pointer-events-none absolute -z-0 animate-halo-pulse"></div>
 
-            <!-- Thread 1: WhatsApp (Active / High Priority) -->
-            <div class="p-3 rounded-xl bg-surface border border-brand-500/40 shadow-attio-2 cursor-pointer transition-all hover:border-brand-500 relative">
-              <div class="absolute -top-1.5 right-2 px-1.5 py-0.2 rounded bg-brand-500 text-white font-mono text-[9px] font-bold">
-                HIGH ACV ($75k)
-              </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
-                    WA
-                  </div>
-                  <div>
-                    <div class="font-semibold text-foreground text-xs flex items-center gap-1">
-                      <span>Sarah Jenkins</span>
-                      <span class="text-emerald-400 text-[10px]">✓</span>
-                    </div>
-                    <div class="text-[10px] text-caption-fg">VP Technology @ CloudScale Bio</div>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono text-emerald-400">SLA: 42s</span>
-              </div>
-              <p class="text-xs text-secondary-fg mt-2 line-clamp-2">
-                "Can Captain AI ingest our custom FHIR/HIPAA data lake before answering client questions?"
-              </p>
-              <div class="flex items-center gap-1.5 mt-2.5">
-                <span class="px-1.5 py-0.5 rounded bg-purple-500/15 text-purple-400 text-[10px] font-medium border border-purple-500/20">Auto-Triaged</span>
-                <span class="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 text-[10px] font-medium font-mono">Deal #9418 Created</span>
-              </div>
+          <!-- Central 3D Ribbon Graphic & Levitation Stage -->
+          <div class="relative z-10 w-56 h-44 sm:w-72 sm:h-56 flex items-center justify-center pointer-events-none">
+            <!-- Dynamic 3D Floating Ribbon Logo -->
+            <div class="relative w-full h-full flex items-center justify-center animate-logo-levitate">
+              <img 
+                src="/relay-logo.svg" 
+                alt="NewRelay Workspace" 
+                class="relative z-10 w-full h-full object-contain filter drop-shadow-[0_16px_32px_rgba(99,91,255,0.22)]"
+              />
             </div>
+            <!-- Soft Dynamic Base Glow / Shadow expanding under the logo -->
+            <div class="absolute -bottom-2 w-48 h-10 bg-purple-400/20 rounded-full blur-xl pointer-events-none animate-shadow-breathe -z-10"></div>
+          </div>
 
-            <!-- Thread 2: SMS Enterprise Lead -->
-            <div class="p-3 rounded-xl hover:bg-surface/60 border border-subtle-stroke/60 transition-all cursor-pointer">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <div class="w-7 h-7 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-xs">
-                    SMS
-                  </div>
-                  <div>
-                    <div class="font-semibold text-foreground text-xs">Marcus Thorne</div>
-                    <div class="text-[10px] text-caption-fg">Chief Revenue Officer @ FinTrack</div>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono text-caption-fg">2m ago</span>
+          <!-- 1. Floating Channel: WhatsApp (Top - 90°) -> left: 50%, top: 0% [GREEN] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 50%; top: 0%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-1">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#25D366] shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4),0_4px_10px_-2px_rgba(37,211,102,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(37,211,102,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 20.16C10.57 20.16 9.12 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.05 20.16ZM16.57 14.37C16.32 14.24 15.11 13.65 14.88 13.56C14.66 13.48 14.49 13.44 14.33 13.69C14.16 13.94 13.68 14.51 13.54 14.67C13.39 14.84 13.25 14.86 13 14.73C12.75 14.61 11.95 14.35 11 13.5C10.26 12.84 9.76 12.03 9.61 11.78C9.47 11.53 9.6 11.4 9.72 11.27C9.83 11.16 9.97 10.98 10.1 10.83C10.22 10.68 10.26 10.57 10.35 10.4C10.43 10.24 10.39 10.09 10.33 9.97C10.26 9.84 9.77 8.64 9.57 8.14C9.37 7.66 9.17 7.72 9.02 7.71C8.88 7.71 8.71 7.7 8.55 7.7C8.38 7.7 8.11 7.77 7.89 8.01C7.66 8.25 7.03 8.84 7.03 10.05C7.03 11.26 7.91 12.43 8.03 12.59C8.16 12.76 9.76 15.22 12.21 16.28C12.79 16.53 13.24 16.68 13.6 16.79C14.19 16.98 14.72 16.95 15.14 16.89C15.61 16.82 16.57 16.31 16.77 15.73C16.98 15.16 16.98 14.67 16.91 14.56C16.85 14.46 16.82 14.5 16.57 14.37Z"/>
+                </svg>
               </div>
-              <p class="text-xs text-secondary-fg mt-1.5 truncate">
-                "Contract signed. Ready to provision 40 rep seats."
-              </p>
-            </div>
-
-            <!-- Thread 3: Video Review Flow -->
-            <div class="p-3 rounded-xl hover:bg-surface/60 border border-subtle-stroke/60 transition-all cursor-pointer">
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <div class="w-7 h-7 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
-                    VID
-                  </div>
-                  <div>
-                    <div class="font-semibold text-foreground text-xs">Elena Rostova</div>
-                    <div class="text-[10px] text-caption-fg">VP Customer Success @ Railway</div>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono text-amber-400">5.0 ★</span>
-              </div>
-              <p class="text-xs text-secondary-fg mt-1.5 truncate">
-                "Submitted 60s verified video testimonial widget."
-              </p>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#25D366] transition-colors">WhatsApp</span>
             </div>
           </div>
 
-          <!-- Column 2: Active Chat / Captain AI Autonomous Resolver (5 cols) -->
-          <div class="md:col-span-5 p-4 flex flex-col justify-between border-r border-subtle-stroke bg-background">
-            
-            <!-- Chat Header -->
-            <div class="flex items-center justify-between pb-2 mb-2 border-b border-subtle-stroke text-xs">
-              <div class="flex items-center gap-2">
-                <span class="font-semibold text-foreground">Session #REL-88219</span>
-                <span class="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 text-[10px] font-mono font-medium">WhatsApp Direct API</span>
+          <!-- 2. Floating Channel: Meta (Top-Right - 45°) -> left: 85.36%, top: 14.64% [BLUE] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 85.36%; top: 14.64%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-2">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-[#0064e0] to-[#0081fb] shadow-[0_10px_25px_-5px_rgba(0,100,224,0.4),0_4px_10px_-2px_rgba(0,100,224,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(0,100,224,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
+                </svg>
               </div>
-              <span class="text-[10px] font-mono text-caption-fg">Security: 256-Bit Encrypted</span>
-            </div>
-
-            <!-- Chat Messages Flow -->
-            <div class="space-y-3.5 flex-1">
-              
-              <!-- Customer Message -->
-              <div class="flex items-start gap-2.5 max-w-[92%]">
-                <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs shrink-0 font-bold">
-                  SJ
-                </div>
-                <div class="p-3.5 rounded-2xl rounded-tl-none bg-surface border border-subtle-stroke text-xs text-foreground space-y-1 shadow-attio-1">
-                  <div class="flex items-center justify-between gap-4">
-                    <span class="font-semibold text-emerald-400">Sarah Jenkins (via WhatsApp Business)</span>
-                    <span class="text-[10px] text-caption-fg font-mono">02:14:08 AM</span>
-                  </div>
-                  <p class="text-secondary-fg leading-relaxed">
-                    We manage 120 global reps across 4 regions. Does New-Relay support multi-tenant role permissions, custom RAG indexing on our internal medical documentation, and direct Salesforce bi-directional sync?
-                  </p>
-                </div>
-              </div>
-
-              <!-- Captain AI Autonomous Reply with Deterministic Guardrails -->
-              <div class="flex items-start gap-2.5 max-w-[96%] ml-auto flex-row-reverse">
-                <div class="w-7 h-7 rounded-full bg-brand-500 text-white flex items-center justify-center text-xs shrink-0 shadow-attio-2">
-                  <Icon name="bot" class="w-4 h-4" />
-                </div>
-                <div class="p-3.5 rounded-2xl rounded-tr-none bg-brand-500/10 border border-brand-500/30 text-xs text-foreground space-y-2.5 shadow-attio-2">
-                  <div class="flex items-center justify-between gap-4">
-                    <span class="font-semibold text-brand-400 flex items-center gap-1.5">
-                      <Icon name="sparkles" class="w-3.5 h-3.5" />
-                      Captain AI Autonomous Reply
-                    </span>
-                    <span class="text-[10px] text-caption-fg font-mono">Deterministic Guardrail: PASS (99.6%)</span>
-                  </div>
-                  <p class="text-foreground leading-relaxed">
-                    Hello Sarah! Yes, absolutely. New-Relay provides:
-                  </p>
-                  <ul class="space-y-1 text-secondary-fg pl-1">
-                    <li>• <strong>Granular Multi-Tenant RBAC:</strong> Hierarchical regional roles for your 120 reps.</li>
-                    <li>• <strong>Universal Context™ RAG:</strong> Secure vector indexing with Zero Data Retention.</li>
-                    <li>• <strong>Bi-Directional CRM Sync:</strong> Sub-50ms sync with Salesforce & HubSpot.</li>
-                  </ul>
-                  
-                  <div class="p-2.5 rounded-lg bg-surface/90 border border-subtle-stroke flex items-center justify-between text-[11px]">
-                    <div class="flex items-center gap-1.5 text-caption-fg">
-                      <Icon name="check-circle" class="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Pipeline Action:</span>
-                    </div>
-                    <span class="text-emerald-400 font-semibold font-mono">Created Opportunity: $75,000 ARR</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Command Composer Bar -->
-            <div class="pt-3 mt-3 border-t border-subtle-stroke flex items-center gap-2">
-              <div class="flex-1 px-3 py-2 rounded-lg bg-surface border border-subtle-stroke text-xs text-caption-fg flex items-center justify-between">
-                <span class="font-mono text-[11px]">Captain AI monitoring in real-time (type '/' for macros)</span>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-surface-subtle text-foreground border border-subtle-stroke">⌘K</span>
-              </div>
-              <button class="button-primary p-2 text-xs rounded-lg">
-                <Icon name="zap" class="w-3.5 h-3.5" />
-              </button>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#0064e0] transition-colors">Meta</span>
             </div>
           </div>
 
-          <!-- Column 3: Live CRM 360 & Security Intelligence (3 cols) -->
-          <div class="md:col-span-3 p-3.5 bg-secondary-bg/30 space-y-3">
-            <div class="text-xs font-semibold text-caption-fg uppercase tracking-wider font-mono text-[11px]">
-              Customer 360 & Context™
-            </div>
-
-            <!-- Organization Card -->
-            <div class="p-3 rounded-xl bg-surface border border-subtle-stroke space-y-2.5">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center font-bold text-xs">
-                  CS
-                </div>
-                <div>
-                  <div class="text-xs font-bold text-foreground">CloudScale Bio</div>
-                  <div class="text-[10px] text-caption-fg">Healthcare Tech • 340 Seats</div>
-                </div>
+          <!-- 3. Floating Channel: Reviews (Right - 0°) -> left: 100%, top: 50% [GOLD] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 100%; top: 50%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-3">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#FFB800] shadow-[0_10px_25px_-5px_rgba(255,184,0,0.4),0_4px_10px_-2px_rgba(255,184,0,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(255,184,0,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
               </div>
-
-              <div class="pt-2 border-t border-subtle-stroke space-y-1.5 text-[11px]">
-                <div class="flex justify-between">
-                  <span class="text-caption-fg">Deal Pipeline:</span>
-                  <span class="font-medium text-brand-400">Enterprise Pilot</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-caption-fg">Contract Value:</span>
-                  <span class="font-bold text-foreground font-mono">$75,000 / yr</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-caption-fg">Security Review:</span>
-                  <span class="text-emerald-400 font-medium font-mono">SOC 2 In Review ✓</span>
-                </div>
-                <div class="flex justify-between">
-                  <span class="text-caption-fg">AI Intent Score:</span>
-                  <span class="text-emerald-400 font-bold font-mono">99.4 / 100 🟢</span>
-                </div>
-              </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#FFB800] transition-colors">Reviews</span>
             </div>
+          </div>
 
-            <!-- Security Audit Stream -->
-            <div class="p-3 rounded-xl bg-surface border border-subtle-stroke space-y-2">
-              <div class="text-[10px] font-semibold text-caption-fg uppercase font-mono">Compliance & Audit Log</div>
-              <div class="space-y-1 text-[10px] font-mono text-caption-fg">
-                <div class="flex items-center justify-between">
-                  <span>Zero-Retention Policy</span>
-                  <span class="text-emerald-400">Enforced</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span>Carrier Fallback Route</span>
-                  <span class="text-brand-400">Direct Meta API</span>
-                </div>
-                <div class="flex items-center justify-between">
-                  <span>SSO Authentication</span>
-                  <span class="text-foreground">Okta / SAML</span>
-                </div>
+          <!-- 4. Floating Channel: Facebook (Bottom-Right - 315°) -> left: 85.36%, top: 85.36% [BLUE] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 85.36%; top: 85.36%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-4">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#1877F2] shadow-[0_10px_25px_-5px_rgba(24,119,242,0.4),0_4px_10px_-2px_rgba(24,119,242,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(24,119,242,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
               </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#1877F2] transition-colors">Facebook</span>
             </div>
+          </div>
 
+          <!-- 5. Floating Channel: Instagram (Bottom - 270°) -> left: 50%, top: 100% [GRADIENT MULTI] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 50%; top: 100%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-5">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-[#FFDC80] via-[#FD1D1D] to-[#833AB4] shadow-[0_10px_25px_-5px_rgba(225,48,108,0.4),0_4px_10px_-2px_rgba(225,48,108,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(225,48,108,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#E1306C] transition-colors">Instagram</span>
+            </div>
+          </div>
+
+          <!-- 6. Floating Channel: Email (Bottom-Left - 225°) -> left: 14.64%, top: 85.36% [BLUE] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 14.64%; top: 85.36%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-6">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#0066FF] shadow-[0_10px_25px_-5px_rgba(0,102,255,0.4),0_4px_10px_-2px_rgba(0,102,255,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(0,102,255,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="3.5" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#0066FF] transition-colors">Email</span>
+            </div>
+          </div>
+
+          <!-- 7. Floating Channel: Calls (Left - 180°) -> left: 0%, top: 50% [GREEN] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 0%; top: 50%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-7">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-[#00C853] shadow-[0_10px_25px_-5px_rgba(0,200,83,0.4),0_4px_10px_-2px_rgba(0,200,83,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(0,200,83,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2a15.05 15.05 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1.01A11.36 11.36 0 0 1 8.57 3.9c0-.55-.45-1-1-1H4.06c-.55 0-1 .45-1 1 0 9.39 7.63 17.02 17.02 17.02.55 0 1-.45 1-1v-3.54c-.07-.55-.52-1-1.07-1z"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#00C853] transition-colors">Calls</span>
+            </div>
+          </div>
+
+          <!-- 8. Floating Channel: Messenger (Top-Left - 135°) -> left: 14.64%, top: 14.64% [GRADIENT PURPLE/PINK] -->
+          <div class="absolute -translate-x-1/2 -translate-y-1/2 z-20" style="left: 14.64%; top: 14.64%;">
+            <div class="flex flex-col items-center group cursor-pointer animate-float-node-8">
+              <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-tr from-[#0084FF] via-[#A824FF] to-[#FF4E72] shadow-[0_10px_25px_-5px_rgba(0,132,255,0.4),0_4px_10px_-2px_rgba(0,132,255,0.2)] flex items-center justify-center text-white group-hover:scale-115 group-hover:shadow-[0_16px_32px_-4px_rgba(0,132,255,0.55)] transition-all duration-300">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-white" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.03 2 11c0 2.87 1.48 5.43 3.79 7.08V22l3.63-1.99c.82.23 1.68.35 2.58.35 5.52 0 10-4.03 10-9s-4.48-9-10-9zm1.09 12.11l-2.61-2.78-5.1 2.78 5.61-5.95 2.67 2.78 5.04-2.78-5.61 5.95z"/>
+                </svg>
+              </div>
+              <span class="text-xs font-bold text-[#17172A] mt-1.5 tracking-tight select-none whitespace-nowrap group-hover:text-[#A824FF] transition-colors">Messenger</span>
+            </div>
+          </div>
+
+          <!-- Handwritten Annotation with Doodle Arrow (Anchored right above the top-right of the orbital ring) -->
+          <div class="absolute -top-10 sm:-top-14 right-2 sm:right-6 z-30 hidden lg:block text-[#17172A] pointer-events-none animate-handwriting-float">
+            <div class="font-handwriting text-xl sm:text-2xl font-bold leading-tight transform -rotate-2 text-[#17172A] select-none text-left">
+              Every channel.<br />One platform.
+            </div>
+            <svg class="w-8 h-8 text-[#656579] ml-10 mt-1 transform rotate-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <path d="M14 12 C 12 28, 24 38, 42 42 M 34 35 L 42 42 L 35 48" />
+            </svg>
           </div>
 
         </div>
 
       </div>
-    </div>
 
-    <!-- Enterprise Customer Logos Bar -->
-    <div class="mt-16 pt-8 border-t border-subtle-stroke/60 text-center">
-      <p class="text-xs font-semibold uppercase tracking-wider text-caption-fg mb-6 font-mono">
-        Trusted by high-growth revenue leaders, sales engineering teams, and global enterprises
-      </p>
-      
-      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-75 grayscale hover:grayscale-0 transition-all duration-300">
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">LINEAR</span>
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">MODAL</span>
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">GRANOLA</span>
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">RAILWAY</span>
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">TASKRABBIT</span>
-        <span class="font-display font-bold text-lg tracking-tight text-foreground">STRIPE</span>
-      </div>
     </div>
 
   </div>
 </section>
+
+<!-- Scoped Classy & Sleek Animations for the Hero Graphic -->
+<style>
+  /* 1. Central 3D Logo Levitation & Breathing */
+  @keyframes logoLevitate {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(0, -9px, 0) scale(1.02);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  @keyframes shadowBreathe {
+    0% {
+      transform: scale(0.92);
+      opacity: 0.18;
+    }
+    50% {
+      transform: scale(1.12);
+      opacity: 0.32;
+    }
+    100% {
+      transform: scale(0.92);
+      opacity: 0.18;
+    }
+  }
+
+  .animate-logo-levitate {
+    animation: logoLevitate 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform;
+  }
+
+  .animate-shadow-breathe {
+    animation: shadowBreathe 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform, opacity;
+  }
+
+  /* 2. Concentric Ripple Layers & Celestial Rotation */
+  @keyframes rippleBreathe {
+    0%, 100% {
+      transform: scale(0.985);
+      opacity: 0.45;
+    }
+    50% {
+      transform: scale(1.018);
+      opacity: 0.75;
+    }
+  }
+
+  @keyframes spinCelestial {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes haloPulse {
+    0%, 100% {
+      transform: scale(0.975);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.025);
+      opacity: 0.85;
+    }
+  }
+
+  @keyframes orbitGlow {
+    0%, 100% {
+      box-shadow: 0 0 25px -5px rgba(99, 91, 255, 0.08);
+      border-color: rgba(196, 181, 253, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 40px 0px rgba(99, 91, 255, 0.16);
+      border-color: rgba(167, 139, 250, 0.95);
+    }
+  }
+
+  .animate-ripple-breathe {
+    animation: rippleBreathe 9s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-spin-celestial {
+    animation: spinCelestial 90s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-halo-pulse {
+    animation: haloPulse 7s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+
+  .animate-orbit-glow {
+    animation: orbitGlow 8s ease-in-out infinite;
+  }
+
+  /* 3. Staggered Smooth Micro-Levitation for 8 Channel Constellation Nodes */
+  @keyframes floatNode1 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -6px, 0); }
+  }
+  @keyframes floatNode2 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(3px, -5px, 0); }
+  }
+  @keyframes floatNode3 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(5px, -2px, 0); }
+  }
+  @keyframes floatNode4 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(3px, 4px, 0); }
+  }
+  @keyframes floatNode5 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, 6px, 0); }
+  }
+  @keyframes floatNode6 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-3px, 4px, 0); }
+  }
+  @keyframes floatNode7 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-5px, -2px, 0); }
+  }
+  @keyframes floatNode8 {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-3px, -5px, 0); }
+  }
+
+  .animate-float-node-1 { animation: floatNode1 4.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite; will-change: transform; }
+  .animate-float-node-2 { animation: floatNode2 5.4s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.6s; will-change: transform; }
+  .animate-float-node-3 { animation: floatNode3 5.0s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 1.2s; will-change: transform; }
+  .animate-float-node-4 { animation: floatNode4 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 1.8s; will-change: transform; }
+  .animate-float-node-5 { animation: floatNode5 4.9s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 2.4s; will-change: transform; }
+  .animate-float-node-6 { animation: floatNode6 5.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 3.0s; will-change: transform; }
+  .animate-float-node-7 { animation: floatNode7 5.1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 3.6s; will-change: transform; }
+  .animate-float-node-8 { animation: floatNode8 5.3s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 4.2s; will-change: transform; }
+
+  /* 4. Floating Micro-Chips Levitation */
+  @keyframes chipDrift1 {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    50% { transform: translate3d(0, -6px, 0) rotate(-0.75deg); }
+  }
+  @keyframes chipDrift2 {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    50% { transform: translate3d(0, -7px, 0) rotate(0.75deg); }
+  }
+
+  .animate-chip-drift-1 { animation: chipDrift1 6.2s ease-in-out infinite; will-change: transform; }
+  .animate-chip-drift-2 { animation: chipDrift2 6.8s ease-in-out infinite 0.8s; will-change: transform; }
+
+  /* 5. Subtle Sparkle Twinkles */
+  @keyframes sparkleTwinkle {
+    0%, 100% { opacity: 0.35; transform: scale(0.85); }
+    50% { opacity: 0.95; transform: scale(1.15); }
+  }
+
+  .animate-twinkle-1 { animation: sparkleTwinkle 3.8s ease-in-out infinite; will-change: transform, opacity; }
+  .animate-twinkle-2 { animation: sparkleTwinkle 4.4s ease-in-out infinite 1.3s; will-change: transform, opacity; }
+  .animate-twinkle-3 { animation: sparkleTwinkle 4.0s ease-in-out infinite 2.2s; will-change: transform, opacity; }
+
+  /* 6. Handwritten Annotation Sway */
+  @keyframes handwritingFloat {
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    50% { transform: translate3d(0, -3px, 0) rotate(-1deg); }
+  }
+
+  .animate-handwriting-float {
+    animation: handwritingFloat 6s ease-in-out infinite;
+    will-change: transform;
+  }
+</style>

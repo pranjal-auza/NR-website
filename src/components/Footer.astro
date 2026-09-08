@@ -1,85 +1,138 @@
 ---
-import Icon from './icons/Icon.astro';
+// Footer Component — Clean Editorial Footer
+const currentYear = new Date().getFullYear();
+
+const footerNav = [
+  {
+    title: 'Product',
+    links: [
+      { label: 'Unified Inbox', href: '#inbox' },
+      { label: 'Automation Builder', href: '#automation' },
+      { label: 'Analytics & CSAT', href: '#analytics' },
+      { label: 'Integrations Hub', href: '#integrations' },
+      { label: 'Live Changelog', href: '#changelog' },
+    ],
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { label: 'E-commerce & D2C', href: '#solutions' },
+      { label: 'Real Estate', href: '#solutions' },
+      { label: 'Healthcare', href: '#solutions' },
+      { label: 'Agencies', href: '#solutions' },
+      { label: 'Enterprise Security', href: '#enterprise' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { label: 'Documentation', href: '#docs' },
+      { label: 'API Reference', href: '#api' },
+      { label: 'WhatsApp Playbook', href: '#playbook' },
+      { label: 'Customer Stories', href: '#stories' },
+      { label: 'Help Center', href: '#help' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About Us', href: '#about' },
+      { label: 'Careers (We’re hiring!)', href: '#careers' },
+      { label: 'Partner Program', href: '#partners' },
+      { label: 'Privacy & Terms', href: '#privacy' },
+      { label: 'Security & Trust', href: '#security' },
+    ],
+  },
+];
 ---
 
-<footer class="border-t border-subtle-stroke bg-secondary-bg/50 pt-16 pb-12 text-sm text-secondary-fg">
+<footer class="bg-[#FCFCFA] border-t border-[#E9E9EF] pt-16 pb-12 text-sm text-[#656579]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Top Footer Columns -->
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-subtle-stroke">
+    <!-- Top Grid: Brand Column + 4 Navigation Columns -->
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 lg:gap-12 pb-12 border-b border-[#E9E9EF]">
       
-      <!-- Brand & Summary -->
+      <!-- Brand Column (2 cols) -->
       <div class="col-span-2 space-y-4">
-        <a href="/" class="flex items-center gap-2.5 font-display font-semibold text-lg text-foreground">
-          <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white shadow-attio-2">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-            </svg>
-          </div>
-          <span class="text-base font-bold tracking-tight">New-Relay</span>
-          <span class="text-[10px] font-mono font-semibold uppercase tracking-wider px-1.5 py-0.2 rounded bg-brand-500/10 text-brand-400 border border-brand-500/20">ENTERPRISE OS</span>
+        <a href="/" class="flex items-center group">
+          <img src="/new-relay-logo.svg" alt="NewRelay" class="h-8 w-auto object-contain" />
         </a>
-        <p class="text-xs sm:text-sm text-caption-fg max-w-sm leading-relaxed">
-          The intelligent revenue and customer communication operating system. Omnichannel inboxes, Captain AI agents, deal pipelines, and automated reputation.
+
+        <p class="text-xs sm:text-sm text-[#656579] max-w-xs leading-relaxed">
+          The all-in-one conversational platform for high-growth modern businesses. Turn conversations into growth.
         </p>
 
-        <!-- System Status Pill -->
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-subtle-stroke text-[11px] font-mono text-caption-fg">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>All Systems Operational (99.99% Uptime SLA)</span>
+        <!-- Live System Status Badge -->
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[11px] font-semibold text-emerald-800">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>All systems operational</span>
+        </div>
+
+        <!-- Social Icons Strip -->
+        <div class="flex items-center gap-4 pt-2 text-[#9696A8]">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com" class="hover:text-[#635BFF] transition-colors" aria-label="LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45c-.88 0-1.6.72-1.6 1.6 0 .89.72 1.6 1.6 1.6.89 0 1.6-.71 1.6-1.6 0-.88-.71-1.6-1.6-1.6z"/>
+            </svg>
+          </a>
+
+          <!-- Twitter / X -->
+          <a href="https://twitter.com" class="hover:text-[#635BFF] transition-colors" aria-label="Twitter">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://youtube.com" class="hover:text-[#635BFF] transition-colors" aria-label="YouTube">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com" class="hover:text-[#635BFF] transition-colors" aria-label="Instagram">
+            <svg class="w-4 h-4 fill-none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
         </div>
       </div>
 
-      <!-- Column 1: Platform -->
-      <div class="space-y-3">
-        <div class="text-xs font-semibold uppercase tracking-wider text-foreground font-mono">Platform</div>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#inbox" class="hover:text-foreground transition-colors">Omnichannel Inbox</a></li>
-          <li><a href="#relay-ai" class="hover:text-foreground transition-colors">Captain AI Agent</a></li>
-          <li><a href="#pipelines" class="hover:text-foreground transition-colors">CRM & Deal Pipelines</a></li>
-          <li><a href="#reputation" class="hover:text-foreground transition-colors">Reputation & Video</a></li>
-          <li><a href="#workflows" class="hover:text-foreground transition-colors">Workflows & Triggers</a></li>
-          <li><a href="/pricing" class="hover:text-foreground transition-colors">Enterprise Pricing</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2: Governance & Security -->
-      <div class="space-y-3">
-        <div class="text-xs font-semibold uppercase tracking-wider text-foreground font-mono">Security & Trust</div>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#security" class="hover:text-foreground transition-colors">Trust Center & SOC 2</a></li>
-          <li><a href="#security" class="hover:text-foreground transition-colors">HIPAA Compliance (BAA)</a></li>
-          <li><a href="#security" class="hover:text-foreground transition-colors">GDPR & CCPA Data Rights</a></li>
-          <li><a href="#security" class="hover:text-foreground transition-colors">Zero LLM Data Retention</a></li>
-          <li><a href="#security" class="hover:text-foreground transition-colors">Private VPC Deployment</a></li>
-          <li><a href="#comparison" class="hover:text-foreground transition-colors">Stack ROI Comparison</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Developers & Ecosystem -->
-      <div class="space-y-3">
-        <div class="text-xs font-semibold uppercase tracking-wider text-foreground font-mono">Developers</div>
-        <ul class="space-y-2 text-xs">
-          <li><a href="#developers" class="hover:text-foreground transition-colors">REST API Documentation</a></li>
-          <li><a href="#developers" class="hover:text-foreground transition-colors">TypeScript & Python SDKs</a></li>
-          <li><a href="#developers" class="hover:text-foreground transition-colors">Model Context Protocol (MCP)</a></li>
-          <li><a href="#developers" class="hover:text-foreground transition-colors">Webhooks & Event Stream</a></li>
-          <li><a href="/changelog" class="hover:text-foreground transition-colors">Weekly Changelog</a></li>
-        </ul>
-      </div>
+      <!-- Navigation Columns -->
+      {footerNav.map((col) => (
+        <div class="space-y-3">
+          <div class="font-bold text-[#17172A] text-xs uppercase tracking-wider font-['Plus_Jakarta_Sans']">
+            {col.title}
+          </div>
+          <ul class="space-y-2.5 text-xs">
+            {col.links.map((link) => (
+              <li>
+                <a href={link.href} class="text-[#656579] hover:text-[#635BFF] transition-colors">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
     </div>
 
-    <!-- Bottom Bar -->
-    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-caption-fg">
-      <div class="font-mono">
-        © 2026 New-Relay Technologies, Inc. All rights reserved. SOC 2 Type II Certified.
+    <!-- Bottom Row: Copyright & Legal Policies -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9696A8]">
+      <div>
+        © {currentYear} NewRelay Technologies Inc. All rights reserved.
       </div>
-      
+
       <div class="flex items-center gap-6">
-        <a href="#privacy" class="hover:text-foreground transition-colors">Privacy Policy</a>
-        <a href="#terms" class="hover:text-foreground transition-colors">Terms of Service</a>
-        <a href="#security" class="hover:text-foreground transition-colors font-medium text-emerald-400">Security Center</a>
+        <a href="#privacy" class="hover:text-[#17172A] transition-colors">Privacy Policy</a>
+        <a href="#terms" class="hover:text-[#17172A] transition-colors">Terms of Service</a>
+        <a href="#security" class="hover:text-[#17172A] transition-colors">Security & SOC2</a>
+        <a href="#cookies" class="hover:text-[#17172A] transition-colors">Cookie Settings</a>
       </div>
     </div>
 

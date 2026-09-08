@@ -1,0 +1,142 @@
+---
+// Integrations Section — VISUAL ECOSYSTEM COMPOSITION
+const integrationCategories = [
+  { name: 'All Ecosystem', active: true },
+  { name: 'Messaging & Voice', active: false },
+  { name: 'E-commerce & Stores', active: false },
+  { name: 'CRM & Data', active: false },
+  { name: 'Payments & Billing', active: false },
+];
+
+const integrations = [
+  {
+    name: 'WhatsApp Business API',
+    category: 'Messaging',
+    desc: 'Official Meta Cloud API for unlimited template broadcasts & verified green badge.',
+    badge: 'Official Meta Partner',
+    iconBg: 'bg-[#25D366]',
+    iconText: 'W',
+  },
+  {
+    name: 'Instagram Messaging',
+    category: 'Social',
+    desc: 'Automate DM replies, story mentions, reel responses, and catalog shopping.',
+    badge: 'Direct API',
+    iconBg: 'bg-gradient-to-tr from-[#FFDC80] via-[#FD1D1D] to-[#833AB4]',
+    iconText: '📸',
+  },
+  {
+    name: 'Shopify Storefront',
+    category: 'E-commerce',
+    desc: 'Live customer cart sync, instant tracking lookups, and one-click refund triage.',
+    badge: 'Real-time Webhook',
+    iconBg: 'bg-[#95BF47]',
+    iconText: '🛍️',
+  },
+  {
+    name: 'Gmail & Google Workspace',
+    category: 'Email',
+    desc: 'Two-way email sync with shared team inboxes, smart tags, and collision alerts.',
+    badge: 'OAuth 2.0',
+    iconBg: 'bg-[#EA4335]',
+    iconText: '✉️',
+  },
+  {
+    name: 'HubSpot & Salesforce',
+    category: 'CRM',
+    desc: 'Auto-create deals, update lead stages, and log full conversation histories.',
+    badge: '2-Way Sync',
+    iconBg: 'bg-[#FF7A59]',
+    iconText: '⚡',
+  },
+  {
+    name: 'Razorpay & Stripe',
+    category: 'Payments',
+    desc: 'Send instant payment links inside WhatsApp or Instagram and receive webhook receipts.',
+    badge: 'Instant Links',
+    iconBg: 'bg-[#002970]',
+    iconText: '💳',
+  },
+];
+---
+
+<section id="integrations" class="py-20 md:py-32 bg-[#FCFCFA] border-b border-[#E9E9EF]/60 relative overflow-hidden">
+  <!-- Soft Blue Atmospheric Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[450px] bg-[#EEF5FF]/60 rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- 1. Centered Statement -->
+    <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF5FF] border border-[#D0E2FF] text-xs font-bold tracking-wider text-[#0066FF] uppercase mb-4">
+        <span>Connected Ecosystem</span>
+      </div>
+
+      <h2 class="text-4xl sm:text-6xl font-extrabold text-[#17172A] tracking-[-0.04em] leading-[1.02] font-['Plus_Jakarta_Sans']">
+        Connect your entire stack <br />
+        <span class="text-[#0066FF]">in under 60 seconds.</span>
+      </h2>
+
+      <p class="text-base sm:text-lg text-[#656579] leading-relaxed mt-5 max-w-2xl mx-auto">
+        No complicated engineering or multi-week migrations. Plug in your favorite channels, CRMs, and payment gateways with native one-click integrations.
+      </p>
+    </div>
+
+    <!-- 2. Visual Integrations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {integrations.map((tool) => (
+        <div class="saas-card p-6 bg-white border border-[#E9E9EF] rounded-[22px] flex flex-col justify-between hover:border-[#0066FF]/40 hover:shadow-lg transition-all duration-200 group">
+          
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class={`w-12 h-12 rounded-2xl ${tool.iconBg} text-white flex items-center justify-center font-bold text-lg shadow-sm`}>
+                {tool.iconText}
+              </div>
+              <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-100 text-[#17172A] border border-slate-200">
+                {tool.badge}
+              </span>
+            </div>
+
+            <h3 class="text-base font-bold text-[#17172A] font-['Plus_Jakarta_Sans'] group-hover:text-[#0066FF] transition-colors">
+              {tool.name}
+            </h3>
+
+            <p class="text-xs text-[#656579] mt-2 leading-relaxed">
+              {tool.desc}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-[#E9E9EF] flex items-center justify-between text-xs">
+            <span class="text-[#656579] font-medium flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span>1-click connect</span>
+            </span>
+            <span class="font-bold text-[#17172A] group-hover:text-[#0066FF] group-hover:translate-x-1 transition-all">
+              Setup guide →
+            </span>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom Webhook & API Callout Strip -->
+    <div class="mt-10 p-5 rounded-2xl bg-white border border-[#E9E9EF] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3 text-left">
+        <div class="w-10 h-10 rounded-xl bg-[#17172A] text-white flex items-center justify-center font-mono font-bold text-xs">
+          &lt;/&gt;
+        </div>
+        <div>
+          <div class="text-xs sm:text-sm font-bold text-[#17172A]">Need custom in-house webhooks or REST API access?</div>
+          <div class="text-xs text-[#656579]">Explore our developer SDKs for Node.js, Python, Go, and webhook streaming.</div>
+        </div>
+      </div>
+
+      <a href="#docs" class="btn-white !h-10 !px-4 !text-xs whitespace-nowrap">
+        <span>View API Docs</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </div>
+</section>

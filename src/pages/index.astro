@@ -1,39 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Banner from '../components/Banner.astro';
-import Header from '../components/Header.astro';
-import AttioHero from '../components/design1/AttioHero.astro';
-import AttioQuoteBlock from '../components/design1/AttioQuoteBlock.astro';
-import AttioMotionTabs from '../components/design1/AttioMotionTabs.astro';
-import AttioUniversalContext from '../components/design1/AttioUniversalContext.astro';
-import AttioWorkflowBuilder from '../components/design1/AttioWorkflowBuilder.astro';
-import EnterpriseComparison from '../components/EnterpriseComparison.astro';
-import EnterpriseSecurity from '../components/EnterpriseSecurity.astro';
-import PricingSection from '../components/PricingSection.astro';
-import ChangelogSection from '../components/ChangelogSection.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import PartnerLogos from '../components/PartnerLogos.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import UnifiedInboxSection from '../components/UnifiedInboxSection.astro';
+import AutomationSection from '../components/AutomationSection.astro';
+import AnalyticsSection from '../components/AnalyticsSection.astro';
+import SolutionsSection from '../components/SolutionsSection.astro';
+import IntegrationsSection from '../components/IntegrationsSection.astro';
+import TestimonialSection from '../components/TestimonialSection.astro';
 import CtaSection from '../components/CtaSection.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout 
-  title="Website Design 1: Enterprise Revenue OS | New-Relay"
-  description="Design Concept 1: The Attio-inspired revenue operating system with two-tone typography, high-density CRM table canvas, vertical motion tabs, and Universal Context."
+<BaseLayout 
+  title="NewRelay — Turn conversations into growth."
+  description="Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools."
 >
-  <Banner />
-  <Header activeDesign="1" />
-  
+  <Navbar />
+
   <main>
-    <AttioHero />
-    <AttioQuoteBlock />
-    <AttioMotionTabs />
-    <AttioUniversalContext />
-    <AttioWorkflowBuilder />
-    <EnterpriseComparison />
-    <EnterpriseSecurity />
-    <PricingSection />
-    <ChangelogSection />
+    <!-- 1. CENTERED HERO -->
+    <Hero />
+
+    <!-- 2. PARTNER TRUST LOGOS -->
+    <PartnerLogos />
+
+    <!-- 3. CENTERED + VISUAL SCATTER (PROBLEM) -->
+    <ProblemSection />
+
+    <!-- 4. FULL-WIDTH PRODUCT (UNIFIED INBOX) -->
+    <UnifiedInboxSection />
+
+    <!-- 5. ASYMMETRIC WORKFLOW BUILDER (AUTOMATION) -->
+    <AutomationSection />
+
+    <!-- 6. CENTERED + BENTO CARD GRID (ANALYTICS) -->
+    <AnalyticsSection />
+
+    <!-- 7. CENTERED + 4-COLUMN GRID (SOLUTIONS) -->
+    <SolutionsSection />
+
+    <!-- 8. VISUAL ECOSYSTEM (INTEGRATIONS) -->
+    <IntegrationsSection />
+
+    <!-- 9. ASYMMETRIC TESTIMONIAL + METRICS (PROOF) -->
+    <TestimonialSection />
+
+    <!-- 10. CENTERED ATMOSPHERIC CONTAINER (FINAL CTA) -->
     <CtaSection />
   </main>
 
+  <!-- EDITORIAL FOOTER -->
   <Footer />
-</Layout>
+</BaseLayout>
