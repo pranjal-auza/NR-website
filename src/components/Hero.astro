@@ -199,16 +199,6 @@
             </div>
           </div>
 
-          <!-- Handwritten Annotation with Doodle Arrow (Anchored right above the top-right of the orbital ring) -->
-          <div class="absolute -top-10 sm:-top-14 right-2 sm:right-6 z-30 hidden lg:block text-[#17172A] pointer-events-none animate-handwriting-float">
-            <div class="font-handwriting text-xl sm:text-2xl font-bold leading-tight transform -rotate-2 text-[#17172A] select-none text-left">
-              Every channel.<br />One platform.
-            </div>
-            <svg class="w-8 h-8 text-[#656579] ml-10 mt-1 transform rotate-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-              <path d="M14 12 C 12 28, 24 38, 42 42 M 34 35 L 42 42 L 35 48" />
-            </svg>
-          </div>
-
         </div>
 
       </div>
@@ -385,15 +375,4 @@
   .animate-twinkle-1 { animation: sparkleTwinkle 3.8s ease-in-out infinite; will-change: transform, opacity; }
   .animate-twinkle-2 { animation: sparkleTwinkle 4.4s ease-in-out infinite 1.3s; will-change: transform, opacity; }
   .animate-twinkle-3 { animation: sparkleTwinkle 4.0s ease-in-out infinite 2.2s; will-change: transform, opacity; }
-
-  /* 6. Handwritten Annotation Sway */
-  @keyframes handwritingFloat {
-    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
-    50% { transform: translate3d(0, -3px, 0) rotate(-1deg); }
-  }
-
-  .animate-handwriting-float {
-    animation: handwritingFloat 6s ease-in-out infinite;
-    will-change: transform;
-  }
 </style>

@@ -37,18 +37,8 @@
       <!-- Desktop Visual Layout (Grid with Left Column, Center Visual, Right Column) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center relative">
         
-        <!-- Left Column: 4 Notification Cards + "Different channels." Doodle -->
+        <!-- Left Column: 4 Notification Cards -->
         <div class="lg:col-span-4 flex flex-col gap-3.5 relative z-10 pt-6 sm:pt-4">
-          
-          <!-- Handwritten Annotation: Different channels (Positioned above & left of cards) -->
-          <div class="absolute -top-14 -left-4 sm:-left-8 lg:-left-12 z-20 flex flex-col items-start pointer-events-none hidden sm:flex select-none">
-            <span class="font-['Caveat'] text-2xl sm:text-[28px] font-bold text-[#1E293B] -rotate-6 tracking-wide leading-tight">
-              Different<br/>channels.
-            </span>
-            <svg class="w-10 h-10 text-[#334155] -mt-1 ml-4" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <path d="M10 6 C 16 18, 20 26, 30 30 M 20 30 L 30 30 L 30 20" />
-            </svg>
-          </div>
 
           <!-- Card 1: WhatsApp -->
           <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-100 shadow-[0_8px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-3.5 group">
@@ -118,30 +108,21 @@
 
         </div>
 
-        <!-- Center Column: Central Stressed Character + Laptop + Doodle Notes -->
+        <!-- Center Column: Professional User Photo in Circle Frame -->
         <div class="lg:col-span-4 relative flex items-center justify-center my-6 lg:my-0">
           
-          <div class="relative w-full max-w-[360px] sm:max-w-[400px] mx-auto flex items-center justify-center">
-            
-            <!-- Handwritten Annotation: Too many tools. Too much chaos. (Positioned cleanly above character) -->
-            <div class="absolute -top-14 right-2 sm:right-6 z-20 flex flex-col items-start pointer-events-none hidden sm:flex select-none">
-              <span class="font-['Caveat'] text-xl sm:text-2xl font-bold text-[#1E293B] rotate-2 leading-tight">
-                Too many tools.<br/>Too much chaos.
-              </span>
-              <svg class="w-8 h-8 text-[#334155] ml-6 mt-1" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                <path d="M18 4 C 18 14, 16 22, 6 26 M 12 26 L 6 26 L 7 20" />
-              </svg>
-            </div>
+          <div class="relative flex items-center justify-center">
 
-            <!-- Soft Lavender Backdrop Organic Blob -->
-            <div class="absolute inset-0 bg-[#EDE9FE]/70 rounded-[48px] transform scale-95 opacity-90 -z-10 shadow-xs"></div>
+            <!-- Soft Ambient Ring / Halo Backdrop -->
+            <div class="absolute -inset-4 sm:-inset-6 rounded-full bg-gradient-to-tr from-purple-200/40 via-indigo-100/30 to-pink-100/30 blur-xl pointer-events-none -z-10"></div>
+            <div class="absolute -inset-2 rounded-full border border-purple-200/60 pointer-events-none"></div>
 
-            <!-- Central Graphic Image -->
-            <div class="relative z-10 w-full p-2 flex items-center justify-center">
+            <!-- Circular Photo Container -->
+            <div class="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full p-2 bg-white border border-slate-200/80 shadow-[0_20px_60px_rgba(99,91,255,0.12),0_8px_25px_rgba(15,23,42,0.06)] overflow-hidden flex items-center justify-center group">
               <img 
-                src="/graphic.webp" 
-                alt="Stressed employee overwhelmed by disconnected tools" 
-                class="w-full h-auto object-contain mx-auto select-none transform hover:scale-[1.03] transition-transform duration-300 drop-shadow-xs"
+                src="/professional-user.jpg" 
+                alt="Business professional managing multi-channel customer communications" 
+                class="w-full h-full object-cover object-top rounded-full select-none transform group-hover:scale-105 transition-transform duration-500"
               />
             </div>
 
@@ -221,16 +202,6 @@
               </div>
               <p class="text-xs text-slate-600 font-normal truncate mt-0.5">Hi! I need help with integration.</p>
             </div>
-          </div>
-
-          <!-- Handwritten Annotation: Valuable conversations slip away (Positioned on the outer right flank) -->
-          <div class="absolute top-[52%] -right-8 lg:-right-36 xl:-right-40 -translate-y-1/2 z-20 hidden lg:flex flex-col items-start pointer-events-none select-none">
-            <span class="font-['Caveat'] text-xl sm:text-2xl font-bold text-[#1E293B] -rotate-3 leading-tight whitespace-nowrap">
-              Valuable<br/>conversations<br/>slip away.
-            </span>
-            <svg class="w-10 h-10 text-[#334155] mt-1 ml-4 transform -rotate-12" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <path d="M26 6 C 22 18, 16 26, 6 30 M 14 30 L 6 30 L 8 22" />
-            </svg>
           </div>
 
         </div>

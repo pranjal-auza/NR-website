@@ -95,29 +95,9 @@
 
     </div>
 
-    <!-- Bottom Block: Dashboard Showcase with Handwritten Doodles & Arrows -->
+    <!-- Bottom Block: Dashboard Showcase -->
     <div class="relative mt-16 sm:mt-24 max-w-5xl mx-auto">
       
-      <!-- Left Handwritten Annotation: "Unified Customer Hub" with Lighter Curved Arrow -->
-      <div class="absolute -top-14 sm:-top-18 left-2 sm:left-10 z-20 hidden md:flex flex-col items-center pointer-events-none select-none animate-doodle-sway">
-        <span class="font-handwriting text-xl sm:text-2xl font-bold text-[#334155] transform -rotate-6 whitespace-nowrap">
-          Unified Customer Hub
-        </span>
-        <svg class="w-20 sm:w-24 h-12 text-[#475569] mt-0.5 transform rotate-3" viewBox="0 0 90 50" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M15 10 C 35 15, 60 25, 75 42 M 63 38 L 75 42 L 72 30" />
-        </svg>
-      </div>
-
-      <!-- Right Top Handwritten Annotation: "Quick Action Controls" with Lighter Curved Arrow -->
-      <div class="absolute -top-14 sm:-top-18 right-4 sm:right-12 z-20 hidden md:flex flex-col items-center pointer-events-none select-none animate-doodle-sway-rev">
-        <span class="font-handwriting text-xl sm:text-2xl font-bold text-[#334155] transform rotate-3 whitespace-nowrap">
-          Quick Action Controls
-        </span>
-        <svg class="w-20 sm:w-24 h-12 text-[#475569] mt-0.5 transform -rotate-3" viewBox="0 0 90 50" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M75 10 C 55 15, 30 25, 15 42 M 27 38 L 15 42 L 18 30" />
-        </svg>
-      </div>
-
       <!-- Central Dashboard Showcase Card -->
       <div class="relative rounded-2xl sm:rounded-3xl border border-stone-200/90 bg-white/95 p-2 sm:p-3.5 shadow-[0_28px_80px_rgba(23,23,42,0.12),0_10px_26px_rgba(23,23,42,0.06)] overflow-hidden transform hover:scale-[1.01] transition-transform duration-500">
         <img 
@@ -127,22 +107,12 @@
         />
       </div>
 
-      <!-- Right Flank Handwritten Annotation: Pointing directly at Relay AI Insights Box -->
-      <div class="absolute top-[42%] -right-4 sm:-right-8 lg:-right-24 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none animate-doodle-sway-rev">
-        <span class="font-handwriting text-lg sm:text-xl font-bold text-[#334155] transform -rotate-3 whitespace-nowrap">
-          Relay AI Insights
-        </span>
-        <svg class="w-9 h-9 text-[#475569] -ml-4 mt-1 transform -rotate-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M48 14 C 38 28, 26 38, 14 42 M 22 36 L 14 42 L 22 46" />
-        </svg>
-      </div>
-
     </div>
 
   </div>
 </section>
 
-<!-- Scoped Micro-Animations for Floating Cursors & Doodles -->
+<!-- Scoped Micro-Animations for Floating Cursors -->
 <style>
   @keyframes cursorFloatLeft {
     0%, 100% {
@@ -162,24 +132,6 @@
     }
   }
 
-  @keyframes doodleSway {
-    0%, 100% {
-      transform: translate3d(0, 0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate3d(2px, -3px, 0) rotate(1deg);
-    }
-  }
-
-  @keyframes doodleSwayRev {
-    0%, 100% {
-      transform: translate3d(0, 0, 0) rotate(0deg);
-    }
-    50% {
-      transform: translate3d(-2px, -3px, 0) rotate(-1deg);
-    }
-  }
-
   .animate-cursor-float-left {
     animation: cursorFloatLeft 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
     will-change: transform;
@@ -187,16 +139,6 @@
 
   .animate-cursor-float-right {
     animation: cursorFloatRight 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.8s;
-    will-change: transform;
-  }
-
-  .animate-doodle-sway {
-    animation: doodleSway 6.2s ease-in-out infinite;
-    will-change: transform;
-  }
-
-  .animate-doodle-sway-rev {
-    animation: doodleSwayRev 6.5s ease-in-out infinite 0.6s;
     will-change: transform;
   }
 </style>
