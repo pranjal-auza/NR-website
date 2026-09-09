@@ -1,0 +1,202 @@
+---
+// Home 2 Hero Section — Playful NewRelay Workspace & Reputation Hero with Floating Cursor Tags & Dashboard Showcase
+---
+
+<section class="relative pt-12 pb-20 md:pt-18 md:pb-28 overflow-hidden bg-[#FAF8F5]">
+  
+  <!-- Subtle warm ambient background glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-b from-amber-100/40 via-purple-50/20 to-transparent rounded-full blur-3xl pointer-events-none -z-0"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    
+    <!-- Top Block: Reviews, Headline, Subtitle, CTAs -->
+    <div class="max-w-4xl mx-auto flex flex-col items-center space-y-6">
+      
+      <!-- 1. Total User Reviews Pill -->
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 border border-stone-200/80 shadow-2xs hover:scale-105 transition-transform duration-200">
+        <div class="flex -space-x-2">
+          <img 
+            src="https://cdn.prod.website-files.com/673442f44c948080a43e913b/673592bcb033b09ad5f3ed3f_user-1.png" 
+            alt="User 1" 
+            class="w-6 h-6 rounded-full border-2 border-white object-cover" 
+          />
+          <img 
+            src="https://cdn.prod.website-files.com/673442f44c948080a43e913b/673592bcafb16ca7bb760d97_user-2.png" 
+            alt="User 2" 
+            class="w-6 h-6 rounded-full border-2 border-white object-cover" 
+          />
+          <img 
+            src="https://cdn.prod.website-files.com/673442f44c948080a43e913b/673592bc40140078962527b6_user-3.png" 
+            alt="User 3" 
+            class="w-6 h-6 rounded-full border-2 border-white object-cover" 
+          />
+        </div>
+        <p class="text-xs sm:text-sm font-semibold text-[#17172A] tracking-tight">
+          Loved by 1,200+ high-growth teams • <span class="text-amber-500">★★★★★</span> 4.9/5
+        </p>
+      </div>
+
+      <!-- 2. Display Heading with Interactive Floating Cursor Tags -->
+      <div class="relative w-full py-2">
+        
+        <!-- Left Floating Cursor Tag: Sarah (Lime Green) -->
+        <div class="absolute -top-3 left-2 sm:-left-6 lg:-left-12 z-20 flex items-center gap-1.5 animate-cursor-float-left pointer-events-none select-none">
+          <div class="px-2.5 py-1 rounded-lg bg-[#C6F879] text-[#17172A] text-xs font-bold shadow-sm">
+            Sarah
+          </div>
+          <!-- Pointing cursor arrowhead -->
+          <svg class="w-4 h-4 text-[#17172A] fill-current transform rotate-[-45deg]" viewBox="0 0 24 24">
+            <path d="M4 0l16 12-7 2-4 9z"/>
+          </svg>
+        </div>
+
+        <!-- Headline text (Strictly 2 balanced lines) -->
+        <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-extrabold text-[#17172A] tracking-[-0.035em] leading-[1.08] font-['Plus_Jakarta_Sans'] max-w-4xl mx-auto">
+          Turn conversations & reviews <br />
+          into <span class="text-[#635BFF]">customer growth</span>
+        </h1>
+
+        <!-- Right Floating Cursor Tag: You (Soft Purple) -->
+        <div class="absolute -bottom-3 right-2 sm:-right-4 lg:-right-8 z-20 flex items-center gap-1.5 animate-cursor-float-right pointer-events-none select-none">
+          <!-- Pointing cursor arrowhead -->
+          <svg class="w-4 h-4 text-[#17172A] fill-current transform rotate-[135deg]" viewBox="0 0 24 24">
+            <path d="M4 0l16 12-7 2-4 9z"/>
+          </svg>
+          <div class="px-3 py-1 rounded-lg bg-[#9D87FF] text-white text-xs font-bold shadow-sm">
+            You
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 3. Subtitle Description -->
+      <div class="max-w-2xl mx-auto">
+        <p class="text-base sm:text-lg text-[#656579] leading-relaxed font-normal">
+          Bring WhatsApp, Instagram, email, calls, reviews, and Relay AI into one connected command center — so you can engage leads, automate support, and grow revenue without switching tools.
+        </p>
+      </div>
+
+      <!-- 4. Hero Button Group -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a 
+          href="#start" 
+          class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#FED965] hover:bg-[#FDCF42] text-[#17172A] font-bold text-sm sm:text-base shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+        >
+          Start for free
+        </a>
+
+        <a 
+          href="#demo" 
+          class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white hover:bg-stone-50 text-[#17172A] font-bold text-sm sm:text-base border border-stone-200/90 shadow-2xs hover:shadow-sm transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+        >
+          Book a Demo
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom Block: Dashboard Showcase with Handwritten Doodles & Arrows -->
+    <div class="relative mt-16 sm:mt-24 max-w-5xl mx-auto">
+      
+      <!-- Left Handwritten Annotation: "Unified Customer Hub" with Lighter Curved Arrow -->
+      <div class="absolute -top-14 sm:-top-18 left-2 sm:left-10 z-20 hidden md:flex flex-col items-center pointer-events-none select-none animate-doodle-sway">
+        <span class="font-handwriting text-xl sm:text-2xl font-bold text-[#334155] transform -rotate-6 whitespace-nowrap">
+          Unified Customer Hub
+        </span>
+        <svg class="w-20 sm:w-24 h-12 text-[#475569] mt-0.5 transform rotate-3" viewBox="0 0 90 50" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 10 C 35 15, 60 25, 75 42 M 63 38 L 75 42 L 72 30" />
+        </svg>
+      </div>
+
+      <!-- Right Top Handwritten Annotation: "Quick Action Controls" with Lighter Curved Arrow -->
+      <div class="absolute -top-14 sm:-top-18 right-4 sm:right-12 z-20 hidden md:flex flex-col items-center pointer-events-none select-none animate-doodle-sway-rev">
+        <span class="font-handwriting text-xl sm:text-2xl font-bold text-[#334155] transform rotate-3 whitespace-nowrap">
+          Quick Action Controls
+        </span>
+        <svg class="w-20 sm:w-24 h-12 text-[#475569] mt-0.5 transform -rotate-3" viewBox="0 0 90 50" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M75 10 C 55 15, 30 25, 15 42 M 27 38 L 15 42 L 18 30" />
+        </svg>
+      </div>
+
+      <!-- Central Dashboard Showcase Card -->
+      <div class="relative rounded-2xl sm:rounded-3xl border border-stone-200/90 bg-white/95 p-2 sm:p-3.5 shadow-[0_28px_80px_rgba(23,23,42,0.12),0_10px_26px_rgba(23,23,42,0.06)] overflow-hidden transform hover:scale-[1.01] transition-transform duration-500">
+        <img 
+          src="/hero-image.png" 
+          alt="NewRelay Workspace & Reputation Dashboard" 
+          class="w-full h-auto rounded-xl sm:rounded-2xl object-cover select-none shadow-xs" 
+        />
+      </div>
+
+      <!-- Right Flank Handwritten Annotation: Pointing directly at Relay AI Insights Box -->
+      <div class="absolute top-[42%] -right-4 sm:-right-8 lg:-right-24 z-20 hidden lg:flex flex-col items-center pointer-events-none select-none animate-doodle-sway-rev">
+        <span class="font-handwriting text-lg sm:text-xl font-bold text-[#334155] transform -rotate-3 whitespace-nowrap">
+          Relay AI Insights
+        </span>
+        <svg class="w-9 h-9 text-[#475569] -ml-4 mt-1 transform -rotate-12" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M48 14 C 38 28, 26 38, 14 42 M 22 36 L 14 42 L 22 46" />
+        </svg>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Scoped Micro-Animations for Floating Cursors & Doodles -->
+<style>
+  @keyframes cursorFloatLeft {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(4px, -6px, 0) rotate(2deg);
+    }
+  }
+
+  @keyframes cursorFloatRight {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(-4px, -5px, 0) rotate(-2deg);
+    }
+  }
+
+  @keyframes doodleSway {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(2px, -3px, 0) rotate(1deg);
+    }
+  }
+
+  @keyframes doodleSwayRev {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+    50% {
+      transform: translate3d(-2px, -3px, 0) rotate(-1deg);
+    }
+  }
+
+  .animate-cursor-float-left {
+    animation: cursorFloatLeft 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+    will-change: transform;
+  }
+
+  .animate-cursor-float-right {
+    animation: cursorFloatRight 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite 0.8s;
+    will-change: transform;
+  }
+
+  .animate-doodle-sway {
+    animation: doodleSway 6.2s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  .animate-doodle-sway-rev {
+    animation: doodleSwayRev 6.5s ease-in-out infinite 0.6s;
+    will-change: transform;
+  }
+</style>

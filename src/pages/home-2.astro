@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Home2Hero from '../components/home2/Home2Hero.astro';
+import PartnerLogos from '../components/PartnerLogos.astro';
+import Home2Problem from '../components/home2/Home2Problem.astro';
+import Home2Automation from '../components/home2/Home2Automation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="NewRelay — Turn conversations & reviews into customer growth"
+  description="Bring WhatsApp, Instagram, email, calls, reviews, and Relay AI into one connected command center."
+  bodyClass="bg-[#FAF8F5]"
+>
+  <Navbar />
+
+  <main>
+    <Home2Hero />
+    <PartnerLogos />
+    <Home2Problem />
+    <Home2Automation />
+  </main>
+
+  <Footer />
+</BaseLayout>
+

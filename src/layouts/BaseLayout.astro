@@ -4,11 +4,13 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  bodyClass?: string;
 }
 
 const {
   title = "NewRelay — Turn conversations into growth.",
-  description = "Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools."
+  description = "Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools.",
+  bodyClass = "bg-[#FCFCFA]"
 } = Astro.props;
 ---
 
@@ -33,7 +35,7 @@ const {
       rel="stylesheet" 
     />
   </head>
-  <body class="bg-[#FCFCFA] text-[#17172A] antialiased selection:bg-purple-100 selection:text-purple-900">
+  <body class={`${bodyClass} text-[#17172A] antialiased selection:bg-purple-100 selection:text-purple-900 min-h-screen`}>
     <slot />
   </body>
 </html>
