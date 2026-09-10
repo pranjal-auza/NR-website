@@ -17,25 +17,35 @@
 
         <!-- Desktop Navigation Menu -->
         <nav class="hidden md:flex items-center gap-7 lg:gap-8">
-          <!-- 1. More Dropdown (Home 2, Home 3) -->
+          <!-- 1. Versions Dropdown (Home 1, Home 2, Home 3, Home 4) -->
           <div class="relative group">
-            <button class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#656579] hover:text-[#17172A] py-2 transition-colors">
-              <span>More</span>
-              <svg class="w-3.5 h-3.5 text-[#9696A8] group-hover:text-[#17172A] transition-transform duration-200 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <button class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#17172A] bg-purple-50/80 hover:bg-purple-100/80 text-[#635BFF] px-3 py-1.5 rounded-full transition-all cursor-pointer border border-purple-200/80">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#635BFF] animate-pulse"></span>
+              <span>Versions</span>
+              <svg class="w-3.5 h-3.5 text-[#635BFF] group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </button>
             
             <!-- Dropdown Card -->
             <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0 z-50 pointer-events-none group-hover:pointer-events-auto">
-              <div class="w-44 bg-white/95 backdrop-blur-xl border border-[#E9E9EF] rounded-2xl shadow-[0_14px_34px_-6px_rgba(23,23,42,0.12),0_4px_12px_-2px_rgba(23,23,42,0.05)] p-1.5 flex flex-col gap-0.5">
-                <a href="/home-2" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50/80 hover:text-[#635BFF] transition-colors group/item">
-                  <span>Home 2</span>
-                  <span class="text-[10px] font-bold text-purple-600 bg-purple-100/60 px-1.5 py-0.5 rounded-full">v2</span>
+              <div class="w-60 bg-white/98 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-[0_16px_40px_rgba(23,23,42,0.12)] p-2 flex flex-col gap-1">
+                <div class="px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Select Version</div>
+                <a href="/" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50 hover:text-[#635BFF] transition-colors">
+                  <span>Home 1 (Omnichannel)</span>
+                  <span class="text-[10px] font-bold text-[#635BFF] bg-purple-100/80 px-2 py-0.5 rounded-full">v1</span>
                 </a>
-                <a href="#home-3" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50/80 hover:text-[#635BFF] transition-colors group/item">
-                  <span>Home 3</span>
-                  <span class="text-[10px] font-bold text-indigo-600 bg-indigo-100/60 px-1.5 py-0.5 rounded-full">v3</span>
+                <a href="/home-2" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50 hover:text-[#635BFF] transition-colors">
+                  <span>Home 2 (Reputation)</span>
+                  <span class="text-[10px] font-bold text-amber-600 bg-amber-100/80 px-2 py-0.5 rounded-full">v2</span>
+                </a>
+                <a href="/home-3" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50 hover:text-[#635BFF] transition-colors">
+                  <span>Home 3 (Full Stack)</span>
+                  <span class="text-[10px] font-bold text-indigo-600 bg-indigo-100/80 px-2 py-0.5 rounded-full">v3</span>
+                </a>
+                <a href="/home-4" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold text-[#17172A] hover:bg-purple-50 hover:text-[#635BFF] transition-colors">
+                  <span>Home 4 (Custom Canvas)</span>
+                  <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-full">v4</span>
                 </a>
               </div>
             </div>
@@ -107,8 +117,10 @@
         <div class="py-1">
           <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider px-1 mb-1">More</div>
           <div class="flex flex-col gap-1 pl-2">
-            <a href="/home-2" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 2</a>
-            <a href="#home-3" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 3</a>
+            <a href="/" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 1 (Omnichannel)</a>
+            <a href="/home-2" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 2 (Reputation)</a>
+            <a href="/home-3" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 3 (Full Stack)</a>
+            <a href="/home-4" class="text-sm font-medium text-slate-700 py-1 hover:text-purple-600">Home 4</a>
           </div>
         </div>
         <a href="#product" class="text-sm font-medium text-slate-700 py-1.5 px-1 hover:text-purple-600">Product</a>

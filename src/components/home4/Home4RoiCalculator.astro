@@ -1,0 +1,151 @@
+---
+// Home 4 Interactive ROI & Hours-Saved Calculator
+---
+
+<section id="roi" class="py-20 md:py-28 bg-[#0A0B10] border-b border-white/5 text-white relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-14">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-800/60 text-xs sm:text-sm font-semibold text-emerald-300 mb-4">
+        <span>Business Impact Calculator</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans'] leading-[1.12]">
+        Calculate your team's ROI with NewRelay
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
+        See how much time your team saves and how much additional revenue you unlock with sub-second response times.
+      </p>
+    </div>
+
+    <!-- Calculator Card -->
+    <div class="max-w-4xl mx-auto bg-[#12131F] border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left: Sliders (6 cols) -->
+        <div class="lg:col-span-6 space-y-8">
+          
+          <!-- Slider 1: Team Size -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-sm">
+              <label class="font-bold text-slate-200">Support & Sales Team Size</label>
+              <span id="team-size-display" class="font-mono font-bold text-purple-400 text-base">8 Agents</span>
+            </div>
+            <input 
+              type="range" 
+              id="team-size-slider" 
+              min="2" 
+              max="50" 
+              value="8" 
+              class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#635BFF]"
+            />
+            <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+              <span>2 Agents</span>
+              <span>50 Agents</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Monthly Conversations -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-sm">
+              <label class="font-bold text-slate-200">Monthly Conversations</label>
+              <span id="volume-display" class="font-mono font-bold text-indigo-400 text-base">3,500 / mo</span>
+            </div>
+            <input 
+              type="range" 
+              id="volume-slider" 
+              min="500" 
+              max="25000" 
+              step="500"
+              value="3500" 
+              class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-[#635BFF]"
+            />
+            <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+              <span>500</span>
+              <span>25,000+</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/5 text-xs text-slate-400 leading-relaxed">
+            💡 Calculated based on an industry average of 4.5 minutes per manual ticket and a 15% increase in lead conversion from instant response times.
+          </div>
+
+        </div>
+
+        <!-- Right: Results Matrix (6 cols) -->
+        <div class="lg:col-span-6 bg-gradient-to-br from-purple-950/40 via-indigo-950/30 to-white/[0.02] border border-purple-500/30 rounded-3xl p-7 text-center space-y-6">
+          
+          <div>
+            <p class="text-xs font-mono uppercase tracking-wider text-purple-300">Estimated Annual Value Unlocked</p>
+            <p id="roi-value" class="text-4xl sm:text-5xl font-black text-white font-['Plus_Jakarta_Sans'] mt-2">
+              $42,800
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 font-mono text-left">
+            <div class="bg-white/[0.04] p-3.5 rounded-2xl">
+              <p class="text-[10px] text-slate-400 uppercase">Hours Saved / Mo</p>
+              <p id="hours-saved" class="text-xl font-bold text-emerald-400 mt-1">280 hrs</p>
+            </div>
+            <div class="bg-white/[0.04] p-3.5 rounded-2xl">
+              <p class="text-[10px] text-slate-400 uppercase">New 5★ Reviews / Mo</p>
+              <p id="reviews-generated" class="text-xl font-bold text-amber-400 mt-1">+140</p>
+            </div>
+          </div>
+
+          <a 
+            href="#pricing" 
+            class="w-full py-3.5 rounded-full bg-[#635BFF] hover:bg-[#5248E5] text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-lg transition-all cursor-pointer"
+          >
+            Start realizing ROI today →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  function initRoiCalculator() {
+    const teamSlider = document.getElementById("team-size-slider") as HTMLInputElement;
+    const volumeSlider = document.getElementById("volume-slider") as HTMLInputElement;
+    const teamDisplay = document.getElementById("team-size-display");
+    const volumeDisplay = document.getElementById("volume-display");
+    const roiValue = document.getElementById("roi-value");
+    const hoursSaved = document.getElementById("hours-saved");
+    const reviewsGenerated = document.getElementById("reviews-generated");
+
+    function update() {
+      if (!teamSlider || !volumeSlider) return;
+      const team = parseInt(teamSlider.value);
+      const volume = parseInt(volumeSlider.value);
+
+      if (teamDisplay) teamDisplay.textContent = `${team} Agents`;
+      if (volumeDisplay) volumeDisplay.textContent = `${volume.toLocaleString()} / mo`;
+
+      const hours = Math.round(volume * 0.08);
+      const reviews = Math.round(volume * 0.04);
+      const value = Math.round(volume * 0.12 * 85);
+
+      if (hoursSaved) hoursSaved.textContent = `${hours} hrs`;
+      if (reviewsGenerated) reviewsGenerated.textContent = `+${reviews}`;
+      if (roiValue) roiValue.textContent = `$${value.toLocaleString()}`;
+    }
+
+    teamSlider?.addEventListener("input", update);
+    volumeSlider?.addEventListener("input", update);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initRoiCalculator);
+  } else {
+    initRoiCalculator();
+  }
+</script>

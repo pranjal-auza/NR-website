@@ -1,0 +1,172 @@
+---
+// AutomateX FAQs Section: Interactive Accordions with Smooth Expand/Collapse
+---
+
+<section class="relative py-20 md:py-28 overflow-hidden bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+    
+    <!-- Title Block -->
+    <div class="space-y-4 mb-14 md:mb-18">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 bg-purple-50/60 text-xs sm:text-sm font-semibold text-[#5B21B6]">
+        <span>Need help?</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-[#100F12] tracking-tight font-['Plus_Jakarta_Sans']">
+        Frequently asked questions
+      </h2>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-4 text-left">
+      
+      <!-- FAQ 1 (Open by default) -->
+      <div class="faq-item bg-[#FAF9FC] border border-[#EBE8F0] rounded-2xl overflow-hidden transition-all duration-200">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer">
+          <h3 class="text-sm sm:text-base font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">
+            What is an AI agent in this product?
+          </h3>
+          <div class="faq-icon w-8 h-8 rounded-full bg-[#100F12] text-white flex items-center justify-center shrink-0 transition-transform duration-300 transform rotate-45">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-5 block">
+          <p class="text-xs sm:text-sm text-[#5F5E6E] leading-relaxed">
+            An agent is a task-focused assistant that can read context, follow rules, and take actions like drafting responses, creating tasks, or routing requests, with human approvals where needed.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item bg-[#FAF9FC] border border-[#EBE8F0] rounded-2xl overflow-hidden transition-all duration-200">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer">
+          <h3 class="text-sm sm:text-base font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">
+            How is this different from a chatbot?
+          </h3>
+          <div class="faq-icon w-8 h-8 rounded-full bg-slate-200/80 text-[#100F12] flex items-center justify-center shrink-0 transition-transform duration-300">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-5 hidden">
+          <p class="text-xs sm:text-sm text-[#5F5E6E] leading-relaxed">
+            Chatbots reply to messages. Agents clarify intent, pull the right context from docs and APIs, and complete complex workflows within defined guardrails and audit controls.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item bg-[#FAF9FC] border border-[#EBE8F0] rounded-2xl overflow-hidden transition-all duration-200">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer">
+          <h3 class="text-sm sm:text-base font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">
+            Can I control what agents are allowed to do?
+          </h3>
+          <div class="faq-icon w-8 h-8 rounded-full bg-slate-200/80 text-[#100F12] flex items-center justify-center shrink-0 transition-transform duration-300">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-5 hidden">
+          <p class="text-xs sm:text-sm text-[#5F5E6E] leading-relaxed">
+            Yes. You define permissions, approval steps, source boundaries, and escalation rules. Nothing runs without the exact controls and thresholds you set.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item bg-[#FAF9FC] border border-[#EBE8F0] rounded-2xl overflow-hidden transition-all duration-200">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer">
+          <h3 class="text-sm sm:text-base font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">
+            Do agents use my data for training?
+          </h3>
+          <div class="faq-icon w-8 h-8 rounded-full bg-slate-200/80 text-[#100F12] flex items-center justify-center shrink-0 transition-transform duration-300">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-5 hidden">
+          <p class="text-xs sm:text-sm text-[#5F5E6E] leading-relaxed">
+            No. Your data is strictly private and never used to train public models. You control data retention policies and approved knowledge sources.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="faq-item bg-[#FAF9FC] border border-[#EBE8F0] rounded-2xl overflow-hidden transition-all duration-200">
+        <button class="faq-btn w-full px-6 py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer">
+          <h3 class="text-sm sm:text-base font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">
+            What happens if an agent is unsure?
+          </h3>
+          <div class="faq-icon w-8 h-8 rounded-full bg-slate-200/80 text-[#100F12] flex items-center justify-center shrink-0 transition-transform duration-300">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </div>
+        </button>
+        <div class="faq-content px-6 pb-5 hidden">
+          <p class="text-xs sm:text-sm text-[#5F5E6E] leading-relaxed">
+            Agents ask clarifying questions or escalate directly to a human teammate based on your rules. They never hallucinate, guess, or act blindly.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Still Have Questions Link -->
+    <div class="mt-10 flex items-center justify-center gap-2 text-xs sm:text-sm">
+      <span class="text-[#5F5E6E]">Still have questions?</span>
+      <a href="#contact" class="font-bold text-[#5925DC] hover:text-[#4314A7] inline-flex items-center gap-1 group">
+        <span>Contact support</span>
+        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function initFaqs() {
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach((item) => {
+      const btn = item.querySelector(".faq-btn");
+      const content = item.querySelector(".faq-content");
+      const icon = item.querySelector(".faq-icon");
+
+      btn?.addEventListener("click", () => {
+        const isOpen = !content?.classList.contains("hidden");
+
+        // Close all
+        faqItems.forEach((otherItem) => {
+          const otherContent = otherItem.querySelector(".faq-content");
+          const otherIcon = otherItem.querySelector(".faq-icon");
+          otherContent?.classList.add("hidden");
+          otherIcon?.classList.remove("rotate-45", "bg-[#100F12]", "text-white");
+          otherIcon?.classList.add("bg-slate-200/80", "text-[#100F12]");
+        });
+
+        if (!isOpen) {
+          content?.classList.remove("hidden");
+          icon?.classList.add("rotate-45", "bg-[#100F12]", "text-white");
+          icon?.classList.remove("bg-slate-200/80", "text-[#100F12]");
+        }
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFaqs);
+  } else {
+    initFaqs();
+  }
+</script>

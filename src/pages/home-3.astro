@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import PartnerLogos from '../components/PartnerLogos.astro';
+import ProblemSection from '../components/ProblemSection.astro';
+import UnifiedInboxSection from '../components/UnifiedInboxSection.astro';
+import AutomationSection from '../components/AutomationSection.astro';
+import AnalyticsSection from '../components/AnalyticsSection.astro';
+import SolutionsSection from '../components/SolutionsSection.astro';
+import IntegrationsSection from '../components/IntegrationsSection.astro';
+import TestimonialSection from '../components/TestimonialSection.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="NewRelay — Turn conversations into growth."
+  description="Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools."
+>
+  <Navbar />
+
+  <main>
+    <!-- 1. CENTERED HERO -->
+    <Hero />
+
+    <!-- 2. PARTNER TRUST LOGOS -->
+    <PartnerLogos />
+
+    <!-- 3. CENTERED + VISUAL SCATTER (PROBLEM) -->
+    <ProblemSection />
+
+    <!-- 4. FULL-WIDTH PRODUCT (UNIFIED INBOX) -->
+    <UnifiedInboxSection />
+
+    <!-- 5. ASYMMETRIC WORKFLOW BUILDER (AUTOMATION) -->
+    <AutomationSection />
+
+    <!-- 6. CENTERED + BENTO CARD GRID (ANALYTICS) -->
+    <AnalyticsSection />
+
+    <!-- 7. CENTERED + 4-COLUMN GRID (SOLUTIONS) -->
+    <SolutionsSection />
+
+    <!-- 8. VISUAL ECOSYSTEM (INTEGRATIONS) -->
+    <IntegrationsSection />
+
+    <!-- 9. ASYMMETRIC TESTIMONIAL + METRICS (PROOF) -->
+    <TestimonialSection />
+
+    <!-- 10. CENTERED ATMOSPHERIC CONTAINER (FINAL CTA) -->
+    <CtaSection />
+  </main>
+
+  <!-- EDITORIAL FOOTER -->
+  <Footer />
+</BaseLayout>

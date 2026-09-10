@@ -1,0 +1,159 @@
+---
+// Home 4 Live Triage Matrix & Realtime Stream Simulator
+---
+
+<section id="triage" class="py-20 md:py-28 bg-[#0D0E15] border-b border-white/5 text-white relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-14 sm:mb-18">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/80 border border-purple-800/60 text-xs sm:text-sm font-semibold text-purple-300 mb-4">
+        <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+        <span>Sub-Second Event Matrix</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans'] leading-[1.12]">
+        Ingest, triage, and route <br class="hidden sm:inline" />
+        <span class="bg-gradient-to-r from-purple-400 to-indigo-300 bg-clip-text text-transparent">thousands of conversations in milliseconds.</span>
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
+        Our event-driven pipeline processes WhatsApp, Instagram, and review webhooks instantly — prioritizing high-value opportunities before customers walk away.
+      </p>
+    </div>
+
+    <!-- Interactive Triage Matrix Grid (2 Columns: Live Feed + Inspector) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-stretch">
+      
+      <!-- LEFT: Live Streaming Feed (5 cols) -->
+      <div class="lg:col-span-5 bg-[#12131F] border border-white/10 rounded-3xl p-6 shadow-2xl flex flex-col justify-between">
+        
+        <div>
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <h3 class="text-sm font-bold text-white uppercase tracking-wider">Live Inbound Stream</h3>
+            </div>
+            <span class="text-[11px] font-mono text-purple-400 bg-purple-950 px-2 py-0.5 rounded-md">12ms Latency</span>
+          </div>
+
+          <!-- Live Event Feed Items -->
+          <div class="space-y-3 font-mono text-xs">
+            
+            <div class="event-item active-event p-3 rounded-2xl bg-white/[0.08] border border-purple-500/50 cursor-pointer transition-all hover:border-purple-400" data-event="event-1">
+              <div class="flex items-center justify-between text-[11px] mb-1">
+                <span class="text-emerald-400 font-bold flex items-center gap-1">● WHATSAPP_VIP</span>
+                <span class="text-slate-400">Just now</span>
+              </div>
+              <p class="text-slate-200 font-sans font-medium text-xs truncate">"Enterprise demo for 40 seats..."</p>
+              <div class="flex items-center gap-2 mt-2 text-[10px] text-slate-400">
+                <span class="bg-emerald-950 text-emerald-300 px-1.5 py-0.5 rounded">$4,200 Opp</span>
+                <span>Auto-routed to Sarah M.</span>
+              </div>
+            </div>
+
+            <div class="event-item p-3 rounded-2xl bg-white/[0.03] border border-white/5 cursor-pointer transition-all hover:bg-white/[0.06] hover:border-white/20" data-event="event-2">
+              <div class="flex items-center justify-between text-[11px] mb-1">
+                <span class="text-pink-400 font-bold flex items-center gap-1">● INSTAGRAM_REEL</span>
+                <span class="text-slate-400">14s ago</span>
+              </div>
+              <p class="text-slate-200 font-sans font-medium text-xs truncate">"Commented VIP20 on Reel #104"</p>
+              <div class="flex items-center gap-2 mt-2 text-[10px] text-slate-400">
+                <span class="bg-pink-950 text-pink-300 px-1.5 py-0.5 rounded">Auto-DM Sent</span>
+                <span>Coupon Applied</span>
+              </div>
+            </div>
+
+            <div class="event-item p-3 rounded-2xl bg-white/[0.03] border border-white/5 cursor-pointer transition-all hover:bg-white/[0.06] hover:border-white/20" data-event="event-3">
+              <div class="flex items-center justify-between text-[11px] mb-1">
+                <span class="text-amber-400 font-bold flex items-center gap-1">● GOOGLE_REVIEW</span>
+                <span class="text-slate-400">42s ago</span>
+              </div>
+              <p class="text-slate-200 font-sans font-medium text-xs truncate">"5-Star rating posted for Austin store"</p>
+              <div class="flex items-center gap-2 mt-2 text-[10px] text-slate-400">
+                <span class="bg-amber-950 text-amber-300 px-1.5 py-0.5 rounded">5.0 ★ Rating</span>
+                <span>Auto-Thanked</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400">
+          <span>Streaming: 1,480 events/min</span>
+          <span class="text-emerald-400 font-semibold">Healthy (100%)</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Interactive Detail Inspector (7 cols) -->
+      <div class="lg:col-span-7 bg-[#12131F] border border-white/10 rounded-3xl p-7 shadow-2xl flex flex-col justify-between">
+        
+        <div>
+          <!-- Inspector Header -->
+          <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-purple-950 border border-purple-700/60 text-purple-300 flex items-center justify-center font-mono font-bold text-sm">
+                #429
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Event Inspector • VIP Opportunity</h4>
+                <p class="text-xs text-slate-400">Source: Meta WhatsApp Cloud API v19.0</p>
+              </div>
+            </div>
+            <span class="text-xs font-mono text-emerald-400 bg-emerald-950/80 border border-emerald-800/60 px-2.5 py-1 rounded-full">
+              Triage Score: 98/100
+            </span>
+          </div>
+
+          <!-- Payload Details -->
+          <div class="space-y-4 text-xs font-sans">
+            
+            <div class="grid grid-cols-2 gap-3 font-mono">
+              <div class="bg-white/[0.03] border border-white/5 p-3 rounded-xl">
+                <p class="text-[10px] text-slate-500 uppercase">Customer Profile</p>
+                <p class="text-white font-bold mt-0.5">David Henderson</p>
+                <p class="text-slate-400 text-[11px]">Apex Logistics Inc.</p>
+              </div>
+              <div class="bg-white/[0.03] border border-white/5 p-3 rounded-xl">
+                <p class="text-[10px] text-slate-500 uppercase">Estimated Value</p>
+                <p class="text-emerald-400 font-bold mt-0.5">$4,200.00 / yr</p>
+                <p class="text-slate-400 text-[11px]">40 seats requested</p>
+              </div>
+            </div>
+
+            <div class="bg-white/[0.03] border border-white/5 p-4 rounded-xl space-y-2">
+              <p class="text-[10px] font-mono text-slate-500 uppercase">Message Transcript</p>
+              <p class="text-slate-200 leading-relaxed">
+                "Hello team! We are currently evaluating NewRelay to replace our Zendesk and WhatsApp setups for 40 support agents. Can we migrate our existing verified number today?"
+              </p>
+            </div>
+
+            <!-- Automated Triage Actions Executed -->
+            <div class="p-3.5 rounded-xl bg-purple-950/40 border border-purple-800/40 space-y-1.5">
+              <p class="text-[11px] font-bold text-purple-300 flex items-center gap-1.5">
+                <span>⚡ Automated Actions Executed in 18ms:</span>
+              </p>
+              <ul class="space-y-1 text-slate-300 text-[11px]">
+                <li>✓ Enriched customer email & company via Clearbit/HubSpot</li>
+                <li>✓ Generated VIP calendar booking link with priority availability</li>
+                <li>✓ Triggered Slack notification in <span class="font-mono text-purple-300">#enterprise-inbounds</span></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+          <span class="text-xs text-slate-400">Assigned Agent: <strong class="text-white">Sarah Miller</strong></span>
+          <button class="px-4 py-2 rounded-full bg-[#635BFF] hover:bg-[#5248E5] text-white font-bold text-xs shadow-md transition-all cursor-pointer">
+            Open in Workspace →
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

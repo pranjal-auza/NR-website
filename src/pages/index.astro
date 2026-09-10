@@ -1,57 +1,63 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Navbar from '../components/Navbar.astro';
-import Hero from '../components/Hero.astro';
-import PartnerLogos from '../components/PartnerLogos.astro';
-import ProblemSection from '../components/ProblemSection.astro';
-import UnifiedInboxSection from '../components/UnifiedInboxSection.astro';
-import AutomationSection from '../components/AutomationSection.astro';
-import AnalyticsSection from '../components/AnalyticsSection.astro';
-import SolutionsSection from '../components/SolutionsSection.astro';
-import IntegrationsSection from '../components/IntegrationsSection.astro';
-import TestimonialSection from '../components/TestimonialSection.astro';
-import CtaSection from '../components/CtaSection.astro';
-import Footer from '../components/Footer.astro';
+import AutomateXNavbar from '../components/AutomateXNavbar.astro';
+import AutomateXHero from '../components/AutomateXHero.astro';
+import TrustLogos from '../components/home1/TrustLogos.astro';
+import ProblemSolution from '../components/home1/ProblemSolution.astro';
+import OmnichannelShowcase from '../components/home1/OmnichannelShowcase.astro';
+import AutomationWorkflow from '../components/home1/AutomationWorkflow.astro';
+import CoreFeaturesBento from '../components/home1/CoreFeaturesBento.astro';
+import IntegrationsEcosystem from '../components/home1/IntegrationsEcosystem.astro';
+import SocialProofTestimonials from '../components/home1/SocialProofTestimonials.astro';
+import TransparentPricing from '../components/home1/TransparentPricing.astro';
+import FaqSection from '../components/home1/FaqSection.astro';
+import FinalCtaBanner from '../components/home1/FinalCtaBanner.astro';
+import AutomateXFooter from '../components/AutomateXFooter.astro';
 ---
 
 <BaseLayout 
-  title="NewRelay — Turn conversations into growth."
-  description="Bring WhatsApp, Instagram, email, calls, reviews and more into one connected workspace — so you can engage, automate and grow without switching tools."
+  title="NewRelay — Turn customer conversations & reviews into growth"
+  description="Bring WhatsApp, Instagram, Google Reviews, Email, and SMS into one unified workspace. Automate routine replies, coordinate your team, and convert leads in seconds."
+  bodyClass="bg-white"
 >
-  <Navbar />
+  <!-- Floating Pill Navbar -->
+  <AutomateXNavbar />
 
   <main>
-    <!-- 1. CENTERED HERO -->
-    <Hero />
+    <!-- 1. HERO SECTION -->
+    <AutomateXHero />
 
     <!-- 2. PARTNER TRUST LOGOS -->
-    <PartnerLogos />
+    <TrustLogos />
 
-    <!-- 3. CENTERED + VISUAL SCATTER (PROBLEM) -->
-    <ProblemSection />
+    <!-- 3. PROBLEM VS SOLUTION TRANSFORMATION -->
+    <ProblemSolution />
 
-    <!-- 4. FULL-WIDTH PRODUCT (UNIFIED INBOX) -->
-    <UnifiedInboxSection />
+    <!-- 4. INTERACTIVE OMNICHANNEL SHOWCASE (WHATSAPP, IG, REVIEWS, TEAM INBOX) -->
+    <OmnichannelShowcase />
 
-    <!-- 5. ASYMMETRIC WORKFLOW BUILDER (AUTOMATION) -->
-    <AutomationSection />
+    <!-- 5. VISUAL AUTOMATION & SMART AUTO-RESPONDER -->
+    <AutomationWorkflow />
 
-    <!-- 6. CENTERED + BENTO CARD GRID (ANALYTICS) -->
-    <AnalyticsSection />
+    <!-- 6. CORE FEATURES BENTO GRID -->
+    <CoreFeaturesBento />
 
-    <!-- 7. CENTERED + 4-COLUMN GRID (SOLUTIONS) -->
-    <SolutionsSection />
+    <!-- 7. INTEGRATIONS ECOSYSTEM -->
+    <IntegrationsEcosystem />
 
-    <!-- 8. VISUAL ECOSYSTEM (INTEGRATIONS) -->
-    <IntegrationsSection />
+    <!-- 8. REAL CUSTOMER TESTIMONIALS & PROOF METRICS -->
+    <SocialProofTestimonials />
 
-    <!-- 9. ASYMMETRIC TESTIMONIAL + METRICS (PROOF) -->
-    <TestimonialSection />
+    <!-- 9. TRANSPARENT PRICING TIERS -->
+    <TransparentPricing />
 
-    <!-- 10. CENTERED ATMOSPHERIC CONTAINER (FINAL CTA) -->
-    <CtaSection />
+    <!-- 10. FAQS ACCORDION -->
+    <FaqSection />
+
+    <!-- 11. FINAL HIGH-CONVERTING CTA BANNER -->
+    <FinalCtaBanner />
   </main>
 
-  <!-- EDITORIAL FOOTER -->
-  <Footer />
+  <!-- FOOTER -->
+  <AutomateXFooter />
 </BaseLayout>

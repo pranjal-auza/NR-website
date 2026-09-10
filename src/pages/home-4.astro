@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Home4Navbar from '../components/home4/Home4Navbar.astro';
+import Home4Hero from '../components/home4/Home4Hero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="NewRelay — Convert with Conversational AI"
+  description="Connect every channel, manage every conversation, and automate your customer journey from one powerful platform."
+  bodyClass="bg-[#FAFAFA] min-h-screen text-slate-900"
+>
+  <div class="relative overflow-hidden">
+    <!-- Ambient Soft Pastel Background Glows Flowing Across Header & Hero -->
+    <div class="absolute inset-0 pointer-events-none -z-10 overflow-hidden select-none">
+      <!-- Bottom-Left Soft Peach/Rose Glow -->
+      <div class="absolute top-[350px] -left-28 w-[600px] h-[600px] bg-gradient-to-tr from-pink-200/40 via-rose-100/25 to-transparent rounded-full blur-[110px]"></div>
+      
+      <!-- Top-Right Soft Lavender/Violet Glow -->
+      <div class="absolute -top-16 -right-24 w-[650px] h-[650px] bg-gradient-to-bl from-purple-200/35 via-violet-100/20 to-transparent rounded-full blur-[120px]"></div>
+      
+      <!-- Subtle Crosshair & Grid Pattern -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a08_1px,transparent_1px),linear-gradient(to_bottom,#0f172a08_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_80%_65%_at_50%_35%,#000_60%,transparent_100%)] opacity-70"></div>
+    </div>
+
+    <!-- Light Header Directly on the Page Background -->
+    <Home4Navbar />
+
+    <main>
+      <!-- Light Theme Hero Section -->
+      <Home4Hero />
+    </main>
+  </div>
+
+  <!-- Clean Light Footer -->
+  <Footer />
+</BaseLayout>

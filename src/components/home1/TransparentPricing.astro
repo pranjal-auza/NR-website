@@ -1,0 +1,213 @@
+---
+// Transparent SaaS Pricing Component — Monthly / Yearly Toggle & Feature Matrix
+---
+
+<section id="pricing" class="py-20 md:py-28 bg-[#FAF9FF]/60 border-t border-slate-100 relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/70 border border-purple-200 text-xs sm:text-sm font-bold text-[#635BFF] mb-4">
+        <span>Simple, Predictable Pricing</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-[#100F12] tracking-tight font-['Plus_Jakarta_Sans'] leading-[1.12]">
+        Start free, scale as your conversations grow.
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-[#5F5E6E] leading-relaxed">
+        14-day free trial on all plans. No credit card required. Cancel anytime.
+      </p>
+
+      <!-- Monthly / Annual Toggle -->
+      <div class="flex items-center justify-center gap-3 mt-8">
+        <span id="monthly-label" class="text-xs sm:text-sm font-bold text-[#100F12]">Monthly</span>
+        <button 
+          id="billing-toggle" 
+          class="relative w-14 h-8 rounded-full bg-[#635BFF] p-1 transition-colors cursor-pointer"
+          aria-label="Toggle Billing Frequency"
+        >
+          <div id="toggle-knob" class="w-6 h-6 rounded-full bg-white transition-transform translate-x-6 shadow-sm"></div>
+        </button>
+        <span id="annual-label" class="text-xs sm:text-sm font-bold text-[#635BFF] flex items-center gap-1.5">
+          Annual <span class="bg-emerald-100 text-emerald-800 text-[10px] font-extrabold px-2 py-0.5 rounded-full">Save 20%</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- 3 Pricing Tier Cards -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+      
+      <!-- TIER 1: STARTER -->
+      <div class="bg-white rounded-3xl border border-slate-200/90 p-8 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-[#100F12]">Starter</h3>
+          <p class="text-xs text-[#5F5E6E] mt-1">Perfect for small teams & boutiques</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="price-val text-4xl sm:text-5xl font-extrabold text-[#100F12] font-['Plus_Jakarta_Sans']" data-monthly="49" data-annual="39">$39</span>
+            <span class="text-xs text-[#5F5E6E]">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-[#100F12]">
+            <p class="font-bold text-[#5F5E6E] text-[11px] uppercase tracking-wider">Includes:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Up to 3 team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> 1 WhatsApp Business number
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Unified WhatsApp & Webchat inbox
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Basic auto-reply rules
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> 1,000 active conversations / mo
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100">
+          <a href="#start" class="w-full py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#100F12] font-bold text-xs sm:text-sm flex items-center justify-center transition-all cursor-pointer">
+            Start 14-day free trial
+          </a>
+        </div>
+      </div>
+
+      <!-- TIER 2: GROWTH (FEATURED) -->
+      <div class="bg-white rounded-3xl border-2 border-[#635BFF] p-8 shadow-[0_16px_40px_rgba(99,91,255,0.12)] transition-all flex flex-col justify-between relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#635BFF] text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm">
+          Most Popular
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-[#100F12]">Growth</h3>
+          <p class="text-xs text-[#5F5E6E] mt-1">For scaling businesses & sales teams</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="price-val text-4xl sm:text-5xl font-extrabold text-[#100F12] font-['Plus_Jakarta_Sans']" data-monthly="99" data-annual="79">$79</span>
+            <span class="text-xs text-[#5F5E6E]">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-[#100F12]">
+            <p class="font-bold text-[#635BFF] text-[11px] uppercase tracking-wider">Everything in Starter, plus:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> Up to 10 team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> WhatsApp, Instagram, Facebook & Email
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> Automated Google & Trustpilot review engine
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> Collision detection & private notes
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> Shopify, HubSpot & Stripe integrations
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-[#635BFF] font-bold">✓</span> 5,000 active conversations / mo
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-purple-100">
+          <a href="#start" class="w-full py-3.5 rounded-full bg-[#635BFF] hover:bg-[#5248E5] text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-md transition-all cursor-pointer">
+            Start 14-day free trial
+          </a>
+        </div>
+      </div>
+
+      <!-- TIER 3: SCALE & ENTERPRISE -->
+      <div class="bg-white rounded-3xl border border-slate-200/90 p-8 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <h3 class="text-lg font-bold text-[#100F12]">Scale</h3>
+          <p class="text-xs text-[#5F5E6E] mt-1">For multi-location brands & high volume</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="price-val text-4xl sm:text-5xl font-extrabold text-[#100F12] font-['Plus_Jakarta_Sans']" data-monthly="249" data-annual="199">$199</span>
+            <span class="text-xs text-[#5F5E6E]">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-[#100F12]">
+            <p class="font-bold text-[#5F5E6E] text-[11px] uppercase tracking-wider">Everything in Growth, plus:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Unlimited team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Multi-location Google Business sync
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Custom routing rules & round-robin
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> Dedicated Customer Success Manager
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-600 font-bold">✓</span> SOC-2, GDPR & custom SLA guarantee
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-100">
+          <a href="#demo" class="w-full py-3.5 rounded-full bg-[#100F12] hover:bg-[#242330] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition-all cursor-pointer">
+            Talk to sales
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Pricing Billing Frequency Toggle Script -->
+<script>
+  function initPricingToggle() {
+    const toggleBtn = document.getElementById("billing-toggle");
+    const toggleKnob = document.getElementById("toggle-knob");
+    const monthlyLabel = document.getElementById("monthly-label");
+    const annualLabel = document.getElementById("annual-label");
+    const priceElements = document.querySelectorAll(".price-val");
+    if (!toggleBtn || !toggleKnob) return;
+
+    let isAnnual = true;
+
+    toggleBtn.addEventListener("click", () => {
+      isAnnual = !isAnnual;
+
+      if (isAnnual) {
+        toggleKnob.style.transform = "translateX(24px)";
+        monthlyLabel?.classList.remove("text-[#635BFF]");
+        monthlyLabel?.classList.add("text-[#5F5E6E]");
+        annualLabel?.classList.remove("text-[#5F5E6E]");
+        annualLabel?.classList.add("text-[#635BFF]");
+
+        priceElements.forEach(el => {
+          const annualPrice = el.getAttribute("data-annual");
+          if (annualPrice) el.textContent = `$${annualPrice}`;
+        });
+      } else {
+        toggleKnob.style.transform = "translateX(0px)";
+        annualLabel?.classList.remove("text-[#635BFF]");
+        annualLabel?.classList.add("text-[#5F5E6E]");
+        monthlyLabel?.classList.remove("text-[#5F5E6E]");
+        monthlyLabel?.classList.add("text-[#100F12]");
+
+        priceElements.forEach(el => {
+          const monthlyPrice = el.getAttribute("data-monthly");
+          if (monthlyPrice) el.textContent = `$${monthlyPrice}`;
+        });
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPricingToggle);
+  } else {
+    initPricingToggle();
+  }
+</script>

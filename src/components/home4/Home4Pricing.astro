@@ -1,0 +1,212 @@
+---
+// Home 4 Dark Mode Pricing Matrix with Annual Discount Toggle
+---
+
+<section id="pricing" class="py-20 md:py-28 bg-[#0A0B10] border-b border-white/5 text-white relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/80 border border-purple-800/60 text-xs sm:text-sm font-semibold text-purple-300 mb-4">
+        <span>Transparent Enterprise Pricing</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight font-['Plus_Jakarta_Sans'] leading-[1.12]">
+        Simple plans. Enterprise velocity.
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-400 leading-relaxed">
+        14-day full feature trial on all plans. No credit card required. Cancel anytime.
+      </p>
+
+      <!-- Toggle Switch -->
+      <div class="flex items-center justify-center gap-3 mt-8">
+        <span id="h4-monthly-label" class="text-xs sm:text-sm font-bold text-slate-400">Monthly</span>
+        <button 
+          id="h4-billing-toggle" 
+          class="relative w-14 h-8 rounded-full bg-[#635BFF] p-1 transition-colors cursor-pointer"
+          aria-label="Toggle Billing Frequency"
+        >
+          <div id="h4-toggle-knob" class="w-6 h-6 rounded-full bg-white transition-transform translate-x-6 shadow-sm"></div>
+        </button>
+        <span id="h4-annual-label" class="text-xs sm:text-sm font-bold text-purple-300 flex items-center gap-1.5">
+          Annual <span class="bg-emerald-950 text-emerald-400 border border-emerald-800/60 text-[10px] font-extrabold px-2 py-0.5 rounded-full">Save 20%</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Pricing Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+      
+      <!-- Plan 1: Starter -->
+      <div class="bg-[#12131F] border border-white/10 rounded-3xl p-8 transition-all flex flex-col justify-between shadow-2xl">
+        <div>
+          <h3 class="text-lg font-bold text-white">Starter</h3>
+          <p class="text-xs text-slate-400 mt-1">For fast-growing teams getting started</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="h4-price-val text-4xl sm:text-5xl font-extrabold text-white font-['Plus_Jakarta_Sans']" data-monthly="49" data-annual="39">$39</span>
+            <span class="text-xs text-slate-400">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-slate-300">
+            <p class="font-bold text-slate-500 text-[11px] uppercase tracking-wider">Features included:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Up to 3 team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> 1 WhatsApp Business number
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Unified WhatsApp & Webchat stream
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Basic routing triggers
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> 1,000 active conversations / mo
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <a href="#start" class="w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition-all cursor-pointer border border-white/10">
+            Start 14-day free trial
+          </a>
+        </div>
+      </div>
+
+      <!-- Plan 2: Growth (Featured) -->
+      <div class="bg-gradient-to-b from-[#181928] to-[#12131F] border-2 border-[#635BFF] rounded-3xl p-8 shadow-[0_0_50px_rgba(99,91,255,0.25)] transition-all flex flex-col justify-between relative">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#635BFF] text-white text-[11px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
+          Most Popular
+        </div>
+
+        <div>
+          <h3 class="text-lg font-bold text-white">Growth Engine</h3>
+          <p class="text-xs text-purple-200 mt-1">For high-velocity revenue & support teams</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="h4-price-val text-4xl sm:text-5xl font-extrabold text-white font-['Plus_Jakarta_Sans']" data-monthly="99" data-annual="79">$79</span>
+            <span class="text-xs text-slate-400">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-slate-200">
+            <p class="font-bold text-purple-300 text-[11px] uppercase tracking-wider">Everything in Starter, plus:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> Up to 10 team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> WhatsApp, Instagram, FB & Email
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> Automated Google & Trustpilot reviews
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> Microsecond collision locks
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> Shopify, HubSpot & Stripe live sync
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-purple-400 font-bold">✓</span> 5,000 active conversations / mo
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-purple-500/30">
+          <a href="#start" class="w-full py-3.5 rounded-full bg-gradient-to-r from-[#635BFF] to-[#8B5CF6] hover:from-[#5248E5] hover:to-[#7C3AED] text-white font-bold text-xs sm:text-sm flex items-center justify-center shadow-lg transition-all cursor-pointer">
+            Start 14-day free trial
+          </a>
+        </div>
+      </div>
+
+      <!-- Plan 3: Scale -->
+      <div class="bg-[#12131F] border border-white/10 rounded-3xl p-8 transition-all flex flex-col justify-between shadow-2xl">
+        <div>
+          <h3 class="text-lg font-bold text-white">Enterprise Scale</h3>
+          <p class="text-xs text-slate-400 mt-1">For multi-location brands & high volume</p>
+
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="h4-price-val text-4xl sm:text-5xl font-extrabold text-white font-['Plus_Jakarta_Sans']" data-monthly="249" data-annual="199">$199</span>
+            <span class="text-xs text-slate-400">/ month</span>
+          </div>
+
+          <div class="mt-6 space-y-3 text-xs sm:text-sm text-slate-300">
+            <p class="font-bold text-slate-500 text-[11px] uppercase tracking-wider">Everything in Growth, plus:</p>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Unlimited team seats
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Multi-location Google Business sync
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Custom webhook & routing engine
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> Dedicated Customer Success Manager
+            </div>
+            <div class="flex items-center gap-2.5">
+              <span class="text-emerald-400 font-bold">✓</span> 99.99% SLA & SOC-2 compliance
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <a href="#demo" class="w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-white font-bold text-xs sm:text-sm flex items-center justify-center transition-all cursor-pointer border border-white/10">
+            Contact enterprise sales
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  function initH4PricingToggle() {
+    const toggleBtn = document.getElementById("h4-billing-toggle");
+    const toggleKnob = document.getElementById("h4-toggle-knob");
+    const monthlyLabel = document.getElementById("h4-monthly-label");
+    const annualLabel = document.getElementById("h4-annual-label");
+    const priceElements = document.querySelectorAll(".h4-price-val");
+    if (!toggleBtn || !toggleKnob) return;
+
+    let isAnnual = true;
+
+    toggleBtn.addEventListener("click", () => {
+      isAnnual = !isAnnual;
+
+      if (isAnnual) {
+        toggleKnob.style.transform = "translateX(24px)";
+        monthlyLabel?.classList.remove("text-white");
+        monthlyLabel?.classList.add("text-slate-400");
+        annualLabel?.classList.remove("text-slate-400");
+        annualLabel?.classList.add("text-purple-300");
+
+        priceElements.forEach(el => {
+          const annualPrice = el.getAttribute("data-annual");
+          if (annualPrice) el.textContent = `$${annualPrice}`;
+        });
+      } else {
+        toggleKnob.style.transform = "translateX(0px)";
+        annualLabel?.classList.remove("text-purple-300");
+        annualLabel?.classList.add("text-slate-400");
+        monthlyLabel?.classList.remove("text-slate-400");
+        monthlyLabel?.classList.add("text-white");
+
+        priceElements.forEach(el => {
+          const monthlyPrice = el.getAttribute("data-monthly");
+          if (monthlyPrice) el.textContent = `$${monthlyPrice}`;
+        });
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initH4PricingToggle);
+  } else {
+    initH4PricingToggle();
+  }
+</script>

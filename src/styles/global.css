@@ -198,3 +198,123 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(99, 91, 255, 0.15);
   margin-bottom: 1rem;
 }
+
+/* Rolling Text Button Effect */
+.btn-text-roll {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-text-wrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height: 1.3em;
+  line-height: 1.3em;
+}
+
+.button-text-wrap .text-default {
+  display: block;
+  transform: translateY(0%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease;
+  opacity: 1;
+}
+
+.button-text-wrap .text-hover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(110%);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.group:hover .button-text-wrap .text-default,
+.btn-text-roll:hover .button-text-wrap .text-default {
+  transform: translateY(-110%);
+  opacity: 0;
+}
+
+.group:hover .button-text-wrap .text-hover,
+.btn-text-roll:hover .button-text-wrap .text-hover {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+/* Blinking Cursor Pipe */
+@keyframes pipeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-pipe {
+  animation: pipeBlink 0.9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Card Floating Keyframes */
+@keyframes floatGentle1 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -10px, 0); }
+}
+
+@keyframes floatGentle2 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 10px, 0); }
+}
+
+@keyframes floatSlowSway {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(4px, -6px, 0) rotate(1deg); }
+}
+
+.animate-float-1 {
+  animation: floatGentle1 6s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatGentle2 7s ease-in-out infinite;
+}
+
+.animate-sway {
+  animation: floatSlowSway 8s ease-in-out infinite;
+}
+
+/* Ambient Radial Background & Light Rays */
+.hero-ambient-rays {
+  background: radial-gradient(circle at 50% 10%, rgba(139, 92, 246, 0.22) 0%, rgba(99, 91, 255, 0.12) 35%, rgba(255, 255, 255, 0) 70%);
+}
+
+/* Marquee animations for Integrations Ticker */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 28s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 30s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+

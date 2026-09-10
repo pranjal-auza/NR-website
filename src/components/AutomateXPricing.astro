@@ -1,0 +1,313 @@
+---
+// AutomateX Pricing Section: Scalable Pricing Plans with Monthly / Yearly 20% Off Toggle
+---
+
+<section id="pricing" class="relative py-20 md:py-28 overflow-hidden bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Title Block -->
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-12 md:mb-16">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-200 bg-purple-50/60 text-xs sm:text-sm font-semibold text-[#5B21B6]">
+        <span>Pricing plans</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-[#100F12] tracking-tight font-['Plus_Jakarta_Sans']">
+        Simple, scalable pricing
+      </h2>
+    </div>
+
+    <!-- Monthly / Yearly Switch Toggle -->
+    <div class="flex items-center justify-center gap-3 mb-14 select-none">
+      <span id="label-monthly" class="text-xs sm:text-sm font-bold text-[#100F12] transition-colors">Monthly</span>
+      
+      <button 
+        id="billing-toggle-btn" 
+        class="relative w-14 h-8 bg-[#100F12] rounded-full p-1 transition-colors focus:outline-none cursor-pointer"
+        aria-label="Toggle billing interval"
+      >
+        <div id="toggle-circle" class="w-6 h-6 bg-white rounded-full transition-transform duration-300 transform translate-x-0"></div>
+      </button>
+
+      <div class="flex items-center gap-2">
+        <span id="label-yearly" class="text-xs sm:text-sm font-semibold text-[#5F5E6E] transition-colors">Yearly</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-purple-100 text-[#5925DC] text-[11px] font-extrabold">
+          20% off
+        </span>
+      </div>
+    </div>
+
+    <!-- 3 Tier Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      
+      <!-- Card 1: Starter Plan -->
+      <div class="bg-white border border-[#EBE8E3] rounded-3xl p-6 sm:p-8 shadow-[0_12px_30px_rgba(20,15,40,0.04)] flex flex-col justify-between hover:shadow-[0_18px_40px_rgba(99,91,255,0.08)] transition-all duration-300">
+        <div class="space-y-6">
+          <div class="space-y-1.5 text-left">
+            <h3 class="text-xl font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">Starter plan</h3>
+            <p class="text-xs sm:text-sm text-[#5F5E6E]">Best for individuals and small teams trying agents.</p>
+          </div>
+
+          <!-- Price -->
+          <div class="flex items-baseline gap-1 text-left">
+            <span class="text-4xl sm:text-5xl font-extrabold text-[#100F12] font-['Plus_Jakarta_Sans']">$0</span>
+            <span class="text-xs sm:text-sm font-medium text-[#5F5E6E]">/month</span>
+          </div>
+
+          <a href="#start" class="btn-text-roll group w-full py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-[#100F12] font-bold text-xs sm:text-sm text-center transition-all">
+            <div class="button-text-wrap">
+              <span class="text-default">Get started free</span>
+              <span class="text-hover">Get started free</span>
+            </div>
+          </a>
+
+          <!-- Features -->
+          <div class="space-y-3 pt-4 border-t border-slate-100 text-left">
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">1 agent</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Ready-to-use templates</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Manual approvals only</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Basic activity logs</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Community support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Pro Plan (Highlighted Card) -->
+      <div class="relative bg-gradient-to-b from-[#FAF7FF] to-[#F1EAFF] border-2 border-purple-400/80 rounded-3xl p-6 sm:p-8 shadow-[0_20px_50px_rgba(99,91,255,0.15)] flex flex-col justify-between transform md:-translate-y-2 transition-all duration-300">
+        
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-gradient-to-r from-[#5925DC] to-[#C026D3] text-white text-[11px] font-extrabold shadow-sm">
+          Most Popular
+        </div>
+
+        <div class="space-y-6">
+          <div class="space-y-1.5 text-left">
+            <h3 class="text-xl font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">Pro plan</h3>
+            <p class="text-xs sm:text-sm text-[#5F5E6E]">For growing teams running real workflows at scale.</p>
+          </div>
+
+          <!-- Price with Dynamic Toggle -->
+          <div class="flex items-baseline gap-1 text-left">
+            <span id="price-pro" class="text-4xl sm:text-5xl font-extrabold text-[#5925DC] font-['Plus_Jakarta_Sans'] transition-all">$29</span>
+            <span class="text-xs sm:text-sm font-medium text-[#5F5E6E]">/month</span>
+          </div>
+
+          <a href="#start" class="btn-text-roll group w-full py-3.5 rounded-full bg-gradient-to-r from-[#5925DC] via-[#7C3AED] to-[#C026D3] text-white font-bold text-xs sm:text-sm text-center shadow-[0_10px_25px_rgba(124,58,237,0.35)] transition-all">
+            <div class="button-text-wrap">
+              <span class="text-default">Start pro trial</span>
+              <span class="text-hover">Start pro trial</span>
+            </div>
+          </a>
+
+          <!-- Features -->
+          <div class="space-y-3 pt-4 border-t border-purple-200/80 text-left">
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-200/80 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-bold">Up to 10 agents</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-200/80 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Custom templates</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-200/80 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Human-in-the-loop controls</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-200/80 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Full activity audit logs</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-200/80 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Priority support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Team Plan -->
+      <div class="bg-white border border-[#EBE8E3] rounded-3xl p-6 sm:p-8 shadow-[0_12px_30px_rgba(20,15,40,0.04)] flex flex-col justify-between hover:shadow-[0_18px_40px_rgba(99,91,255,0.08)] transition-all duration-300">
+        <div class="space-y-6">
+          <div class="space-y-1.5 text-left">
+            <h3 class="text-xl font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">Team plan</h3>
+            <p class="text-xs sm:text-sm text-[#5F5E6E]">For teams managing higher workflow volume.</p>
+          </div>
+
+          <!-- Price with Dynamic Toggle -->
+          <div class="flex items-baseline gap-1 text-left">
+            <span id="price-team" class="text-4xl sm:text-5xl font-extrabold text-[#100F12] font-['Plus_Jakarta_Sans'] transition-all">$79</span>
+            <span class="text-xs sm:text-sm font-medium text-[#5F5E6E]">/month</span>
+          </div>
+
+          <a href="#start" class="btn-text-roll group w-full py-3 rounded-full bg-[#100F12] hover:bg-[#23222A] text-white font-bold text-xs sm:text-sm text-center transition-all shadow-md">
+            <div class="button-text-wrap">
+              <span class="text-default">Upgrade to Team</span>
+              <span class="text-hover">Upgrade to Team</span>
+            </div>
+          </a>
+
+          <!-- Features -->
+          <div class="space-y-3 pt-4 border-t border-slate-100 text-left">
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Includes all Pro features</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-bold">Up to 25 agents</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Advanced analytics</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">All integrations</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <div class="w-5 h-5 rounded-full bg-purple-50 text-[#5925DC] flex items-center justify-center shrink-0">
+                <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <span class="text-xs sm:text-sm text-[#100F12] font-medium">Higher workflow limits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Full-Width Card: Enterprise Plan -->
+    <div class="bg-[#FAF9FC] border border-[#E9E5F2] rounded-3xl p-6 sm:p-10 shadow-sm">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        
+        <div class="lg:col-span-4 space-y-2 text-left">
+          <h3 class="text-2xl font-bold text-[#100F12] font-['Plus_Jakarta_Sans']">Enterprise plan</h3>
+          <p class="text-xs sm:text-sm text-[#5F5E6E]">For organizations that need scale, dedicated security, and custom compliance.</p>
+        </div>
+
+        <div class="lg:col-span-5 grid grid-cols-2 gap-3 text-left">
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-purple-100 text-[#5925DC] flex items-center justify-center shrink-0">
+              <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-[#100F12]">Unlimited agents</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-purple-100 text-[#5925DC] flex items-center justify-center shrink-0">
+              <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-[#100F12]">Dedicated audit</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-purple-100 text-[#5925DC] flex items-center justify-center shrink-0">
+              <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-[#100F12]">Custom guardrails</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-4 h-4 rounded-full bg-purple-100 text-[#5925DC] flex items-center justify-center shrink-0">
+              <svg class="w-2.5 h-2.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="text-xs font-semibold text-[#100F12]">SSO & compliance</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 text-left lg:text-right">
+          <a href="#contact" class="btn-text-roll group inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#100F12] hover:bg-[#23222A] text-white font-bold text-xs sm:text-sm shadow-md transition-all">
+            <div class="button-text-wrap">
+              <span class="text-default">Contact sales</span>
+              <span class="text-hover">Contact sales</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function initPricingToggle() {
+    const toggleBtn = document.getElementById("billing-toggle-btn");
+    const circle = document.getElementById("toggle-circle");
+    const labelMonthly = document.getElementById("label-monthly");
+    const labelYearly = document.getElementById("label-yearly");
+    const pricePro = document.getElementById("price-pro");
+    const priceTeam = document.getElementById("price-team");
+
+    let isYearly = false;
+
+    toggleBtn?.addEventListener("click", () => {
+      isYearly = !isYearly;
+
+      if (isYearly) {
+        circle?.classList.remove("translate-x-0");
+        circle?.classList.add("translate-x-6");
+        labelMonthly?.classList.replace("text-[#100F12]", "text-[#5F5E6E]");
+        labelMonthly?.classList.replace("font-bold", "font-semibold");
+        labelYearly?.classList.replace("text-[#5F5E6E]", "text-[#100F12]");
+        labelYearly?.classList.replace("font-semibold", "font-bold");
+
+        if (pricePro) pricePro.textContent = "$23";
+        if (priceTeam) priceTeam.textContent = "$63";
+      } else {
+        circle?.classList.remove("translate-x-6");
+        circle?.classList.add("translate-x-0");
+        labelMonthly?.classList.replace("text-[#5F5E6E]", "text-[#100F12]");
+        labelMonthly?.classList.replace("font-semibold", "font-bold");
+        labelYearly?.classList.replace("text-[#100F12]", "text-[#5F5E6E]");
+        labelYearly?.classList.replace("font-bold", "font-semibold");
+
+        if (pricePro) pricePro.textContent = "$29";
+        if (priceTeam) priceTeam.textContent = "$79";
+      }
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPricingToggle);
+  } else {
+    initPricingToggle();
+  }
+</script>

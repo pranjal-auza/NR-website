@@ -1,0 +1,363 @@
+---
+// Interactive Omnichannel Showcase — WhatsApp, Instagram, Google Reviews & Unified Inbox
+---
+
+<section id="inbox" class="py-20 md:py-28 bg-white relative overflow-hidden">
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs sm:text-sm font-bold text-emerald-800 mb-4">
+        <span>Omnichannel Power</span>
+      </div>
+      <h2 class="text-3xl sm:text-5xl font-extrabold text-[#100F12] tracking-tight font-['Plus_Jakarta_Sans'] leading-[1.12]">
+        Every conversation channel. <br class="hidden sm:inline" />
+        <span class="text-[#635BFF]">One unified command center.</span>
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-[#5F5E6E] leading-relaxed">
+        Seamlessly switch between WhatsApp, Instagram, Google Reviews, and live webchat without losing a single line of customer context.
+      </p>
+    </div>
+
+    <!-- Interactive Channel Selector Tabs -->
+    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+      
+      <button 
+        class="channel-tab active-tab px-5 py-3 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 border bg-[#100F12] text-white border-[#100F12] shadow-md"
+        data-target="whatsapp"
+      >
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+        <span>WhatsApp Business</span>
+      </button>
+
+      <button 
+        class="channel-tab px-5 py-3 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 border bg-slate-50 text-[#5F5E6E] border-slate-200 hover:bg-slate-100"
+        data-target="instagram"
+      >
+        <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+        <span>Instagram & Meta DMs</span>
+      </button>
+
+      <button 
+        class="channel-tab px-5 py-3 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 border bg-slate-50 text-[#5F5E6E] border-slate-200 hover:bg-slate-100"
+        data-target="reviews"
+      >
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+        <span>Google & Trustpilot Reviews</span>
+      </button>
+
+      <button 
+        class="channel-tab px-5 py-3 rounded-full text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 border bg-slate-50 text-[#5F5E6E] border-slate-200 hover:bg-slate-100"
+        data-target="team-inbox"
+      >
+        <span class="w-2.5 h-2.5 rounded-full bg-[#635BFF]"></span>
+        <span>Shared Team Inbox</span>
+      </button>
+
+    </div>
+
+    <!-- Dynamic Content Showcase Area -->
+    <div class="max-w-5xl mx-auto bg-[#FDFCFD] border border-slate-200/90 rounded-3xl p-6 sm:p-10 shadow-[0_20px_60px_rgba(23,23,42,0.06)] relative">
+      
+      <!-- TAB 1: WHATSAPP BUSINESS -->
+      <div id="panel-whatsapp" class="channel-panel block">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left Info (5 cols) -->
+          <div class="lg:col-span-5 space-y-5 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-xs font-bold">
+              Official Cloud API Integration
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#100F12] tracking-tight">
+              Turn WhatsApp into your highest-converting sales channel
+            </h3>
+            <p class="text-sm text-[#5F5E6E] leading-relaxed">
+              Connect multiple phone numbers, send rich product catalogs, trigger abandoned cart recovery, and broadcast announcements with 98% open rates.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-[#100F12]">
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-600 font-bold">✓</span> Multi-agent access to single WhatsApp number
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-600 font-bold">✓</span> Automated interactive buttons & quick replies
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-600 font-bold">✓</span> Shopify & CRM contact synchronization
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right UI Visual (7 cols) -->
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3.5">
+            <!-- Chat Header -->
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <img src="https://cdn.prod.website-files.com/673442f44c948080a43e913b/673592bcb033b09ad5f3ed3f_user-1.png" class="w-9 h-9 rounded-full object-cover" alt="Customer" />
+                <div>
+                  <h4 class="text-xs font-bold text-[#100F12] flex items-center gap-1.5">
+                    Marcus Sterling <span class="text-[10px] text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-sm">WhatsApp Lead</span>
+                  </h4>
+                  <p class="text-[11px] text-[#5F5E6E]">+1 (555) 382-9102 • Active now</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">Assigned: Sarah M.</span>
+            </div>
+
+            <!-- Messages Stream -->
+            <div class="space-y-2.5 text-xs pt-1">
+              <div class="flex justify-start">
+                <div class="bg-slate-100 rounded-2xl rounded-tl-xs px-3.5 py-2.5 max-w-xs text-[#100F12]">
+                  Hi! I'm interested in the Enterprise plan for our team of 25. Can we port our existing WhatsApp numbers?
+                </div>
+              </div>
+
+              <div class="flex justify-end">
+                <div class="bg-[#635BFF] text-white rounded-2xl rounded-tr-xs px-3.5 py-2.5 max-w-xs">
+                  Hi Marcus! Yes, absolutely. We support seamless number porting with zero downtime. Would you like a 10-minute demo today?
+                </div>
+              </div>
+
+              <div class="flex justify-start">
+                <div class="bg-slate-100 rounded-2xl rounded-tl-xs px-3.5 py-2.5 max-w-xs text-[#100F12]">
+                  That sounds great! Let's book 2:00 PM EST.
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Bar -->
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-[#5F5E6E]">
+              <span class="text-[11px]">⚡ Response time: 14s (SLA Met)</span>
+              <span class="font-semibold text-[#635BFF] cursor-pointer hover:underline">View CRM Profile →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: INSTAGRAM & META DMS -->
+      <div id="panel-instagram" class="channel-panel hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 space-y-5 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-pink-50 text-pink-700 text-xs font-bold">
+              Instagram Direct & Story Mentions
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#100F12] tracking-tight">
+              Convert social engagement into immediate checkouts
+            </h3>
+            <p class="text-sm text-[#5F5E6E] leading-relaxed">
+              Auto-reply to Instagram story tags, send automated discount links when followers comment on reels, and manage all influencer chats from one inbox.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-[#100F12]">
+              <li class="flex items-center gap-2">
+                <span class="text-pink-600 font-bold">✓</span> Auto-DM instant coupons when users comment keywords
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-pink-600 font-bold">✓</span> Story mention tracking & immediate thank-you replies
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-pink-600 font-bold">✓</span> Sync with Facebook Messenger in the same queue
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3.5">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <img src="https://cdn.prod.website-files.com/673442f44c948080a43e913b/673592bcafb16ca7bb760d97_user-2.png" class="w-9 h-9 rounded-full object-cover" alt="Customer" />
+                <div>
+                  <h4 class="text-xs font-bold text-[#100F12] flex items-center gap-1.5">
+                    @chloe_style <span class="text-[10px] text-pink-600 bg-pink-50 px-1.5 py-0.5 rounded-sm">Reel Comment Lead</span>
+                  </h4>
+                  <p class="text-[11px] text-[#5F5E6E]">Trigger: Commented "SUMMER" on Reel #84</p>
+                </div>
+              </div>
+              <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-full">Auto-Responder Active</span>
+            </div>
+
+            <div class="space-y-2.5 text-xs pt-1">
+              <div class="flex justify-end">
+                <div class="bg-gradient-to-r from-purple-600 to-pink-500 text-white rounded-2xl rounded-tr-xs px-3.5 py-2.5 max-w-xs">
+                  Hey Chloe! 💕 Thanks for checking out our latest collection! Here is your exclusive 20% discount code: <span class="font-bold">SUMMER20</span>
+                </div>
+              </div>
+
+              <div class="flex justify-start">
+                <div class="bg-slate-100 rounded-2xl rounded-tl-xs px-3.5 py-2.5 max-w-xs text-[#100F12]">
+                  Just used it and bought the linen set! Thank you so much! 🔥
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-[#5F5E6E]">
+              <span class="text-[11px] text-emerald-600 font-bold">💰 Attributed Sale: $148.00</span>
+              <span class="font-semibold text-[#635BFF] cursor-pointer hover:underline">Track Influencer Code →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 3: GOOGLE & TRUSTPILOT REVIEWS -->
+      <div id="panel-reviews" class="channel-panel hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 space-y-5 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-amber-50 text-amber-800 text-xs font-bold">
+              Reputation & Review Growth
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#100F12] tracking-tight">
+              Capture 3x more 5-star Google reviews on autopilot
+            </h3>
+            <p class="text-sm text-[#5F5E6E] leading-relaxed">
+              Trigger automated SMS and WhatsApp review invites right after a happy service completion. Respond to all reviews across locations from one dashboard.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-[#100F12]">
+              <li class="flex items-center gap-2">
+                <span class="text-amber-500 font-bold">★</span> 1-click personalized AI reply suggestions for reviews
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-amber-500 font-bold">★</span> Negative sentiment alerts before reviews get posted
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-amber-500 font-bold">★</span> Sync across Google Business, Trustpilot & Facebook
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3.5">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-amber-50 text-amber-500 flex items-center justify-center font-bold text-base">
+                  G
+                </div>
+                <div>
+                  <h4 class="text-xs font-bold text-[#100F12]">Google Business Profile • Austin Flagship</h4>
+                  <p class="text-[11px] text-[#5F5E6E]">Overall Rating: 4.9 ★ (1,096 Verified Reviews)</p>
+                </div>
+              </div>
+              <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full">New 5-Star Alert</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-2 text-xs">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-[#100F12]">David K.</span>
+                <span class="text-amber-500 font-bold">★★★★★</span>
+              </div>
+              <p class="text-[#5F5E6E]">
+                "Outstanding customer service. Replied to my WhatsApp question in seconds and shipped my replacement the same afternoon."
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-[#5F5E6E]">
+              <span class="text-[11px]">⚡ Auto-thankyou posted • Review shared to Website Widget</span>
+              <span class="font-semibold text-[#635BFF] cursor-pointer hover:underline">Manage All 8 Locations →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 4: SHARED TEAM INBOX -->
+      <div id="panel-team-inbox" class="channel-panel hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-5 space-y-5 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-purple-50 text-[#635BFF] text-xs font-bold">
+              Team Productivity & Routing
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-[#100F12] tracking-tight">
+              Coordinate 5 to 500 team members with zero collisions
+            </h3>
+            <p class="text-sm text-[#5F5E6E] leading-relaxed">
+              Real-time collision detection prevents two agents from typing at the same time. Leave private internal notes, assign conversation owners, and track SLAs.
+            </p>
+            <ul class="space-y-2.5 text-xs sm:text-sm font-medium text-[#100F12]">
+              <li class="flex items-center gap-2">
+                <span class="text-[#635BFF] font-bold">✓</span> Collision detection warning when a teammate is viewing
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#635BFF] font-bold">✓</span> Private internal @mentions visible only to your staff
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#635BFF] font-bold">✓</span> Round-robin and skill-based automated ticket routing
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 p-5 shadow-sm space-y-3.5">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-xs font-bold text-[#100F12]">Live Collision Warning</span>
+              </div>
+              <span class="text-xs font-semibold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-full">Alex is currently drafting</span>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-purple-50/50 border border-purple-100 text-xs space-y-2">
+              <div class="flex items-center gap-2 text-purple-900 font-bold">
+                <span>🔒 Private Internal Note</span>
+                <span class="text-[10px] text-purple-600 font-normal">Only your team sees this</span>
+              </div>
+              <p class="text-purple-800">
+                @sarah: I confirmed with warehouse, their replacement item has shipped. Alex is drafting the tracking details now!
+              </p>
+            </div>
+
+            <div class="pt-2 border-t border-slate-100 flex items-center justify-between text-xs text-[#5F5E6E]">
+              <span class="text-[11px]">SLA: 100% On-Time • Team Resolution: 3m 40s</span>
+              <span class="font-semibold text-[#635BFF] cursor-pointer hover:underline">Open Live Inbox →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Tab Switcher Script -->
+<script>
+  function initChannelTabs() {
+    const tabs = document.querySelectorAll('.channel-tab');
+    const panels = document.querySelectorAll('.channel-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-target');
+
+        // Reset tab styles
+        tabs.forEach(t => {
+          t.classList.remove('bg-[#100F12]', 'text-white', 'border-[#100F12]', 'shadow-md');
+          t.classList.add('bg-slate-50', 'text-[#5F5E6E]', 'border-slate-200');
+        });
+
+        // Activate clicked tab
+        tab.classList.remove('bg-slate-50', 'text-[#5F5E6E]', 'border-slate-200');
+        tab.classList.add('bg-[#100F12]', 'text-white', 'border-[#100F12]', 'shadow-md');
+
+        // Toggle panels
+        panels.forEach(p => {
+          p.classList.add('hidden');
+          p.classList.remove('block');
+        });
+
+        const activePanel = document.getElementById(`panel-${target}`);
+        if (activePanel) {
+          activePanel.classList.remove('hidden');
+          activePanel.classList.add('block');
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initChannelTabs);
+  } else {
+    initChannelTabs();
+  }
+</script>
